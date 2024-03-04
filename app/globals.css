@@ -6,4 +6,10 @@ html,
 body,
 :root {
   height: 100%;
+  scrollbar-color: transparent transparent;
+}
+
+.blury {
+  backdrop-filter: blur(10px);
+  background-color: rgba(128, 128, 128, 0.2);
 }

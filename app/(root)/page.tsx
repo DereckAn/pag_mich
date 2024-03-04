@@ -1,8 +1,13 @@
+import AboutUs from "./sections/about-us-section";
+import { FoodSection } from "./sections/food-section";
+import { HeroSection } from "./sections/hero-section";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-black">Protein House</h1>
-    </main>
-    
+    <>
+      <HeroSection />
+      <FoodSection />
+      <AboutUs />
+    </>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { Navbar } from "@/components/shared/navbar";
 import { ReactNode, useState } from "react";
 
 // note: los segundos children van a ser tipo reactNode
@@ -16,6 +17,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         onClick={() => setShowMenu(true)}
         className="lg:hidden fixed right-0 bottom-0 z-30 bg-primary p-4  rounded-tl-lg"
       /> */}
+      <Navbar  />
 
       {children}
       <div>hola</div>
