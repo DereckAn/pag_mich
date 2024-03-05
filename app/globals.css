@@ -13,3 +13,13 @@ body,
   backdrop-filter: blur(15px);
   background-color: rgba(128, 128, 128, 0.2);
 }
+
+.topb {
+  transform: translateY(7px) rotate(45deg);
+}
+.middleb {
+  opacity: 0;
+}
+.bottomb {
+  transform: translateY(-7px) rotate(-45deg);
+}
