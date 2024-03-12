@@ -15,11 +15,18 @@ body,
 }
 
 .topb {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 .middleb {
   opacity: 0;
 }
 .bottomb {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
+
+/* .imaParallax {
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

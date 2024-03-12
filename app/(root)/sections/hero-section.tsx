@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <Image
         src={cerdo}
         alt="cerdo"
-        className="h-screen object-cover"
+        className="h-screen object-cover "
         priority
       />
     </div>

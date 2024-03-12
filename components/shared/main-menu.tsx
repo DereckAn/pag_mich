@@ -4,13 +4,12 @@ import { cn } from "@/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 interface MainMenuProps {
-  showMenu?: boolean;
-  onClose?: () => void;
+  drawerMenu: boolean;
+  setDrawerMenu: (value: boolean) => void;
 }
 
-export const MainMenu = ({ showMenu, onClose }: MainMenuProps) => {
+export const MainMenu = ({ setDrawerMenu, drawerMenu }: MainMenuProps) => {
   const pathName = usePathname();
   const baseClass = `p-5 relative transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0
   before:h-0.5 before:bg-secondary before:rounded-full before:transition-all before:duration-300 hover:before:w-full`;
@@ -46,12 +45,31 @@ export const MainMenu = ({ showMenu, onClose }: MainMenuProps) => {
           <Image src={cart} alt="cart" className="text-primary" />
         </Link>
       </div>
-      <button className="relative lg:hidden" onClick={() => {}}>
-        <span className="bg-secondary absolute right-0 -top-4 h-0.5 w-8 topb" />
-        <span className="bg-secondary absolute right-0 -top-2 h-0.5 w-8 middleb" />
-        <span className="bg-secondary absolute right-0 -top-0 h-0.5 w-8 bottomb" />
+      <button
+        className="relative lg:hidden"
+        onClick={() => {
+          return setDrawerMenu(!drawerMenu);
+        }}
+      >
+        <span
+          className={cn(
+            "bg-secondary absolute right-0 -top-4 h-0.5 w-8 transition-all duration-300 ease-in-out",
+            drawerMenu ? "topb" : ""
+          )}
+        />
+        <span
+          className={cn(
+            "bg-secondary absolute right-0 -top-2 h-0.5 w-8 transition-all duration-300 ease-in-out",
+            drawerMenu ? "middleb" : ""
+          )}
+        />
+        <span
+          className={cn(
+            "bg-secondary absolute right-0 -top-0 h-0.5 w-8 transition-all duration-300 ease-in-out ",
+            drawerMenu ? "bottomb" : ""
+          )}
+        />
       </button>
-      
     </div>
   );
 };
