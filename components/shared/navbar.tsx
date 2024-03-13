@@ -12,14 +12,16 @@ export const Navbar = () => {
       <header className="fixed top-0 left-0 w-full z-50 blury h-[90px] flex ">
         <div className="container mx-auto flex items-center justify-between p-5 lg:py-5 lg:px-0">
           <section>
-            <Link href="/" className="">
-              <Image
-                src={Logo}
-                alt="logo"
-                priority
-                className="h-[20rem] w-[20rem] fixed top-0  "
-              />
-            </Link>
+            {!showMenu && (
+              <Link href="/" className="">
+                <Image
+                  src={Logo}
+                  alt="logo"
+                  priority
+                  className="h-[20rem] w-[20rem] fixed top-0  "
+                />
+              </Link>
+            )}
           </section>
           <section>
             <MainMenu drawerMenu={showMenu} setDrawerMenu={setShowMenu} />
