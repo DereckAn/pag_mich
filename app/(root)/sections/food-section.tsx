@@ -1,8 +1,7 @@
 export const FoodSection = () => {
-    return ( 
-        <div>
-            <h1>Food Section</h1>
-        </div>
-     );
-}
- 
+  return (
+    <div className="h-screen flex items-center overflow-hidden bg-[#D59D97]">
+      <div className="medio-circulo">hola</div>
+    </div>
+  );
+};

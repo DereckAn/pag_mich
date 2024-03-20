@@ -10,26 +10,42 @@ body,
   scrollbar-width: none;
 }
 
-.blury {
-  backdrop-filter: blur(15px);
-  background-color: rgba(128, 128, 128, 0.2);
-}
-
 .topb {
   transform: translateY(8px) rotate(45deg);
 }
+
 .middleb {
   opacity: 0;
 }
+
 .bottomb {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.hero-section {
-  height: 100vh;
-  background-image: url('../assets/images/cerdo.webp');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.medio-circulo {
+  width: 50%;
+  height: 110%;
+  border-radius: 0 90% 90% 0/ 0 100% 100% 0;
+  background-color: #7BAB83;
+}
+
+.navbarsettings {
+  backdrop-filter: blur(0px);
+  background-color: transparent;
+  color: transparent;
+  animation: enhanced-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 500px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes enhanced-header {
+  to {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: white;
+    backdrop-filter: blur(15px);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
