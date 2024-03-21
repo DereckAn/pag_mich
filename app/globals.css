@@ -11,7 +11,7 @@ body,
 }
 
 .topb {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(-10px) rotate(45deg);
 }
 
 .middleb {
@@ -19,32 +19,48 @@ body,
 }
 
 .bottomb {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.top-span {
+  top: 35%;
+}
+
+.bottom-span {
+  top: 60%;
+}
+
+.middle-span {
+  top: calc(50% - 2px);
+}
+
+button:hover .top-span {
+  top: 60%;
+}
+
+button:hover .bottom-span {
+  top: 35%;
 }
 
 .medio-circulo {
   width: 50%;
   height: 110%;
   border-radius: 0 90% 90% 0/ 0 100% 100% 0;
-  background-color: #7BAB83;
+  background-color: #7bab83;
 }
 
 .navbarsettings {
-  backdrop-filter: blur(0px);
-  background-color: transparent;
   color: transparent;
   animation: enhanced-header linear both;
   animation-timeline: scroll(root);
-  animation-range: 0 500px;
+  animation-range: 0 600px;
   opacity: 0;
   pointer-events: none;
 }
 
 @keyframes enhanced-header {
   to {
-    background-color: rgba(128, 128, 128, 0.2);
     color: white;
-    backdrop-filter: blur(15px);
     opacity: 1;
     pointer-events: auto;
   }

@@ -1,5 +1,6 @@
 "use client";
 
+import { ButtonNavbar } from "@/components/shared/button-navbar";
 import { Navbar } from "@/components/shared/navbar";
 import { ReactNode, useState } from "react";
 
@@ -9,7 +10,8 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
+      <ButtonNavbar/>
       {children}
     </div>
   );
