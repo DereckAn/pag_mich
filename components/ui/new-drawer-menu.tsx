@@ -17,11 +17,11 @@ export const NewDrawerMenu = ({ className }: NewDrawerMenuProps) => {
   return (
     <div
       className={cn(
-        "fixed w-full h-full flex justify-center items-center  ",
+        "fixed pl-[30%] flex justify-center items-center  ",
         className
       )}
     >
-      <ul className=" bg-gray-300 ">
+      <ul className=" bg-red-300">
         {routes.map((route) => (
           <li key={route.path} className="py-5 px-8">
             <Link

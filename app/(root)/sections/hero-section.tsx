@@ -1,4 +1,4 @@
-import { Logo, cerdo } from "@/assets";
+import { logo, cerdo } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export const HeroSection = () => {
         className="flex flex-col items-center justify-center"
       >
         {/* <div className="text-5xl text-primary">Order Now</div> */}
-        <Image src={Logo} alt="logo" className="w-[20rem] " />
+        <Image src={logo} alt="logo" className="w-[20rem] " />
       </Link>
     </div>
   );
