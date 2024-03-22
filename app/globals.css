@@ -11,14 +11,17 @@ body,
 }
 
 .topb {
+  top: 60%;
   transform: translateY(-10px) rotate(45deg);
 }
 
 .middleb {
+  top: calc(50% - 2px);
   opacity: 0;
 }
 
 .bottomb {
+  top: 35%;
   transform: translateY(10px) rotate(-45deg);
 }
 
@@ -53,7 +56,7 @@ button:hover .bottom-span {
   color: transparent;
   animation: enhanced-header linear both;
   animation-timeline: scroll(root);
-  animation-range: 0 600px;
+  animation-range: 0 800px;
   opacity: 0;
   pointer-events: none;
 }

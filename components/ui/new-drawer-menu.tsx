@@ -1,27 +1,27 @@
+import { cart } from "@/assets";
 import { routes } from "@/assets/constants";
 import { cn } from "@/utils/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import { cart } from "@/assets";
 
 interface NewDrawerMenuProps {
-  showMenu: boolean;
+  className?: string;
 }
 
-export const NewDrawerMenu = ({ showMenu }: NewDrawerMenuProps) => {
+export const NewDrawerMenu = ({ className }: NewDrawerMenuProps) => {
   const pathName = usePathname();
   const baseClass = `relative transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-0
-  before:h-0.5 before:bg-secondary before:rounded-full before:transition-all before:duration-300 hover:before:w-full text-5xl`;
+  before:h-0.5 before:bg-secondary before:rounded-full before:transition-all before:duration-300 hover:before:w-full text-8xl font-bold`;
 
   return (
-    <aside
+    <div
       className={cn(
-        "fixed h-full  w-full transition-all duration-300 ease-in-out  bg-red-400 z-0"
-        // showMenu ? "left-0" : "-left-full"
+        "fixed w-full h-full flex justify-center items-center  ",
+        className
       )}
     >
-      <ul className="bg-gray-600">
+      <ul className=" bg-gray-300 ">
         {routes.map((route) => (
           <li key={route.path} className="py-5 px-8">
             <Link
@@ -49,6 +49,6 @@ export const NewDrawerMenu = ({ showMenu }: NewDrawerMenuProps) => {
           <Image src={cart} alt="cart" className="text-primary w-[5rem] ml-8" />
         </Link>
       </ul>
-    </aside>
+    </div>
   );
 };
