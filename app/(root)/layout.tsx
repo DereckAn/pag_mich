@@ -11,13 +11,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div>
-      <Logo showMenu={showMenu} className="z-50" />
+      <Logo showMenu={showMenu} setShowMenu={setShowMenu} className="z-50" />
       <ButtonNavbar
         showMenu={showMenu}
         setShowMenu={setShowMenu}
-        className="z-70"
+        className="z-100"
       />
-      {showMenu && <NewDrawerMenu className="z-60" />}
+      {showMenu && <NewDrawerMenu className=" " setShowMenu={setShowMenu} />}
       {children}
     </div>
   );

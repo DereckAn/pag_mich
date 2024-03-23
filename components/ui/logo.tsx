@@ -5,9 +5,10 @@ import Link from "next/link";
 interface LogoProps {
   showMenu: boolean;
   className?: string;
+  setShowMenu?: (showMenu: boolean) => void;
 }
 
-export const Logo = ({ showMenu, className }: LogoProps) => {
+export const Logo = ({ showMenu, className, setShowMenu }: LogoProps) => {
   return (
     <Link href="/" className="">
       <section
@@ -15,6 +16,7 @@ export const Logo = ({ showMenu, className }: LogoProps) => {
           "fixed top-14 left-36 flex items-center justify-center",
           className
         )}
+        onClick={() => setShowMenu && setShowMenu(false)}
       >
         <Image
           src={logo}
@@ -22,7 +24,7 @@ export const Logo = ({ showMenu, className }: LogoProps) => {
           priority
           className={cn(
             "h-[100px] w-[100px] object-cover  transform scale-150 ",
-            showMenu ? "" : "navbarsettings"
+            showMenu ? "rotate-center " : "navbarsettings "
           )}
         />
       </section>

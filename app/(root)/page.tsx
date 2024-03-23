@@ -7,6 +7,12 @@ export default function Home() {
     <>
       <HeroSection />
       <FoodSection />
+      <FoodSection />
+
+      <FoodSection />
+
+      <FoodSection />
+
       <AboutUs />
     </>
   );

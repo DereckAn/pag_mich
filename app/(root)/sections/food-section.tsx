@@ -11,7 +11,7 @@ export const FoodSection = () => {
             accusamus id delectus?
           </p>
           <div className="flex justify-start">
-            <button className="bg-[#D59D97] text-white rounded-md py-3 px-5">
+            <button className="bg-red-300 text-white rounded-md py-3 px-5">
               Order now
             </button>
           </div>

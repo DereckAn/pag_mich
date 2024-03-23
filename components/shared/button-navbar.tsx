@@ -21,7 +21,7 @@ export const ButtonNavbar = ({
         <div
           id="expandale"
           className={cn(
-            "absolute rounded-full bg-white transition-all duration-700 cubic-bezier(.11,.99,.68,.93) ",
+            "absolute rounded-full bg-blue-300 transition-all duration-700 cubic-bezier(.11,.99,.68,.93) ",
             showMenu
               ? "w-screen h-screen rounded-none"
               : "w-[80px] h-[80px] navbarsettings"
