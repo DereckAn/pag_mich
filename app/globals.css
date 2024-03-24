@@ -10,6 +10,11 @@ body,
   scrollbar-width: none;
 }
 
+.buttonwh{
+  width: 80px;
+  height: 80px;
+}
+
 .topb {
   top: 60%;
   transform: translateY(-10px) rotate(45deg);
