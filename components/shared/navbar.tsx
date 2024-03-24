@@ -1,21 +1,19 @@
-import { Logo } from "@/assets";
+import { logo } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { DrawerMenu } from "../ui/drawer-menu";
 import { MainMenu } from "./main-menu";
 
 export const Navbar = () => {
   let [showMenu, setShowMenu] = useState(false);
   return (
-    <>
-      <header className="fixed top-0 left-0 w-full z-50 navbarsettings h-[90px] flex mt-10 ">
+      <header className=" header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none">
         <div className="container mx-auto flex items-center justify-between p-5 lg:py-5 lg:px-0">
           <section>
             {!showMenu && (
               <Link href="/" className="">
                 <Image
-                  src={Logo}
+                  src={logo}
                   alt="logo"
                   priority
                   className="h-[20rem] w-[20rem] fixed top-0  "
@@ -28,7 +26,5 @@ export const Navbar = () => {
           </section>
         </div>
       </header>
-      {showMenu && <DrawerMenu showMenu={showMenu} />}
-    </>
   );
 };
