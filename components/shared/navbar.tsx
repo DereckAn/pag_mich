@@ -6,6 +6,16 @@ import { ButtonNavbar } from "./button-navbar";
 
 export const Navbar = () => {
   let [showMenu, setShowMenu] = useState(false);
+
+  const toggleShowMenu = () => {
+    setShowMenu(!showMenu);
+    if (!showMenu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  };
+  
   return (
     <header className=" header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none navbarsettings">
       <div className="flex items-center justify-between">
@@ -15,7 +25,7 @@ export const Navbar = () => {
         >
           <Image src={logo} alt="logo" />
         </Link>
-        <ButtonNavbar showMenu={showMenu} setShowMenu={setShowMenu} />
+        <ButtonNavbar showMenu={showMenu} setShowMenu={toggleShowMenu} />
       </div>
     </header>
   );

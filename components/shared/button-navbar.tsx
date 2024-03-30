@@ -10,11 +10,12 @@ interface ButtonNavbarProps {
 }
 
 export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
+
   return (
     <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center">
       <div
         className={cn(
-          "absolute   rounded-full bg-white visible  transition-all duration-700 ease-in-out  ",
+          "absolute   rounded-full bg-color_azul_perry visible  transition-all duration-700 ease-in-out  ",
           showMenu ? "w-screen h-screen rounded-none" : " buttonwh"
         )}
         style={{ transform: showMenu ? "scale(3)" : "scale(1)" }}
@@ -49,7 +50,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    className="w-[50px] "
+                    className="w-[5rem] "
                   />
                 </a>
               ))}
