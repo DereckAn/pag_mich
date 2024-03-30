@@ -1,7 +1,7 @@
-import { routes } from "@/assets/constants";
+import { socials } from "@/assets/constants";
 import { cn } from "@/utils/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { MapMenu } from "../ui/map-menu";
 import { TresLineas } from "../ui/tres-lineas";
 
 interface ButtonNavbarProps {
@@ -10,8 +10,6 @@ interface ButtonNavbarProps {
 }
 
 export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
-  const pathName = usePathname();
-
   return (
     <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center">
       <div
@@ -35,29 +33,30 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
         <div className="fixed z-10 inset-0 font-bold flex flex-col">
           <div className="flex-grow basis-0" />
           <div className="flex-grow basis-0">
-            <ul className="flex flex-wrap justify-center">
-              {routes.map((route) => (
-                <li
-                  key={route.path}
-                  className="flex-none w-full flex justify-center "
-                  style={{ padding: "0.7rem" }}
-                >
-                  <Link
-                    onClick={() => setShowMenu && setShowMenu(false)}
-                    href={route.path}
-                    className={cn(
-                      " subrayado text-8xl font-bold wobble-horizontal-bottom",
-                      pathName === route.path &&
-                        "text-primary before:w-full before:bg-primary  "
-                    )}
-                  >
-                    {route.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <MapMenu setShowMenu={setShowMenu} />
           </div>
-          <div className="flex-grow basis-0 flex items-end"></div>
+          <div className="flex-grow basis-0 flex items-end">
+            <div className="bg-black w-10 basis-1/2"> h</div>
+
+            <div className="flex border-2 gap-5">
+              {socials.map((social) => (
+                <a
+                  href={social.url}
+                  key={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={social.icon}
+                    alt={social.name}
+                    className="w-[50px] "
+                  />
+                </a>
+              ))}
+            </div>
+            <div className="bg-black w-10 basis-1/2"> h</div>
+
+          </div>
         </div>
       )}
     </nav>

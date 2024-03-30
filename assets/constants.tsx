@@ -1,3 +1,5 @@
+import {instagram, linkedin, tiktok, twitter} from "./index";
+
 export const routes = [
   {
     name: "Home",
@@ -23,19 +25,23 @@ export const routes = [
 
 export const socials = [
   {
-    name: "Facebook",
+    name: "TikTok",
+    icon: tiktok,
     url: "https://www.facebook.com/",
   },
   {
     name: "Instagram",
+    icon: instagram,
     url: "https://www.instagram.com/",
   },
   {
     name: "Twitter",
+    icon: twitter,
     url: "https://twitter.com/",
   },
   {
     name: "LinkedIn",
+    icon: linkedin,
     url: "https://www.linkedin.com/",
   },
 ];
