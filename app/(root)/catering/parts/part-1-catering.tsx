@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export const Part1Catering = () => {
   return (
-    <div className="w-[30vw] border-lime-500 border-4">
-      <div className="border-4 p-5 ">
+    <div className="w-[30vw] border-lime-500 border-4 rounded-3xl">
+      <div className="border-4 p-5 rounded-3xl">
         <div className="  flex items-center justify-between">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />

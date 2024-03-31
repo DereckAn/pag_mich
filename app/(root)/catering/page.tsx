@@ -1,3 +1,4 @@
+import { Part2Catering } from "./parts/par-2-catering";
 import { Part1Catering } from "./parts/part-1-catering";
 
 const Catering = () => {
@@ -10,10 +11,8 @@ const Catering = () => {
           </div>
         </div>
 
-        <div className="basis-1/2 bg-orange-900  rounded-r-3xl ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio rerum
-          perspiciatis earum dolor illo nam vero facilis non, totam tempora ut
-          vel odio, saepe vitae, aperiam temporibus fugiat. Quidem, ipsam.
+        <div className="basis-1/2 bg-primary  rounded-r-3xl flex justify-center items-center  flex-col gap-5">
+          <Part2Catering />
         </div>
       </div>
     </section>
