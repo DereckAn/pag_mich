@@ -7,7 +7,7 @@ export const OccasionSection = () => {
       <h2 className="text-3xl py-6 font-extrabold text-center">
         PERFECT FOR ANY OCCASION
       </h2>
-      <div className="flex  flex-wrap w-full items-star justify-center">
+      <div className="flex lg:items-start items-center justify-center flex-wrap  w-full ">
         {cateringSection.map((item) => (
           <OccationCatering
             key={item.title}

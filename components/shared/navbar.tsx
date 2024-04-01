@@ -1,19 +1,18 @@
 import { logo } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ButtonNavbar } from "./button-navbar";
 
 export const Navbar = () => {
-  let [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("no-scroll", showMenu);
+  }, [showMenu]);
 
   const toggleShowMenu = () => {
-    setShowMenu(!showMenu);
-    if (!showMenu) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    setShowMenu(prevShowMenu => !prevShowMenu);
   };
 
   return (
@@ -22,7 +21,9 @@ export const Navbar = () => {
         <Link
           className="block relative z-50 ml-[5%] sm:ml-[7.5%] pointer-events-auto  "
           href={"/"}
-          onClick={toggleShowMenu}
+          onClick={() => {
+            setShowMenu(false);
+          }}
         >
           <Image src={logo} alt="logo" />
         </Link>
