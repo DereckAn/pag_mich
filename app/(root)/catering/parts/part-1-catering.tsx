@@ -5,25 +5,22 @@ import Link from "next/link";
 
 export const Part1Catering = () => {
   return (
-    <div className="w-[30vw] border-lime-500 border-4 rounded-3xl">
-      <div className="border-4 p-5 rounded-3xl">
+    <div className="lg:w-[40vw] w-[80vw]  border-4 rounded-3xl h-full  my-6 ">
+      <div className=" rounded-3xl">
         <div className="  flex items-center justify-between">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
           </Link>
-          <button
-            className="px-5 py-2 bg-primary rounded-3xl"
-            onClick={() => {}}
-          >
+          <Link href={"/"} className="px-5 py-2 bg-primary rounded-3xl">
             {" "}
             Get in Touch{" "}
-          </button>
+          </Link>
         </div>
-        <h1 className="text-black text-7xl font-semibold rounded-3xl py-10">
+        <h1 className="text-black h1size font-bold rounded-3xl py-10">
           At Protein House, we pride ourselves on providing exceptional culinary
           experiences that take your celebrations to the next level.
         </h1>
-        <div className="flex gap-5">
+        <div className="flex gap-5 sm:flex-row flex-col">
           <button
             className=" text-white rounded-3xl px-5 py-2 bg-primary"
             onClick={() => {}}
@@ -38,8 +35,8 @@ export const Part1Catering = () => {
           </button>
         </div>
 
-        <div className="border-4 mt-10">
-          <p className="text-black text-lg  rounded-3xl py-7">
+        <div className="mt-10">
+          <p className="text-black psize  rounded-3xl py-7">
             Delight your taste buds with our exquisite catering services.
             catering services. At Protein House, we create artistic dishes made
             with fresh ingredients and refined techniques that will captivate
