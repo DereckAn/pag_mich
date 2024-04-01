@@ -1,8 +1,8 @@
 const Menu = () => {
     return ( 
-        <div>
+        <section>
             <h1>Menu</h1>
-        </div>
+        </section>
      );
 }
  

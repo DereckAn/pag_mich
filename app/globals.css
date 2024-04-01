@@ -139,6 +139,15 @@ button:hover .bottom-span {
   }
 }
 
+.palomita::marker {
+  content: "⏺ ";
+  font-size: 1rem;
+}
+
+.novisible {
+  visibility: hidden;
+}
+
 .wobble-horizontal-bottom {
   animation: wobble-horizontal-bottom 0.8s linear both;
   animation-delay: 0.2s;
