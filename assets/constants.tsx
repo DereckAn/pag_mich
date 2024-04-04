@@ -18,8 +18,8 @@ export const routes = [
     path: "/catering",
   },
   {
-    name: "Login",
-    path: "/login",
+    name: "Account",
+    path: "/auth",
   },
 ];
 
