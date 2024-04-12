@@ -149,13 +149,13 @@ button:hover .bottom-span {
 }
 
 .wobble-horizontal-bottom {
-  animation: wobble-horizontal-bottom 0.8s linear both;
+  animation: wobble-horizontal-bottom 0.8s linear both, fade-in 0.8s linear both;
   animation-delay: 0.2s;
 }
 @keyframes wobble-horizontal-bottom {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translateX(0); 
     transform-origin: 50% 50%;
   }
   15% {
@@ -172,5 +172,14 @@ button:hover .bottom-span {
   }
   75% {
     transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
