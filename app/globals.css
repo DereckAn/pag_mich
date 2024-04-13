@@ -145,7 +145,8 @@ button:hover .bottom-span {
 }
 
 .palomita::marker {
-  content: "⏺ ";
+  /* content: "⏺ ";  Creo que esto lol cambia la mac */ 
+  content: "● ";
   font-size: 1rem;
 }
 

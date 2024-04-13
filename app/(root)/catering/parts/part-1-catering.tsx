@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Part1Catering = () => {
   return (
     // <div className="lg:w-[40vw] w-[80vw]  border-4 rounded-3xl h-full  my-6 ">
-      <div className=" rounded-3xl bg-red-300 p-5">
+      <div className=" rounded-3xl bg-red-300 2xl:py-5 2xl:px-32 p-5">
         <div className="  flex items-center justify-between">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />

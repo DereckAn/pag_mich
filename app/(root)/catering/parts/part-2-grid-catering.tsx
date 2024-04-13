@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Part2GridCatering = () => {
   return (
-    <div className=" w-full h-full bg-red-400 border-2 rounded-3xl grid grid-rows-3 grid-cols-3 gap-5 ">
+    <div className=" w-full h-full grid grid-rows-3 grid-cols-3 gap-5 ">
       <Image
         src={comida1}
         alt="catering"
@@ -12,17 +12,17 @@ export const Part2GridCatering = () => {
       <Image
         src={comida1}
         alt="catering"
-        className="rounded-3xl object-cover "
+        className="rounded-3xl object-cover  w-[100%] h-[100%]"
       />
       <Image
         src={comida1}
         alt="catering"
-        className="rounded-3xl object-cover "
+        className="rounded-3xl object-cover  w-[100%] h-[100%]"
       />
       <Image
         src={comida1}
         alt="catering"
-        className="rounded-3xl object-cover "
+        className="rounded-3xl object-cover  w-[100%] h-[100%]"
       />
       <Image
         src={comida1}
