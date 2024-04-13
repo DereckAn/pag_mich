@@ -1,12 +1,11 @@
-"use client";
 import { logo } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Part1Catering = () => {
   return (
-    <div className="lg:w-[40vw] w-[80vw]  border-4 rounded-3xl h-full  my-6 ">
-      <div className=" rounded-3xl">
+    // <div className="lg:w-[40vw] w-[80vw]  border-4 rounded-3xl h-full  my-6 ">
+      <div className=" rounded-3xl bg-red-300 p-5">
         <div className="  flex items-center justify-between">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
@@ -21,18 +20,16 @@ export const Part1Catering = () => {
           experiences that take your celebrations to the next level.
         </h1>
         <div className="flex gap-5 sm:flex-row flex-col">
-          <button
-            className=" text-white rounded-3xl px-5 py-2 bg-primary"
-            onClick={() => {}}
-          >
+          <Link href={"/"} 
+            className=" text-white rounded-3xl px-5 py-2 bg-primary max-w-sm text-center"
+          > 
             Order Carside Pickup
-          </button>
-          <button
-            className=" text-black rounded-3xl px-5 py-2 border-2 border-primary"
-            onClick={() => {}}
+          </Link>
+          <Link href={"/"}
+            className=" text-black rounded-3xl px-5 py-2 border-2 border-primary max-w-sm text-center"
           >
             Order Delivery
-          </button>
+          </Link>
         </div>
 
         <div className="mt-10">
@@ -46,21 +43,21 @@ export const Part1Catering = () => {
             experience.
           </p>
           <div className="flex gap-5 text-black ">
-            <button onClick={() => {}} className="subrayado">
+            <Link href={"/"} className="subrayado">
               {" "}
               How it works
-            </button>
-            <button onClick={() => {}} className="subrayado">
+            </Link>
+            <Link href={"/"} className="subrayado">
               {" "}
               About us
-            </button>
-            <button onClick={() => {}} className="subrayado">
+            </Link>
+            <Link href={"/"} className="subrayado">
               {" "}
               FAQ
-            </button>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
