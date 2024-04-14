@@ -3,9 +3,9 @@ import { Part2GridCatering } from "../parts/part-2-grid-catering";
 
 export const HeroGridSection = () => {
   return (
-    <section className="h-auto 2xl:h-screen grid 2xl:grid-rows-1 2xl:grid-cols-2 grid-rows-2 grid-cols-1 gap-5 p-5">
-      <Part1Catering />
-      <Part2GridCatering />
+    <section className=" flex xl:h-screen p-5 flex-col xl:flex-row xl:gap-5">
+      <Part1Catering classname="basis-1/2"/>
+      <Part2GridCatering classname="basis-1/2" />
     </section>
   );
 };
