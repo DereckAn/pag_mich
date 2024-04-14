@@ -7,13 +7,13 @@ interface Part2GridCateringProps {
 
 export const  Part2GridCatering = ({classname}: Part2GridCateringProps) => {
   return (
-    <div className={cn("  grid grid-rows-3 grid-cols-3 gap-5 ", classname)}>
+    <div className={cn("grid gap-5 grid-rows-3 grid-cols-2 2xl:grid-rows-3 2xl:grid-cols-3  ", classname)}>
       <Image
         src={comida1}
         alt="catering"
-        className="rounded-3xl  col-start-1 col-end-3 row-start-1 row-end-3"
+        className="rounded-3xl  col-start-1 col-end-3 row-start-1 row-end-3  w-[100%]"
       />
-      <div className="space-y-5">
+      <div className="space-y-5 hidden 2xl:block">
         <Image
         src={comida1}
         alt="catering"
@@ -22,7 +22,7 @@ export const  Part2GridCatering = ({classname}: Part2GridCateringProps) => {
       <Image
         src={comida1} 
         alt="catering"
-        className="rounded-3xl object-cover "
+        className="rounded-3xl object-cover  "
       />
       </div>
       <Image
@@ -34,7 +34,7 @@ export const  Part2GridCatering = ({classname}: Part2GridCateringProps) => {
         src={comida1}
         alt="catering"
         id="ultima"
-        className="rounded-3xl object-cover  col-start-2  col-span-2 w-[100%] h-[100%] " 
+        className="rounded-3xl object-cover 2xl:col-start-2 2xl:col-span-2 2xl:w-[100%] 2xl:h-[100%]  " 
       />
     </div>
   );
