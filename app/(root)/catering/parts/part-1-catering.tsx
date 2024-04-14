@@ -10,24 +10,23 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
   return (
     <div
       className={cn(
-        " rounded-3xl bg-red-300 border-2 flex flex-col",
+        " rounded-3xl cristalblur flex flex-col p-5 justify-around h-auto 2xl:h-full",
         classname
       )}
     >
-      <div className="  flex items-center justify-between border-2">
+      <div className="  flex items-center justify-between " >
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
         <Link href={"/"} className="px-5 py-2 bg-primary rounded-3xl">
-          {" "}
-          Get in Touch{" "}
+          Get in Touch
         </Link>
       </div>
-      <h1 className="text-black h1size font-bold rounded-3xl py-10 border-2">
+      <h1 className="text-black h1size font-bold rounded-3xl py-10 ">
         At Protein House, we pride ourselves on providing exceptional culinary
         experiences that take your celebrations to the next level.
       </h1>
-      <div className="flex gap-5 sm:flex-row flex-col border-2">
+      <div className="flex gap-5 sm:flex-row flex-col 2xl:justify-start justify-center ">
         <Link
           href={"/"}
           className=" text-white rounded-3xl px-5 py-2 bg-primary max-w-sm text-center"
@@ -36,13 +35,13 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
         </Link>
         <Link
           href={"/"}
-          className=" text-black rounded-3xl px-5 py-2 border-2 border-primary max-w-sm text-center"
+          className=" text-black rounded-3xl px-5 py-2 border-2  border-primary max-w-sm text-center"
         >
           Order Delivery
         </Link>
       </div>
 
-      <div className=" border-2 ">
+      <div className="  ">
         <p className="text-black psize  rounded-3xl py-7">
           Delight your taste buds with our exquisite catering services. catering
           services. At Protein House, we create artistic dishes made with fresh
@@ -53,15 +52,12 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
         </p>
         <div className="flex gap-5 text-black ">
           <Link href={"/"} className="subrayado">
-            {" "}
             How it works
           </Link>
           <Link href={"/"} className="subrayado">
-            {" "}
             About us
           </Link>
           <Link href={"/"} className="subrayado">
-            {" "}
             FAQ
           </Link>
         </div>
