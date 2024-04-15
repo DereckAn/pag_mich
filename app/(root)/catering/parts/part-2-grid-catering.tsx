@@ -1,22 +1,19 @@
 import { comida1 } from "@/assets";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
+import "@/styles/catering-styles.css";
+
 interface Part2GridCateringProps {
   classname?: string;
 }
 
 export const Part2GridCatering = ({ classname }: Part2GridCateringProps) => {
   return (
-    <div
-      className={cn(
-        "grid gap-5 grid-rows-3 grid-cols-2 2xl:grid-rows-3 2xl:grid-cols-3  ",
-        classname
-      )}
-    >
+    <div className={cn("gridcatering gap-5   ", classname)}>
       <Image
         src={comida1}
         alt="catering"
-        className="rounded-3xl  col-start-1 col-end-3 row-start-1 row-end-3 "
+        className="rounded-3xl  col-start-1 col-end-3 row-start-1 row-end-3 w-[100%] h-[100%]"
       />
       <div className="cristalblur rounded-3xl ">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum,
@@ -43,3 +40,5 @@ export const Part2GridCatering = ({ classname }: Part2GridCateringProps) => {
     </div>
   );
 };
+
+//note: if your are using taildwindcss using grid is going to be harderd.

@@ -11,7 +11,7 @@ body,
 }
 
 .cristalblur {
-  backdrop-filter: blur(80px);
+  backdrop-filter: blur(30px);
   background-color: rgba(128, 128, 128, 0.2);
 }
 
