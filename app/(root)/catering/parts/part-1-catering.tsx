@@ -10,7 +10,7 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
   return (
     <div
       className={cn(
-        " rounded-3xl cristalblur flex flex-col p-5 justify-around h-auto 2xl:h-full",
+        " rounded-3xl cristalblur flex flex-col p-5 justify-around h-auto ",
         classname
       )}
     >
