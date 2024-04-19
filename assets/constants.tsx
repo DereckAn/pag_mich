@@ -1,4 +1,12 @@
-import { balloons, building, comida6, instagram, linkedin, tiktok, twitter, wedding } from "./index";
+import {
+  balloons,
+  building,
+  facebook,
+  instagram,
+  tiktok,
+  wedding,
+  whatsapp,
+} from "./index";
 
 export const routes = [
   {
@@ -36,12 +44,12 @@ export const socials = [
   },
   {
     name: "Twitter",
-    icon: twitter,
+    icon: whatsapp,
     url: "https://twitter.com/",
   },
   {
     name: "LinkedIn",
-    icon: linkedin,
+    icon: facebook,
     url: "https://www.linkedin.com/",
   },
 ];
@@ -86,7 +94,7 @@ export const cateringSection = [
     title: "Wedding Catering",
     text: `Celebrate life's special moments
     with a meal everyone will love.`,
-    image: balloons,
+    image: wedding,
     lista: [
       "Birthday",
       "Anniversary",
@@ -98,7 +106,7 @@ export const cateringSection = [
     title: "Event Catering",
     text: `A once in a lifetime moment
     calls for an unforgettable meal.`,
-    image: wedding,
+    image: balloons,
     lista: ["Rehearsal Dinner", "Wedding", "Bridal Shower"],
   },
 ];

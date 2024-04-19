@@ -12,22 +12,24 @@ import comida6 from "./images/comida (6).webp";
 import comida7 from "./images/comida (7).webp";
 import comida8 from "./images/comida (8).webp";
 import comida9 from "./images/comida (9).webp";
+import fruits from "./images/fruits.webp";
+import fruits2 from "./images/fruits2.webp";
 import logo from "./svg/Official Logo.svg";
+import balloons from "./svg/ballons.svg";
+import building from "./svg/building.svg";
 import cart from "./svg/cart.svg";
+import facebook from "./svg/facebook.svg";
 import instagram from "./svg/instagram.svg";
-import linkedin from "./svg/linkedin.svg";
 import logo2 from "./svg/logo2.svg";
 import ondas from "./svg/ondas.svg";
 import tiktok from "./svg/tiktok.svg";
-import twitter from "./svg/twitter.svg";
-import fruits from "./images/fruits.webp";
-import fruits2 from "./images/fruits2.webp";
-import balloons from "./svg/ballons.svg";
-import building from "./svg/building.svg";
 import wedding from "./svg/wedding.svg";
+import whatsapp from "./svg/whatsapp.svg";
 
 export {
+  balloons,
   bebidas,
+  building,
   cart,
   cerdo,
   comida1,
@@ -42,16 +44,14 @@ export {
   comida7,
   comida8,
   comida9,
+  facebook,
+  fruits,
+  fruits2,
   instagram,
-  linkedin,
   logo,
   logo2,
   ondas,
   tiktok,
-  twitter,
-  fruits,
-  fruits2,
-  balloons,
-  building,
   wedding,
+  whatsapp,
 };

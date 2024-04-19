@@ -10,7 +10,6 @@ interface ButtonNavbarProps {
 }
 
 export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
-
   return (
     <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center">
       <div
@@ -37,9 +36,9 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
             <MapMenu setShowMenu={setShowMenu} />
           </div>
           <div className="flex-grow basis-0 flex items-end">
-            <div className="bg-black w-10 basis-1/2"> h</div>
+            <div className="w-10 basis-1/2"> </div>
 
-            <div className="flex border-2 gap-5">
+            <div className="flex gap-5">
               {socials.map((social) => (
                 <a
                   href={social.url}
@@ -50,13 +49,12 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    className="w-[5rem] "
+                    className="w-[3rem] "
                   />
                 </a>
               ))}
             </div>
-            <div className="bg-black w-10 basis-1/2"> h</div>
-
+            <div className="w-10 basis-1/2"> </div>
           </div>
         </div>
       )}
