@@ -1,6 +1,8 @@
+import { link } from "fs";
 import {
   balloons,
   building,
+  comida11,
   facebook,
   instagram,
   tiktok,
@@ -108,5 +110,33 @@ export const cateringSection = [
     calls for an unforgettable meal.`,
     image: balloons,
     lista: ["Rehearsal Dinner", "Wedding", "Bridal Shower"],
+  },
+];
+
+
+export const cateringMenu = [
+  {
+    title: "MEAL COMBINATIONS",
+    text: `Bundles designed to create the perfect combination for any occasion.`,
+    lista: [ "Choose from a variety of delicious meal combination options.",
+    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    link: "/menu",
+    image: comida11,
+  },
+  {
+    title: "MEAL COMBINATIONS",
+    text: `Bundles designed to create the perfect combination for any occasion.`,
+    lista: [ "Choose from a variety of delicious meal combination options.",
+    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    link: "/menu",
+    image: comida11,
+  },
+  {
+    title: "MEAL COMBINATIONS",
+    text: `Bundles designed to create the perfect combination for any occasion.`,
+    lista: [ "Choose from a variety of delicious meal combination options.",
+    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    link: "/menu",
+    image: comida11,
   },
 ];

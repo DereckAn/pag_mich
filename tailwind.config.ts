@@ -14,7 +14,8 @@ const config: Config = {
         tertary: "#292929",
         fourth: "#e4e2dd",
         color_azul_perry: "rgb(9, 233, 211)",
-        vainilla: "#F5ECD7"
+        vainilla: "#F5ECD7",
+        textcolor: "#000000"
 
       },
     },

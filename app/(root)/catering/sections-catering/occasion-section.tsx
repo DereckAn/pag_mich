@@ -1,13 +1,13 @@
 import { cateringSection } from "@/assets/constants";
+import { Container } from "@/components/ui/container";
 import { OccationCatering } from "@/components/ui/occation-catering";
+import { Title } from "@/components/ui/title";
 
 export const OccasionSection = () => {
   return (
-    <section className="flex items-center flex-col justify-around w-full text-black  py-20 gap-10">
-      <h2 className="text-3xl  font-extrabold text-center p-2">
-        PERFECT FOR ANY OCCASION
-      </h2>
-      <div className="flex lg:items-start items-center justify-center flex-wrap  w-full ">
+    <Container className="mt-10">
+      <Title title="Catering for every occasion" />
+      <div className="flex lg:items-start items-center justify-center flex-wrap w-full ">
         {cateringSection.map((item) => (
           <OccationCatering
             key={item.title}
@@ -18,6 +18,6 @@ export const OccasionSection = () => {
           />
         ))}
       </div>
-    </section>
+    </Container>
   );
 };

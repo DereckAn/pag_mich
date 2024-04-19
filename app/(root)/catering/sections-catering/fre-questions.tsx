@@ -1,7 +1,13 @@
+import { Container } from "@/components/ui/container";
+import { Title } from "@/components/ui/title";
+
 export const FrequentQuest = () => {
   return (
-    <div>
-      <div></div>
-    </div>
+    <Container>
+      <Title title="Frequent Questions" />
+      <div>
+        
+      </div>
+    </Container>
   );
 };
