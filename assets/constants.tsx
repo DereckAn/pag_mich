@@ -1,4 +1,4 @@
-import { comida6, instagram, linkedin, tiktok, twitter } from "./index";
+import { balloons, building, comida6, instagram, linkedin, tiktok, twitter, wedding } from "./index";
 
 export const routes = [
   {
@@ -79,14 +79,14 @@ export const cateringSection = [
     title: "Business Catering",
     text: `Catering everyone will love, with convenient delivery and setup
     included, starting at $12 per person.*`,
-    image: comida6,
+    image: building,
     lista: ["Holiday Parties", "Office Meetings", "Employee Appreciation"],
   },
   {
     title: "Wedding Catering",
     text: `Celebrate life's special moments
     with a meal everyone will love.`,
-    image: comida6,
+    image: balloons,
     lista: [
       "Birthday",
       "Anniversary",
@@ -98,7 +98,7 @@ export const cateringSection = [
     title: "Event Catering",
     text: `A once in a lifetime moment
     calls for an unforgettable meal.`,
-    image: comida6,
+    image: wedding,
     lista: ["Rehearsal Dinner", "Wedding", "Bridal Shower"],
   },
 ];

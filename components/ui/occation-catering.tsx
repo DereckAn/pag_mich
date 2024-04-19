@@ -4,6 +4,7 @@ interface OccationCateringProps {
   title: string;
   text: string;
   image: StaticImageData;
+  svg?: StaticImageData;
   lista: string[];
 }
 

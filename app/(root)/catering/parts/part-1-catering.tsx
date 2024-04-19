@@ -1,4 +1,5 @@
 import { logo } from "@/assets";
+import { Buttons } from "@/components/ui/buttons";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,34 +15,30 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
         classname
       )}
     >
-      <div className="  flex items-center justify-between " >
+      <div className="  flex items-center justify-between ">
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
-        <Link href={"/"} className="px-5 py-2 bg-primary rounded-3xl">
-          Get in Touch
-        </Link>
+        <Buttons href={"/"} text={"Get in Touch"} className="bg-primary" />
       </div>
       <h1 className="text-black h1size font-bold rounded-3xl py-10 ">
         At Protein House, we pride ourselves on providing exceptional culinary
         experiences that take your celebrations to the next level.
       </h1>
       <div className="flex gap-5 sm:flex-row flex-col 2xl:justify-start justify-center ">
-        <Link
+        <Buttons
           href={"/"}
-          className=" text-white rounded-3xl px-5 py-2 bg-primary max-w-sm text-center"
-        >
-          Order Carside Pickup
-        </Link>
-        <Link
+          text={"Order Carside Pickup"}
+          className="bg-primary max-w-sm text-center "
+        />
+        <Buttons
           href={"/"}
-          className=" text-black rounded-3xl px-5 py-2 border-2  border-primary max-w-sm text-center"
-        >
-          Order Delivery
-        </Link>
+          text={"Order Delivery"}
+          className="border-2 border-primary max-w-sm text-center text-primary "
+        />
       </div>
 
-      <div className="  ">
+      <div className=" ">
         <p className="text-black psize  rounded-3xl py-7">
           Delight your taste buds with our exquisite catering services. catering
           services. At Protein House, we create artistic dishes made with fresh

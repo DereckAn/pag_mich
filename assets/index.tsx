@@ -20,6 +20,11 @@ import logo2 from "./svg/logo2.svg";
 import ondas from "./svg/ondas.svg";
 import tiktok from "./svg/tiktok.svg";
 import twitter from "./svg/twitter.svg";
+import fruits from "./images/fruits.webp";
+import fruits2 from "./images/fruits2.webp";
+import balloons from "./svg/ballons.svg";
+import building from "./svg/building.svg";
+import wedding from "./svg/wedding.svg";
 
 export {
   bebidas,
@@ -44,4 +49,9 @@ export {
   ondas,
   tiktok,
   twitter,
+  fruits,
+  fruits2,
+  balloons,
+  building,
+  wedding,
 };
