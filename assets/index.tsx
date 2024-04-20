@@ -25,6 +25,7 @@ import ondas from "./svg/ondas.svg";
 import tiktok from "./svg/tiktok.svg";
 import wedding from "./svg/wedding.svg";
 import whatsapp from "./svg/whatsapp.svg";
+import arrow from "./svg/arrow.svg";
 
 export {
   balloons,
@@ -54,4 +55,5 @@ export {
   tiktok,
   wedding,
   whatsapp,
+  arrow,
 };
