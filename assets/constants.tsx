@@ -214,3 +214,34 @@ export const frequentQuestions = [
     answer: `Yes, we offer catering for large groups. Contact your local store for more information.`,
   },
 ];
+
+
+export const footerLinks = [
+  {
+    title: "About",
+    links: [
+      "Contact Us",
+      "About Protein House",
+      "Our Mission",
+      "FAQs",
+    ],
+  },
+  {
+    title: "Ordering",
+    links: [
+      "Order Now",
+      "Lookup Order",
+      "Order History",
+      "My Account",
+    ],
+  },
+  {
+    title: "Menu",
+    links: [
+      "Coockies",
+      "Waffels",
+      "Pancakes",
+      "Smoothies",
+    ],
+  },
+];

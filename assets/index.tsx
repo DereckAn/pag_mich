@@ -21,11 +21,9 @@ import cart from "./svg/cart.svg";
 import facebook from "./svg/facebook.svg";
 import instagram from "./svg/instagram.svg";
 import logo2 from "./svg/logo2.svg";
-import ondas from "./svg/ondas.svg";
 import tiktok from "./svg/tiktok.svg";
 import wedding from "./svg/wedding.svg";
 import whatsapp from "./svg/whatsapp.svg";
-import arrow from "./svg/arrow.svg";
 import time from "./svg/time.svg";
 import food_cart from "./svg/food_cart.svg";
 import fruitbowl from "./svg/fruitbowl.svg";
@@ -55,11 +53,9 @@ export {
   instagram,
   logo,
   logo2,
-  ondas,
   tiktok,
   wedding,
   whatsapp,
-  arrow,
   time,
   food_cart,
   fruitbowl,
