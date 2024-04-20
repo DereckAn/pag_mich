@@ -39,7 +39,26 @@
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
+.flex .top-spanc, .flex .bottom-spanc {
+    transition: transform 0.5s ease-in-out;
+  }
 
-.arrow{
-    /* rotate: 90deg; */
+.dropdown_check:not(:checked) ~ .flex .top-spanc {
+  top: 50%;
+  transform: translateY(0px) rotate(45deg);
+}
+
+.dropdown_check:not(:checked) ~ .flex .bottom-spanc {
+  top: 50%;
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.dropdown_check:checked ~ .flex .top-spanc {
+  top: 50%;
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.dropdown_check:checked ~ .flex .bottom-spanc {
+  top: 50%;
+  transform: translateY(0px) rotate(45deg);
 }
