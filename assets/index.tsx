@@ -26,6 +26,10 @@ import tiktok from "./svg/tiktok.svg";
 import wedding from "./svg/wedding.svg";
 import whatsapp from "./svg/whatsapp.svg";
 import arrow from "./svg/arrow.svg";
+import time from "./svg/time.svg";
+import food_cart from "./svg/food_cart.svg";
+import fruitbowl from "./svg/fruitbowl.svg";
+import truk from "./svg/truk.svg";
 
 export {
   balloons,
@@ -56,4 +60,8 @@ export {
   wedding,
   whatsapp,
   arrow,
+  time,
+  food_cart,
+  fruitbowl,
+  truk,
 };

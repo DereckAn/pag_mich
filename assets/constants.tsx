@@ -3,8 +3,12 @@ import {
   building,
   comida11,
   facebook,
+  food_cart,
+  fruitbowl,
   instagram,
   tiktok,
+  time,
+  truk,
   wedding,
   whatsapp,
 } from "./index";
@@ -112,31 +116,59 @@ export const cateringSection = [
   },
 ];
 
-
 export const cateringMenu = [
   {
     title: "MEAL COMBINATIONS",
     text: `Bundles designed to create the perfect combination for any occasion.`,
-    lista: [ "Choose from a variety of delicious meal combination options.",
-    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    lista: [
+      "Choose from a variety of delicious meal combination options.",
+      "Each serves 8-14 people, starting at $13.75 per person.*",
+    ],
     link: "/menu",
     image: comida11,
   },
   {
     title: "MEAL COMBINATIONS",
     text: `Bundles designed to create the perfect combination for any occasion.`,
-    lista: [ "Choose from a variety of delicious meal combination options.",
-    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    lista: [
+      "Choose from a variety of delicious meal combination options.",
+      "Each serves 8-14 people, starting at $13.75 per person.*",
+    ],
     link: "/menu",
     image: comida11,
   },
   {
     title: "MEAL COMBINATIONS",
     text: `Bundles designed to create the perfect combination for any occasion.`,
-    lista: [ "Choose from a variety of delicious meal combination options.",
-    "Each serves 8-14 people, starting at $13.75 per person.*"],
+    lista: [
+      "Choose from a variety of delicious meal combination options.",
+      "Each serves 8-14 people, starting at $13.75 per person.*",
+    ],
     link: "/menu",
     image: comida11,
+  },
+];
+
+export const detailsCatering = [
+  {
+    image: food_cart,
+    text: "$100 minimum on catering delivery orders",
+    text2: "",
+  },
+  {
+    image: time,
+    text: "Order by 5 p.m. for next day lunch delivery",
+    text2: "for orders within delivery area",
+  },
+  {
+    image: truk,
+    text: "10% delivery fee up to $500",
+    text2: "then 5% for every dollar thereafter",
+  },
+  {
+    image: fruitbowl,
+    text: "Complimentary chafing kit",
+    text2: "available upon request with delivery",
   },
 ];
 
