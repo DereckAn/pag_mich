@@ -1,4 +1,3 @@
-import Menu from "./menu/page";
 import AboutUs from "./sections/about-us-section";
 import { FoodSection } from "./sections/food-section";
 import { HeroSection } from "./sections/hero-section";

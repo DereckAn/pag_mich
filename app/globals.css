@@ -70,11 +70,10 @@ button:hover .bottom-span {
   color: transparent;
   animation: enhanced-header linear both;
   animation-timeline: scroll(root);
-  animation-range: 0 600px;
+  animation-range: 0 300px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 10s ease-in-out;
-}
+} 
 
 .navbarsettings:hover{
   opacity: 1;
