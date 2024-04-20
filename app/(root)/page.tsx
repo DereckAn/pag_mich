@@ -3,6 +3,7 @@ import { FoodSection } from "./sections/food-section";
 import { HeroSection } from "./sections/hero-section";
 import { HighlightSection } from "./sections/highlights-sections";
 import { MenuSection } from "./sections/menu-section";
+import { ReviewSection } from "./sections/reviews-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FoodSection />
       <AboutUs />
       <HighlightSection />
+      <ReviewSection />
     </>
   );
 }
