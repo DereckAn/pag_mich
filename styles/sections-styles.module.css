@@ -1,0 +1,15 @@
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.span_r_2 {
+  grid-row: span 2;
+}
+
+.span_rc_2 {
+  grid-row: span 2;
+  grid-column: span 2;
+}

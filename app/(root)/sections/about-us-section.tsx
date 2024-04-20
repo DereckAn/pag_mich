@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <Container className="flex flex-col lg:flex-row justify-center items-center border-2 px-10 ">
+    <Container className="flex flex-col lg:flex-row justify-center items-center px-10 ">
       <div className=" rounded-3x sm:w-3/4 md:w-2/4 px-2 sm:px-0">
         <Image
           src={bebidas}
