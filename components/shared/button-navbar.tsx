@@ -11,7 +11,7 @@ interface ButtonNavbarProps {
 
 export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
   return (
-    <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center">
+    <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center navbarsettings ">
       <div
         className={cn(
           "absolute   rounded-full bg-color_azul_perry visible  transition-all duration-700 ease-in-out  ",

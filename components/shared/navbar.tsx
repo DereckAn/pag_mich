@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ButtonNavbar } from "./button-navbar";
+import { cn } from "@/utils/utils";
 
 export const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,10 +17,10 @@ export const Navbar = () => {
   };
 
   return (
-    <header className=" header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none navbarsettings">
+    <header className=" header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none ">
       <div className="flex items-center justify-between">
         <Link
-          className="block relative z-50 ml-[5%] sm:ml-[7.5%] pointer-events-auto  "
+          className={cn("block relative z-50 ml-[5%] sm:ml-[7.5%] pointer-events-auto navbarsettings ", showMenu && "opacityy")}
           href={"/"}
           onClick={() => {
             setShowMenu(false);

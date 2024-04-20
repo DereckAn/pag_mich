@@ -215,33 +215,32 @@ export const frequentQuestions = [
   },
 ];
 
-
 export const footerLinks = [
   {
     title: "About",
     links: [
-      "Contact Us",
-      "About Protein House",
-      "Our Mission",
-      "FAQs",
+      { name: "About Us", url: "/about" },
+      { name: "Contact Us", url: "/contact" },
+      { name: "Careers", url: "/careers" },
+      { name: "Press", url: "/press" },
     ],
   },
   {
     title: "Ordering",
     links: [
-      "Order Now",
-      "Lookup Order",
-      "Order History",
-      "My Account",
+      { name: "Order Now", url: "/ordernow" },
+      { name: "Lookup Order", url: "/lookup-order" },
+      { name: "Order History", url: "/order-history" },
+      { name: "My Account", url: "/my-account" },
     ],
   },
   {
     title: "Menu",
     links: [
-      "Coockies",
-      "Waffels",
-      "Pancakes",
-      "Smoothies",
+      { name: "Menu", url: "/menu" },
+      { name: "Nutrition", url: "/nutrition" },
+      { name: "Allergens", url: "/allergens" },
+      { name: "Ingredients", url: "/ingredients" },
     ],
   },
 ];

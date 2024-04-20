@@ -73,7 +73,18 @@ button:hover .bottom-span {
   animation-range: 0 600px;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 10s ease-in-out;
 }
+
+.navbarsettings:hover{
+  opacity: 1;
+}
+
+.opacityy {
+  opacity: 1;
+  pointer-events: none;
+}
+
 
 @keyframes enhanced-header {
   to {
@@ -159,6 +170,7 @@ button:hover .bottom-span {
   animation: wobble-horizontal-bottom 0.8s linear both, fade-in 0.8s linear both;
   animation-delay: 0.2s;
 }
+
 @keyframes wobble-horizontal-bottom {
   0%,
   100% {
