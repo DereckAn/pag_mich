@@ -1,6 +1,6 @@
-import "@/styles/catering-styles.css";
 import Image, { StaticImageData } from "next/image";
 import { Buttons } from "./buttons";
+import Menuhi from "@/styles/catering-styles.module.css";
 
 interface MenuHighlightCateringProps {
   title: string;

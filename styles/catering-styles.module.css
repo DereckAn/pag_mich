@@ -34,27 +34,27 @@
   transition: max-height 0.4s ease-in-out;
 }
 
-.flex .top-spanc,
-.flex .bottom-spanc {
+.d_flex .top_spanc,
+.d_flex .bottom_spanc {
   transition: transform 0.4s ease-in-out;
 }
 
-.dropdown_check:not(:checked) ~ .flex .top-spanc {
+.dropdown_check:not(:checked) ~ .d_flex .top_spanc {
   top: 50%;
   transform: translateY(0px) rotate(45deg);
 }
 
-.dropdown_check:not(:checked) ~ .flex .bottom-spanc {
+.dropdown_check:not(:checked) ~ .d_flex .bottom_spanc {
   top: 50%;
   transform: translateY(0px) rotate(-45deg);
 }
 
-.dropdown_check:checked ~ .flex .top-spanc {
+.dropdown_check:checked ~ .d_flex .top_spanc {
   top: 50%;
   transform: translateY(0px) rotate(-45deg);
 }
 
-.dropdown_check:checked ~ .flex .bottom-spanc {
+.dropdown_check:checked ~ .d_flex .bottom_spanc {
   top: 50%;
   transform: translateY(0px) rotate(45deg);
 }

@@ -1,3 +1,5 @@
+'use server';
+
 import { cateringSection } from "@/assets/constants";
 import { Container } from "@/components/ui/container";
 import { OccationCatering } from "@/components/ui/occation-catering";

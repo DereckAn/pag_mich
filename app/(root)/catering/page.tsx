@@ -1,3 +1,5 @@
+'use server';
+
 import { CateringMenu } from "./sections-catering/catering-menu";
 import { DetailsCatering } from "./sections-catering/details-section";
 import { FrequentQuest } from "./sections-catering/fre-questions";

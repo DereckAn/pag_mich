@@ -1,3 +1,5 @@
+'use server';
+
 import { cateringMenu } from "@/assets/constants";
 import { Container } from "@/components/ui/container";
 import { MenuHighlightCatering } from "@/components/ui/menu-highlight-catering";

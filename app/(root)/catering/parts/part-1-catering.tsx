@@ -1,3 +1,5 @@
+'use server';
+
 import { logo } from "@/assets";
 import { Buttons } from "@/components/ui/buttons";
 import { cn } from "@/utils/utils";

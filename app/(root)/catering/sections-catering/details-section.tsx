@@ -1,3 +1,5 @@
+'use server';
+
 import { detailsCatering } from "@/assets/constants";
 import { Buttons } from "@/components/ui/buttons";
 import { Container } from "@/components/ui/container";
