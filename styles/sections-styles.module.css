@@ -9,15 +9,74 @@
   grid-row: span 2;
 }
 
-.span_rc_2 {
+.span_rc_2, .spanx2 {
   grid-row: span 2;
   grid-column: span 2;
 }
 
-.reviews{
+
+.reviews {
+  --widtht: 300px;
+  --heightt: 300px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   padding: 10px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, var(--widtht));
+  grid-auto-rows: var(--widtht);
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.card {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.square:hover > .card {
+  transform: rotateY(180deg);
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: darkgoldenrod;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: cadetblue;
+}
+
+
+@media (width < 630px) {
+  .spanx2{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+
+@media (width >= 1280px) {
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
 }

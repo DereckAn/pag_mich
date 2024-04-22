@@ -1,16 +1,17 @@
-'use server';
+"use server";
 
 import { detailsCatering } from "@/assets/constants";
 import { Buttons } from "@/components/ui/buttons";
 import { Container } from "@/components/ui/container";
 import { Title } from "@/components/ui/title";
+import Details from "@/styles/catering-styles.module.css";
 import Image from "next/image";
 
 export const DetailsCatering = () => {
   return (
     <Container>
       <Title title="Details de catering" />
-      <div className="w-full details_catering padding-auto ">
+      <div className={`w-full ${Details.details_catering} padding-auto`}>
         {detailsCatering.map((item) => (
           <div
             key={item.text}
