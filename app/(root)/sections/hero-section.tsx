@@ -15,7 +15,6 @@ export const HeroSection = () => {
         href={"/ordernow"}
         className="flex flex-col items-center justify-center"
       >
-        {/* <div className="text-5xl text-primary">Order Now</div> */}
         <Image src={logo} alt="logo" className="w-[20rem] " />
       </Link>
     </div>

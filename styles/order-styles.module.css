@@ -1,0 +1,5 @@
+.order_card {
+  position: absolute;
+  top: 70%;
+  border-radius: 80% 80% 80% 80%/ 70% 70% 70% 70%;
+}

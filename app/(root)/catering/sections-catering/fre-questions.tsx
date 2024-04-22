@@ -18,7 +18,6 @@ export const FrequentQuest = () => {
               <Arrow />
               {item.question}
             </h3>
-            {/* <div className="dropdown_content "> */}
             <div className={`${Freq.dropdown_content}`}>
               <p className="text-lg max-w-xl ">{item.answer}</p>
             </div>

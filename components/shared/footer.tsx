@@ -23,7 +23,7 @@ export const Footer = () => {
         ))}
       </div>
       <a
-        href="https://portafolio-2023-iota.vercel.app/"
+        href="https://dereckan.com/"
         className="text-center"
         target="_blank"
         rel="noopener noreferrer"
