@@ -49,7 +49,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    className="w-[3rem] "
+                    className="w-[3rem] wobble-horizontal-bottom "
                   />
                 </a>
               ))}

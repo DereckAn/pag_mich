@@ -8,13 +8,13 @@ import { OccasionSection } from "./sections-catering/occasion-section";
 
 const Catering = () => {
   return (
-    <>
+    <main>
       <HeroGridSection />
       <OccasionSection />
       <CateringMenu />
       <DetailsCatering />
       <FrequentQuest />
-    </>
+    </main>
   );
 };
 

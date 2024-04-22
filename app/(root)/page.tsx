@@ -7,14 +7,13 @@ import { ReviewSection } from "./sections/reviews-section";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <HeroSection />
       <MenuSection />
       <FoodSection />
       <AboutUs />
       <HighlightSection />
       <ReviewSection />
-
-    </>
+    </main>
   );
 }

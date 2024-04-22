@@ -6,7 +6,7 @@ export const HighlightSection = () => {
   return (
     <Container>
       <Title title="Highlights" />
-      <div className={`w-full h-[65vw] ${Highlight.highlights}`}>
+      <div className={`w-full h-[65vw] 2xl:h-[50vw] ${Highlight.highlights}`}>
         <div className={`bg-white w-full rounded-3xl ${Highlight.span_r_2 }`}></div>
         <div className={`bg-white w-full rounded-3xl`}></div>
         <div className={`bg-white w-full rounded-3xl`}></div>

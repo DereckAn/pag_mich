@@ -166,7 +166,7 @@ button:hover .bottom-span {
 }
 
 .wobble-horizontal-bottom {
-  animation: wobble-horizontal-bottom 0.8s linear both, fade-in 0.8s linear both;
+  animation: wobble-horizontal-bottom 0.8s linear both, fade-in 1s linear both;
   animation-delay: 0.2s;
 }
 
