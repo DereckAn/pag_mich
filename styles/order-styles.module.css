@@ -3,3 +3,20 @@
   top: 70%;
   border-radius: 80% 80% 80% 80%/ 70% 70% 70% 70%;
 }
+
+.toparrow{
+  transform: rotate(42deg) translateX(-6px)
+}
+
+.bownarrow{
+  transform: rotate(-42deg) translateX(-6px)
+}
+
+.tailarrow{
+  top: 50%;
+  /* transform: rotate(-45deg) */
+}
+
+.tailarrow:hover{
+  width:2rem;
+}
