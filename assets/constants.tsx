@@ -244,3 +244,27 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const orderCards = [
+  {
+    title: "Order Now",
+    text: `¡Saborea la vida, un bocado a la vez! Haz tu pedido ahora y disfruta
+    de la delicia en tu puerta.`,
+    image: comida11,
+    href: "/menu",
+  },
+  {
+    title: "Delivery",
+    text: `¡Saborea la vida, un bocado a la vez! Haz tu pedido ahora y disfruta
+    de la delicia en tu puerta.`,
+    image: comida11,
+    href: "/menu",
+  },
+  {
+    title: "Catering",
+    text: `¡Saborea la vida, un bocado a la vez! Haz tu pedido ahora y disfruta
+    de la delicia en tu puerta.`,
+    image: comida11,
+    href: "/catering",
+  },
+];
