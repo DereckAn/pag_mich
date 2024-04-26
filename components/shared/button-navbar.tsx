@@ -3,6 +3,7 @@ import { cn } from "@/utils/utils";
 import Image from "next/image";
 import { MapMenu } from "../ui/map-menu";
 import { TresLineas } from "../ui/tres-lineas";
+import { SvgComponent } from "@/assets/svg/instagram";
 
 interface ButtonNavbarProps {
   showMenu: boolean;
@@ -53,6 +54,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
                   />
                 </a>
               ))}
+              {/* <SvgComponent className={"w-5 h-5"}/> */}
             </div>
             <div className="w-10 basis-1/2"> </div>
           </div>

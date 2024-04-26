@@ -13,6 +13,8 @@ import {
   whatsapp,
 } from "./index";
 
+// import { tiktok, facebook, whatsapp, instagram  } from "./index";
+
 export const routes = [
   {
     name: "Home",
@@ -48,14 +50,14 @@ export const socials = [
     url: "https://www.instagram.com/",
   },
   {
-    name: "Twitter",
+    name: "Whatsapp",
     icon: whatsapp,
     url: "https://twitter.com/",
   },
   {
-    name: "LinkedIn",
+    name: "Facebook",
     icon: facebook,
-    url: "https://www.linkedin.com/",
+    url: "https://www.facebook.com/",
   },
 ];
 

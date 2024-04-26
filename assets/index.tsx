@@ -61,3 +61,11 @@ export {
   fruitbowl,
   truk,
 };
+
+// export { default as tiktok } from './svg/tiktok.svg';
+// export { default as instagram } from './svg/instagram.svg';
+// export { default as facebook } from './svg/facebook.svg';
+// export { default as whatsapp } from './svg/whatsapp.svg';
+
+
+
