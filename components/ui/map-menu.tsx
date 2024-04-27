@@ -21,9 +21,9 @@ export const MapMenu = ({ setShowMenu }: MapMenuProps) => {
             onClick={() => setShowMenu && setShowMenu(false)}
             href={route.path}
             className={cn(
-              " subrayado text-8xl font-bold wobble-horizontal-bottom text-center",
+              " subrayado text-8xl font-bold wobble-horizontal-bottom text-center text-primary",
               pathName === route.path &&
-                "text-primary before:w-full before:bg-primary  "
+                "text-secondary before:w-full before:bg-primary  "
             )}
           >
             {route.name}

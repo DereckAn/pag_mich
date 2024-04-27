@@ -1,5 +1,4 @@
 import { routes, socials } from "@/assets/constants";
-import Image from "next/image";
 import Link from "next/link";
 
 export const FooterX = () => {
@@ -32,17 +31,28 @@ export const FooterX = () => {
         <div className="md:col-span-4 xl:col-span-3">
           <h2 className="font-bold mb-6 uppercase">Social Media</h2>
           <nav>
-            {socials.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg transition-colors"
-                target="_blank"
-              >
-                {/* {social.icon} */}
-                {social.name}
-              </a>
-            ))}
+            {socials.map((social) => {
+              const IconComponent = social.iconComponent;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  className="group flex items-center gap-2 hover:bg-vainilla p-2 rounded-lg transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span
+                    style={{ color: "#F5ECD7"}}
+                    className="group-hover:text-primary"
+                  >
+                    <IconComponent size={22} />
+                  </span>
+                  <span className="group-hover:text-primary">
+                    {social.name}
+                  </span>
+                </a>
+              );
+            })}
           </nav>
         </div>
         <div className="md:col-span-4 xl:col-span-3">

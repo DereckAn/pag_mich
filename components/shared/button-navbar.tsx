@@ -1,9 +1,7 @@
 import { socials } from "@/assets/constants";
 import { cn } from "@/utils/utils";
-import Image from "next/image";
 import { MapMenu } from "../ui/map-menu";
 import { TresLineas } from "../ui/tres-lineas";
-import { SvgComponent } from "@/assets/svg/instagram";
 
 interface ButtonNavbarProps {
   showMenu: boolean;
@@ -40,21 +38,19 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
             <div className="w-10 basis-1/2"> </div>
 
             <div className="flex gap-5">
-              {socials.map((social) => (
-                <a
-                  href={social.url}
-                  key={social.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    className="w-[3rem] wobble-horizontal-bottom "
-                  />
-                </a>
-              ))}
-              {/* <SvgComponent className={"w-5 h-5"}/> */}
+              {socials.map((social) => {
+                const IconComponent = social.iconComponent;
+                return (
+                  <a
+                    href={social.url}
+                    key={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IconComponent size={50} className="fill-primary" />
+                  </a>
+                );
+              })}
             </div>
             <div className="w-10 basis-1/2"> </div>
           </div>

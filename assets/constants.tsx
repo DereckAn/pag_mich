@@ -1,19 +1,14 @@
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import {
   balloons,
   building,
   comida11,
-  facebook,
   food_cart,
   fruitbowl,
-  instagram,
-  tiktok,
   time,
   truk,
   wedding,
-  whatsapp,
 } from "./index";
-
-// import { tiktok, facebook, whatsapp, instagram  } from "./index";
 
 export const routes = [
   {
@@ -41,22 +36,22 @@ export const routes = [
 export const socials = [
   {
     name: "TikTok",
-    icon: tiktok,
-    url: "https://www.facebook.com/",
+    iconComponent: FaTiktok,
+    url: "https://www.tiktok.com/",
   },
   {
     name: "Instagram",
-    icon: instagram,
+    iconComponent: FaInstagram,
     url: "https://www.instagram.com/",
   },
   {
     name: "Whatsapp",
-    icon: whatsapp,
-    url: "https://twitter.com/",
+    iconComponent: FaWhatsapp,
+    url: "https://whatsapp.com/",
   },
   {
     name: "Facebook",
-    icon: facebook,
+    iconComponent: FaFacebook,
     url: "https://www.facebook.com/",
   },
 ];
