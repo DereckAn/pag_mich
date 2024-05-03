@@ -14,7 +14,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
       <div
         className={cn(
           "absolute   rounded-full bg-color_azul_perry visible  transition-all duration-700 ease-in-out  ",
-          showMenu ? "w-screen h-screen rounded-none" : " buttonwh"
+          showMenu ? "w-[100vw] h-[100vw] rounded-none" : " buttonwh"
         )}
         style={{ transform: showMenu ? "scale(3)" : "scale(1)" }}
       />

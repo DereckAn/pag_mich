@@ -4,11 +4,13 @@ import { HeroSection } from "./sections/hero-section";
 import { HighlightSection } from "./sections/highlights-sections";
 import { MenuSection } from "./sections/menu-section";
 import { ReviewSection } from "./sections/reviews-section";
+import { SliderBeverages } from "./sections/slider-bebidas";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <SliderBeverages />
       <MenuSection />
       <FoodSection />
       <AboutUs />

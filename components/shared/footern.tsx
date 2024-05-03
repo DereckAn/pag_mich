@@ -42,10 +42,10 @@ export const FooterX = () => {
                   rel="noreferrer"
                 >
                   <span
-                    style={{ color: "#F5ECD7"}}
+                    style={{ color: "#F5ECD7" }}
                     className="group-hover:text-primary"
                   >
-                    <IconComponent size={22} />
+                    <IconComponent size={22} className="group-hover:text-primary"/>
                   </span>
                   <span className="group-hover:text-primary">
                     {social.name}
@@ -119,16 +119,22 @@ export const FooterX = () => {
       </div>
       <hr className="my-4" />
       <div className="flex flex-col xl:flex-row gap-4 items-center justify-between">
-        <p className=" text-center md:text-left">
-          &copy; {new Date().getFullYear()}
-          <span className="font-bold">DA Devs.</span> All rights reserved.
-        </p>
+        <a
+          href="https://dereckan.com/ "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p className=" text-center md:text-left">
+            &copy; {new Date().getFullYear()}
+            <span className="font-bold">D.A. Dev.</span> All rights reserved.
+          </p>
+        </a>
         <div className="flex flex-col md:flex-row items-center gap-2">
-          <a href="#" className=" hover:text-gray-900 transition-colors">
+          <a href="/" className=" hover:text-gray-900 transition-colors">
             Terminos y condiciones
           </a>
           <span className="hidden md:flex">|</span>
-          <a href="#" className=" hover:text-gray-900 transition-colors">
+          <a href="/" className=" hover:text-gray-900 transition-colors">
             Política de privacidad
           </a>
         </div>
