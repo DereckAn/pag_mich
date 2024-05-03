@@ -1,54 +1,45 @@
-import { cn } from "@/utils/utils";
 import Image, { StaticImageData } from "next/image";
+import { Buttons } from "./buttons";
 
 interface SliderItemProps {
   itemActivo: number;
   id: number;
   image: StaticImageData;
-  brand: string;
   name: string;
   description: string;
 }
 
-const SliderItem = ({
+export const SliderItem = ({
   itemActivo,
   id,
   image,
-  brand,
   name,
   description,
 }: SliderItemProps) => {
   return (
-    <li
-      className={cn(
-        "absolute inset-0 overflow-hidden after:absolute after:w-full after:h-full after:left-0 after:bottom-0 after:bg-slider transition-all duration-500",
-        itemActivo === id ? "z-10 opacity-100" : "opacity-0"
-      )}
-    >
-      <div className="relative w-full h-full ">
+    <li className="absolute top-0 bottom-0 -left-[18%] m-auto flex items-center gap-16 border-2">
+      <div className="rounded-full w-[45vw] h-[45vw]  flex relative items-center justify-center">
         <Image
           src={image}
           fill
-          className="object-cover"
+          className="rounded-full object-cover "
           alt="Image"
-          sizes="100%"
           placeholder="blur"
           loading="lazy"
         />
       </div>
-      <div className="spcae-y-4 absolute left-[10%] top-[20%] w-[500px] max-w-[80%] z-10">
-        <p
-          className={cn(
-            "uppercase tracking-[10px] text-white translate-y-[30px] blur-[20px] opacity-0 ",
-            itemActivo === id && "animate-show-content"
-          )}
-        >
-          {brand}
-        </p>
+      <div className=" flex flex-col items-start justify-center gap-5">
+        <h2 className="text-6xl font-bold">{name}</h2>
+        <p className="text-xl max-w-md">{description}</p>
+        <Buttons href="/" text="Buy now" className="bg-primary " />
+
+      </div>
+
+      {/* <div className="spcae-y-4 absolute w-[500px] top-0 left-0 right-0 m-auto z-100">
         <h2
           className={cn(
             "text-6xl lg:text-8xl m-0 text-white font-bold translate-y-[30px] blur-[20px] opacity-0 animation-delay-4",
-            itemActivo === id && "animate-show-content"
+            // itemActivo === id && "animate-show-content"
           )}
         >
           {name}
@@ -56,14 +47,12 @@ const SliderItem = ({
         <p
           className={cn(
             "text-gray-200 translate-y-[30px] blur-[20px] opacity-0 animation-delay-5",
-            itemActivo === id && "animate-show-content"
+            // itemActivo === id && "animate-show-content"
           )}
         >
           {description}
         </p>
-      </div>
+      </div> */}
     </li>
   );
 };
-
-export default SliderItem;

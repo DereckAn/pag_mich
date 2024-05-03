@@ -5,8 +5,8 @@ import { Title } from "@/components/ui/title";
 
 const OrderNow = () => {
   return (
-    <main className="">
-      <Title title="Order Now" className="text-black" />
+    <main className="p-[.1px]">
+      <Title title="Order Now" className="text-black mt-16" />
       <Container className=" flex justify-center items-center flex-row">
         {orderCards.map((card) => (
           <OrderCard

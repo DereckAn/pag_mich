@@ -15,7 +15,7 @@ export default function Home() {
       <FoodSection />
       <AboutUs />
       <HighlightSection />
-      <ReviewSection />
+      <ReviewSection /> 
     </main>
   );
 }

@@ -56,6 +56,23 @@ export const socials = [
   },
 ];
 
+export const bebidasSliderSection = [
+  {
+    imagen: fruitbowl,
+    titulo: "Fresh Grapes",
+    link: "/menu",
+    descripcion:
+      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+  },
+  {
+    imagen: fruitbowl,
+    titulo: "Fresh Grapes",
+    link: "/menu",
+    descripcion:
+      "Fresh grapes are a great snack to have on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+  },
+];
+
 export const menuSection = [
   {
     name: "Coockies",

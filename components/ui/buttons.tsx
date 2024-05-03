@@ -1,5 +1,3 @@
-'use server';
-
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 

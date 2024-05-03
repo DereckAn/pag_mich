@@ -10,9 +10,9 @@ export const CateringMenu = () => {
     <Container>
       <Title title="Catering Menu" />
       <div className="flex flex-wrap w-full items-center justify-center ">
-        {cateringMenu.map((item, index) => (
+        {cateringMenu.map((item) => (
           <MenuHighlightCatering
-            key={index}
+            key={item.title}
             title={item.title}
             text={item.text}
             image={item.image}

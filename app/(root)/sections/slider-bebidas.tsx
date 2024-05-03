@@ -1,21 +1,34 @@
+"use client";
 import { cerdo } from "@/assets";
-import Image from "next/image";
-import Link from "next/link";
+import { ArrowsLR } from "@/components/ui/arrows-lr";
+import { SliderItem } from "@/components/ui/slider-items";
+import { useState } from "react";
 
 export const SliderBeverages = () => {
+  const [itemActivo, setItemActivo] = useState<number>(1);
+  const countItems = 10;
+
+  const handleNext = () => {
+    setItemActivo((prev) => (prev === countItems ? 1 : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setItemActivo((prev) => (prev === 1 ? countItems : prev - 1));
+  };
   return (
-    <section className="w-full h-screen overflow-hidden">
+    <section className="w-full h-screen relative">
       <ul>
-        <div className="item absolute w-full h-screen ">
-          <div className="rounded-full w-[45vw] h-[45vw] absolute -left-[20%] top-0 bottom-0 m-auto">
-            <Image src={cerdo} alt="Bebida 1" className="rounded-full w-ful h-full object-cover"/>
-          </div>
-          <div className="content">
-            <h3>Nombre de la bebida</h3>
-            <p>Descripción de la bebida</p>
-            <Link href="/"> Buy now </Link>
-          </div>
-        </div>
+        <SliderItem
+          itemActivo={itemActivo}
+          id={1}
+          image={cerdo}
+          name="Fresh Grapes"
+          description="loremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        />
+      </ul>
+      <ArrowsLR handleNext={handleNext} handlePrev={handlePrev} />
+      <ul>
+
       </ul>
     </section>
   );
