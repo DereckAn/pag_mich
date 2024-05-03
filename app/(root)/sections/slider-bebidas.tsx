@@ -1,34 +1,50 @@
 "use client";
 import { cerdo } from "@/assets";
+import { bebidasSliderSection } from "@/assets/constants";
 import { ArrowsLR } from "@/components/ui/arrows-lr";
+import { SliderBebidas } from "@/components/ui/slider-bebidas";
 import { SliderItem } from "@/components/ui/slider-items";
 import { useState } from "react";
 
 export const SliderBeverages = () => {
-  const [itemActivo, setItemActivo] = useState<number>(1);
-  const countItems = 10;
+  const [itemActivo, setItemActivo] = useState<number>(0);
+  const countItems = bebidasSliderSection.length - 1;
 
   const handleNext = () => {
-    setItemActivo((prev) => (prev === countItems ? 1 : prev + 1));
+    setItemActivo((prev) => (prev === countItems ? 0 : prev + 1));
   };
 
   const handlePrev = () => {
-    setItemActivo((prev) => (prev === 1 ? countItems : prev - 1));
+    setItemActivo((prev) => (prev === 0 ? countItems : prev - 1));
   };
+
+  
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen relative overflow-hidden">
       <ul>
-        <SliderItem
-          itemActivo={itemActivo}
-          id={1}
-          image={cerdo}
-          name="Fresh Grapes"
-          description="loremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
-        />
+        {bebidasSliderSection.map((bebida, index) => (
+          <SliderItem
+            key={bebida.titulo}
+            itemActivo={itemActivo}
+            id={index}
+            imagec={bebida.imagenc}
+            titulo={bebida.titulo}
+            description={bebida.description}
+          />
+        ))}
       </ul>
       <ArrowsLR handleNext={handleNext} handlePrev={handlePrev} />
-      <ul>
-
+      <ul className="flex absolute h-[80%]  border-4 top-0 bottom-0 left-[55%] m-auto w-full  gap-10 ">
+        {bebidasSliderSection.map((bebida, index) => (
+          <SliderBebidas
+            key={bebida.titulo}
+            imagel={bebida.imagenl}
+            id={index}
+            onClick={() => setItemActivo(index)}
+            itemActivo={itemActivo}
+            name={bebida.titulo}
+          />
+        ))}
       </ul>
     </section>
   );

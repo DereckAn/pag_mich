@@ -2,7 +2,11 @@ import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import {
   balloons,
   building,
+  comida1,
   comida11,
+  comida2,
+  comida3,
+  comida4,
   food_cart,
   fruitbowl,
   time,
@@ -58,18 +62,36 @@ export const socials = [
 
 export const bebidasSliderSection = [
   {
-    imagen: fruitbowl,
+    imagenc: comida1,
+    imagenl: comida11,
     titulo: "Fresh Grapes",
-    link: "/menu",
-    descripcion:
+    link: "/",
+    description:
       "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
   },
   {
-    imagen: fruitbowl,
+    imagenc: comida2,
+    imagenl: comida11,
     titulo: "Fresh Grapes",
-    link: "/menu",
-    descripcion:
-      "Fresh grapes are a great snack to have on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+    link: "/",
+    description:
+      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+  },
+  {
+    imagenc: comida3,
+    imagenl: comida11,
+    titulo: "Fresh Grapes",
+    link: "/",
+    description:
+      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+  },
+  {
+    imagenc: comida4,
+    imagenl: comida11,
+    titulo: "Fresh Grapes",
+    link: "/",
+    description:
+      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
   },
 ];
 

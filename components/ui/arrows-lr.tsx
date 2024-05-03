@@ -11,7 +11,7 @@ export const ArrowsLR = ({ handleNext, handlePrev }: ArrowsProps) => {
                          `;
 
   return (
-    <div className="absolute bottom-[20%] left-[40%] flex items-center gap-10">
+    <div className="absolute bottom-[20%] left-[45%] flex items-center gap-10 z-10">
       <button onClick={handlePrev} className={`${commonClasses} `}>
         <IoIosArrowBack size={40} className="m-auto inset-0 "/>
       </button>
