@@ -89,7 +89,12 @@
   gap: 30px;
   padding: 10px;
   justify-content: start;
-  overflow: hidden;
+  overflow: scroll;
   transition: transform 0.5s ease-in-out;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.card_carusell {
+  scroll-snap-align: start;
 }

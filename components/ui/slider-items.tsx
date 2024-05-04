@@ -29,6 +29,7 @@ export const SliderItem = ({
           src={imagec}
           className="rounded-full object-cover "
           fill
+          sizes="100%"
           alt="Image"
           loading="lazy"
         />
