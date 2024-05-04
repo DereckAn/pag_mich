@@ -4,9 +4,12 @@ import {
   building,
   comida1,
   comida11,
+  comida12,
   comida2,
   comida3,
   comida4,
+  comida8,
+  comida9,
   food_cart,
   fruitbowl,
   time,
@@ -71,24 +74,24 @@ export const bebidasSliderSection = [
   },
   {
     imagenc: comida2,
-    imagenl: comida11,
-    titulo: "Fresh Grapes",
+    imagenl: comida12,
+    titulo: "Fresh Apples",
     link: "/",
     description:
       "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
   },
   {
     imagenc: comida3,
-    imagenl: comida11,
-    titulo: "Fresh Grapes",
+    imagenl: comida9,
+    titulo: "Rotten Tommatos",
     link: "/",
     description:
       "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
   },
   {
     imagenc: comida4,
-    imagenl: comida11,
-    titulo: "Fresh Grapes",
+    imagenl: comida8,
+    titulo: "Orange HUge",
     link: "/",
     description:
       "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",

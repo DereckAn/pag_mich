@@ -10,7 +10,7 @@ interface SliderBebidasProps {
 
 export const SliderBebidas = ({ imagel, itemActivo, id, name, onClick }: SliderBebidasProps) => {
   return (
-    <li className="w-[15%] h-full relative">
+    <li className=" h-full w-[100%] relative card">
       <Image
         src={imagel}
         alt="Image"

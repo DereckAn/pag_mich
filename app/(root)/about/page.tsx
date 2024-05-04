@@ -1,5 +1,11 @@
+
 const AboutUs = () => {
-    return ( <main></main> );
-}
- 
+  return (
+    <main className="h-screen w-screen">
+        about
+        
+    </main>
+  );
+};
+
 export default AboutUs;

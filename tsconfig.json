@@ -5,7 +5,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/page.tsx"
-  ],
+, "components/ui/scroll.jsx"  ],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

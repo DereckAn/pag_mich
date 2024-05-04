@@ -33,7 +33,7 @@ export const SliderItem = ({
           loading="lazy"
         />
       </div>
-      <div className=" flex flex-col items-start justify-center gap-5">
+      <div className=" flex flex-col items-start justify-center gap-5 text-primary">
         <h2
           className={cn(
             `text-8xl font-bold`,
@@ -54,7 +54,7 @@ export const SliderItem = ({
           href="/"
           text="Buy now"
           className={cn(
-            "bg-primary ",
+            "bg-primary text-vainilla ",
             itemActivo === id && "animate-show-content"
           )}
         />

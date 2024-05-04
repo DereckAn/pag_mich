@@ -1,9 +1,9 @@
 "use client";
-import { cerdo } from "@/assets";
 import { bebidasSliderSection } from "@/assets/constants";
 import { ArrowsLR } from "@/components/ui/arrows-lr";
 import { SliderBebidas } from "@/components/ui/slider-bebidas";
 import { SliderItem } from "@/components/ui/slider-items";
+import sec from "@/styles/sections-styles.module.css";
 import { useState } from "react";
 
 export const SliderBeverages = () => {
@@ -18,9 +18,8 @@ export const SliderBeverages = () => {
     setItemActivo((prev) => (prev === 0 ? countItems : prev - 1));
   };
 
-  
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full h-screen relative overflow-hidde">
       <ul>
         {bebidasSliderSection.map((bebida, index) => (
           <SliderItem
@@ -34,7 +33,9 @@ export const SliderBeverages = () => {
         ))}
       </ul>
       <ArrowsLR handleNext={handleNext} handlePrev={handlePrev} />
-      <ul className="flex absolute h-[80%]  border-4 top-0 bottom-0 left-[55%] m-auto w-full  gap-10 ">
+      <ul
+        className={` absolute h-[80%] border-4 top-0 bottom-0 left-[55%] m-auto ${sec.carusell} `}
+      >
         {bebidasSliderSection.map((bebida, index) => (
           <SliderBebidas
             key={bebida.titulo}
