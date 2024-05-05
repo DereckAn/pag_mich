@@ -82,14 +82,14 @@
 }
 
 .carusell{
-  width: 60%;
+  width: 1400px;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 500px;
+  grid-auto-columns: 700px;
   gap: 30px;
   padding: 10px;
   justify-content: start;
-  overflow: scroll;
+  /* overflow: hidden; */
   transition: transform 0.5s ease-in-out;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -97,4 +97,16 @@
 
 .card_carusell {
   scroll-snap-align: start;
+}
+
+.cardd{
+  width: 700px;
+  background-color: darkgoldenrod;
+}
+
+.carusell {
+  transition: all 0.5s ease;
+}
+.first_card {
+  margin-left: -730px;
 }

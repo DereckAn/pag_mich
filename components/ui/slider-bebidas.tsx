@@ -8,18 +8,21 @@ interface SliderBebidasProps {
   name: string;
   onClick: () => void;
   className?: string;
+  onLoad?: () => void;
+  transformX: number;
 }
 
 export const SliderBebidas = ({
   imagel,
   itemActivo,
   id,
+  onLoad,
   name,
   onClick,
-  className,
+  className, transformX
 }: SliderBebidasProps) => {
   return (
-    <li className={cn(" h-full w-[100%] relative card", className)}>
+    <li style={{ transform: `translateX(${transformX}px)` }} className={cn(" h-full w-[100%] relative card", className)}>
       <Image
         src={imagel}
         alt="Image"
@@ -27,6 +30,7 @@ export const SliderBebidas = ({
         fill
         sizes="100%"
         loading="lazy"
+        onLoad={onLoad}
       />
     </li>
   );

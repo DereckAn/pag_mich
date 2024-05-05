@@ -20,7 +20,7 @@ export const SliderItem = ({
   return (
     <li
       className={cn(
-        "absolute top-0 bottom-0 -left-[18%] m-auto flex items-center gap-16 transition-all duration-1000 border-r-2",
+        "absolute top-0 bottom-0 -left-[10%] m-auto flex items-center gap-16 transition-all duration-1000 border-r-2",
         itemActivo === id ? "z-10 opacity-100" : "opacity-0"
       )}
     >
