@@ -81,7 +81,7 @@
   }
 }
 
-.carusell{
+/* .carusell{
   width: 1400px;
   display: grid;
   grid-auto-flow: column;
@@ -89,24 +89,68 @@
   gap: 30px;
   padding: 10px;
   justify-content: start;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: transform 0.5s ease-in-out;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-}
+} */
 
-.card_carusell {
+/* .card_carusell {
   scroll-snap-align: start;
-}
+} */
 
-.cardd{
+/* .cardd{
   width: 700px;
   background-color: darkgoldenrod;
-}
+} */
 
 .carusell {
-  transition: all 0.5s ease;
+    width: max-content;
+    margin-top: 50px;
 }
-.first_card {
+/* .first_card {
   margin-left: -730px;
+} */
+
+.item {
+  width: 400px;
+  height: 400px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 1s;
+  background-size: 200%;
+  position: absolute;
+  z-index: 1;
+}
+
+.item:nth-child(1) {
+  transform: translate(-150%);
+  opacity: 0;
+}
+.item:nth-child(2) {
+  transform: translate(-40%);
+}
+.item:nth-child(3) {
+  transform: translate(70%);
+}
+.item:nth-child(4) {
+  transform: translate(180%);
+}
+.item:nth-child(n + 5) {
+  transform: translate(290%);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 80%;
+  padding: 0 10%;
+  font-family: system-ui;
+  text-align: center;
+  box-shadow: 0 30px 50px #b9b9b9;
+  transition: 0.5s;
+  overflow: hidden;
+  max-height: 0;
 }
