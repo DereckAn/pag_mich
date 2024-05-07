@@ -1,9 +1,11 @@
 "use client";
 import { bebidasSliderSection } from "@/assets/constants";
 import { ArrowsLR } from "@/components/ui/arrows-lr";
-import { SliderBebidas } from "@/components/ui/slider-bebidas";
+import EmblaCarousel from "@/components/ui/EmblaCarousel";
+import { usePrevNextButtons } from "@/components/ui/EmblaCarouselArrowButtons";
 import { SliderItem } from "@/components/ui/slider-items";
-import { cn } from "@/utils/utils";
+import { EmblaOptionsType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
 import { useRef, useState } from "react";
 
 export const SliderBeverages = () => {
@@ -17,13 +19,34 @@ export const SliderBeverages = () => {
 
   const handlePrev = () => {
     setListaaa(listaaa.slice(-1).concat(listaaa.slice(0, -1)));
-
   };
 
+  const handleNextCombined = () => {
+    handleNext();
+    onNextButtonClick();
+  };
+
+  const handlePrevCombined = () => {
+    handlePrev();
+    onPrevButtonClick();
+  };
+
+  const OPTIONS: EmblaOptionsType = { align: "start", loop: true };
+  const SLIDE_COUNT = 5;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
+
   return (
-    <section className="w-full h-screen relative overflow-hidden  ">
+    <section className="w-full h-screen relative overflow-hiddn  ">
       <ul>
-        {listaaa.map((bebida, index ) => (
+        {listaaa.map((bebida, index) => (
           <SliderItem
             key={bebida.titulo + index}
             itemActivo={itemActivo}
@@ -34,19 +57,25 @@ export const SliderBeverages = () => {
           />
         ))}
       </ul>
-      <ArrowsLR handleNext={handleNext} handlePrev={handlePrev} />
-      <div id="slide" className=" absolute right-[10%] top-0 bottom-0 m-auto h-[80%] flex items-center justify-center">
-        {listaaa.map((bebida, index) => (
-          <SliderBebidas
-            key={bebida.titulo}
-            imagel={bebida.imagenl}
-            id={index}
-            itemActivo={itemActivo}
-            name={bebida.titulo}
-            className={` item`}
-          />
-        ))}
-      </div> 
+      <ArrowsLR
+        handleNext={handleNextCombined}
+        handlePrev={handlePrevCombined}
+      />
+      <EmblaCarousel
+        slides={SLIDES}
+        prevBtnDisabled={prevBtnDisabled}
+        nextBtnDisabled={nextBtnDisabled}
+        onPrevButtonClick={onPrevButtonClick}
+        onNextButtonClick={onNextButtonClick}
+        emblaRef={emblaRef}
+      />
+
+      {/* <div className="embla__controls ">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+      </div> */}
     </section>
   );
 };

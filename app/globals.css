@@ -73,9 +73,9 @@ button:hover .bottom-span {
   animation-range: 0 300px;
   opacity: 0;
   pointer-events: none;
-} 
+}
 
-.navbarsettings:hover{
+.navbarsettings:hover {
   opacity: 1;
 }
 
@@ -83,7 +83,6 @@ button:hover .bottom-span {
   opacity: 1;
   pointer-events: none;
 }
-
 
 @keyframes enhanced-header {
   to {
@@ -201,11 +200,6 @@ button:hover .bottom-span {
   }
 }
 
-
-
-
-
-
 .item {
   width: 400px;
   height: 100%;
@@ -235,8 +229,6 @@ button:hover .bottom-span {
   opacity: 0;
 }
 
-
-
 .item:nth-child(1).prev {
   transform: translate(150%);
   opacity: 0;
@@ -253,4 +245,92 @@ button:hover .bottom-span {
 .item:nth-child(n + 5).prev {
   transform: translate(-290%);
   opacity: 0;
+}
+
+.embla {
+  /* max-width: 50rem; */
+  margin: auto;
+  position: absolute;
+  right: -25%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --slide-height: 40vw;
+  --slide-spacing: 1rem;
+  --slide-size: 50%;
+}
+.embla__viewport {
+  overflow: hidden;
+  border: 4px solid orchid;
+}
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  /* min-width: 0px; */
+  padding-left: var(--slide-spacing);
+  border: 4px solid rgb(202, 218, 112);
+  width: 200px;
+  height: 700px;
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+}
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  border: 4px solid orchid;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+  border: 4px solid rgb(9, 0, 113);
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__button:disabled {
+  color: var(--detail-high-contrast);
+}
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
 }
