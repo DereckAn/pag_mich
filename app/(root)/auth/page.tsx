@@ -1,4 +1,5 @@
 "use client";
+import { providers } from "@/assets/constants";
 import { useState } from "react";
 
 const AuthForm = () => {
@@ -8,47 +9,39 @@ const AuthForm = () => {
     setIsLogin(!isLogin);
   };
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            {isLogin ? "Sign in to your account" : "Create a new account"}
-          </h2>
+    <main className="h-screen w-full">
+      <div className="text-center flex flex-col  items-center justify-center h-full">
+        <h2 className="text-[3.5rem] text-black font-bold">
+          Login to Your Account
+        </h2>
+        <p className="text-gray-500 my-2">Login using social networks</p>
+        <ul className="flex flex-row items-center justify-center gap-5 p-3">
+          {providers.map((providers) => {
+            const IconComponent = providers.provider;
+            return (
+              <li key={providers.color} className="rounded-full bg-primary p-2">
+                <IconComponent size={40} className="fill-vainilla" />
+              </li>
+            );
+          })}
+        </ul>
+        <div className="flex flex-row text-center">
+          <hr />
+          <p>OR</p>
+          <hr />
         </div>
-        <form className="mt-8 space-y-6">
-          {!isLogin && (
-            <input
-              type="text"
-              placeholder="Name"
-              className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-            />
-          )}
+        <div className="flex flex-col gap-3 p-5">
           <input
-            type="email"
+            type="text"
             placeholder="Email"
-            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            className="rounded-full p-[16px] w-[460px] focus:bg-vainilla focus:border-none focus:outline-none focus:ring focus:ring-primary"
           />
           <input
+          
             type="password"
             placeholder="Password"
-            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            className="rounded-full p-[16px] w-[460px] focus:bg-vainilla focus:border-none focus:outline-none focus:ring focus:ring-primary"
           />
-          <button
-            type="submit"
-            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            {isLogin ? "Login" : "Sign Up"}
-          </button>
-        </form>
-        <div className="flex items-center justify-center">
-          <button
-            onClick={switchMode}
-            className="font-medium text-indigo-600 hover:text-indigo-500"
-          >
-            {isLogin
-              ? "Need to create an account?"
-              : "Already have an account?"}
-          </button>
         </div>
       </div>
     </main>

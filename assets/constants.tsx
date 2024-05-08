@@ -1,4 +1,11 @@
-import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import {
   balloons,
   building,
@@ -132,7 +139,7 @@ export const menuSection = [
   {
     name: "Bowls",
     path: "/login",
-    icon: "🍲",
+    icon: "🍎",
   },
 ];
 
@@ -315,5 +322,24 @@ export const orderCards = [
     de la delicia en tu puerta.`,
     image: comida11,
     href: "/catering",
+  },
+];
+
+export const providers = [
+  {
+    provider: FcGoogle,
+    color: "red",
+  },
+  {
+    provider: FaFacebook,
+    color: "red",
+  },
+  {
+    provider: FaGithub,
+    color: "red",
+  },
+  {
+    provider: FaInstagram,
+    color: "red",
   },
 ];
