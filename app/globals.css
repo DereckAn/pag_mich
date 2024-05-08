@@ -264,7 +264,7 @@ button:hover .bottom-span {
 }
 .embla__viewport {
   overflow: hidden;
-  border: 4px solid orchid;
+  /* border: 4px solid orchid; */
 }
 .embla__container {
   backface-visibility: hidden;
@@ -276,7 +276,7 @@ button:hover .bottom-span {
   flex: 0 0 var(--slide-size);
   /* min-width: 0px; */
   padding-left: var(--slide-spacing);
-  border: 4px solid rgb(202, 218, 112);
+  /* border: 4px solid rgb(202, 218, 112); */
   width: 200px;
   height: 700px;
 }

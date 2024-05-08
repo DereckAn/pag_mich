@@ -6,11 +6,10 @@ import { usePrevNextButtons } from "@/components/ui/EmblaCarouselArrowButtons";
 import { SliderItem } from "@/components/ui/slider-items";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export const SliderBeverages = () => {
   const [itemActivo, setItemActivo] = useState<number>(0);
-  const carouselRef = useRef<HTMLUListElement>(null);
   const [listaaa, setListaaa] = useState(bebidasSliderSection);
 
   const handleNext = () => {
@@ -31,9 +30,8 @@ export const SliderBeverages = () => {
     onPrevButtonClick();
   };
 
-  const OPTIONS: EmblaOptionsType = { align: "start", loop: true };
-  const SLIDE_COUNT = 5;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+  const OPTIONS: EmblaOptionsType = { align: "start", loop: true, watchDrag: false, };
+  const Slides2 = bebidasSliderSection.map((bebida) => bebida.imagenl);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const {
@@ -44,7 +42,7 @@ export const SliderBeverages = () => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="w-full h-screen relative overflow-hiddn  ">
+    <section className="w-full h-screen relative overflow-hidden  ">
       <ul>
         {listaaa.map((bebida, index) => (
           <SliderItem
@@ -62,20 +60,9 @@ export const SliderBeverages = () => {
         handlePrev={handlePrevCombined}
       />
       <EmblaCarousel
-        slides={SLIDES}
-        prevBtnDisabled={prevBtnDisabled}
-        nextBtnDisabled={nextBtnDisabled}
-        onPrevButtonClick={onPrevButtonClick}
-        onNextButtonClick={onNextButtonClick}
+        slides={Slides2}
         emblaRef={emblaRef}
       />
-
-      {/* <div className="embla__controls ">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-      </div> */}
     </section>
   );
 };

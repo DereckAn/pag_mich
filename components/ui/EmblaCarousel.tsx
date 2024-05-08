@@ -1,29 +1,21 @@
-import { NextButton, PrevButton } from "./EmblaCarouselArrowButtons";
-
+import { StaticImageData } from "next/image";
+import  Image from "next/image";
 interface PropTypeProps {
-  slides: number[];
-  prevBtnDisabled: boolean;
-  nextBtnDisabled: boolean;
-  onPrevButtonClick: () => void;
-  onNextButtonClick: () => void;
+  slides: StaticImageData[];
   emblaRef: any;
 }
 
 const EmblaCarousel = ({
   slides,
-  prevBtnDisabled,
-  nextBtnDisabled,
-  onNextButtonClick,
-  onPrevButtonClick,
   emblaRef,
 }: PropTypeProps) => {
   return (
-    <section className="embla">
+    <section className="embla ">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+          {slides.map((ima, index) => (
+            <div className="embla__slide" key={ima.src}>
+               <Image src={ima} alt="imagen" className="w-full h-full object-cover"/>
             </div>
           ))}
         </div>

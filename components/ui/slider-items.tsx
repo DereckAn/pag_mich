@@ -20,7 +20,7 @@ export const SliderItem = ({
   return (
     <li
       className={cn(
-        "absolute top-0 bottom-0 -left-[10%] m-auto flex items-center gap-16 transition-all duration-1000 border-r-2",
+        "absolute top-0 bottom-0 -left-[10%] m-auto flex items-center gap-16 transition-all duration-1000 ",
         itemActivo === id ? "z-10 opacity-100" : "opacity-0"
       )}
     >
@@ -37,11 +37,12 @@ export const SliderItem = ({
       <div className=" flex flex-col items-start justify-center gap-5 text-primary">
         <h2
           className={cn(
-            `text-8xl font-bold`,
+            `text-8xl font-bold text-balance`,
             itemActivo === id && "animate-show-content"
           )}
+          style={{ whiteSpace: "pre-wrap" }}
         >
-          {titulo}
+          {titulo.split(" ").join("\n")}
         </h2>
         <p
           className={cn(
@@ -60,7 +61,6 @@ export const SliderItem = ({
           )}
         />
       </div>
-
-         </li>
+    </li>
   );
 };

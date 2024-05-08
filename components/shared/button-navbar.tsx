@@ -37,7 +37,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
           <div className="flex-grow basis-0 flex items-end">
             <div className="w-10 basis-1/2"> </div>
 
-            <div className="flex gap-5">
+            <div className="flex gap-5 wobble-horizontal-bottom">
               {socials.map((social) => {
                 const IconComponent = social.iconComponent;
                 return (
