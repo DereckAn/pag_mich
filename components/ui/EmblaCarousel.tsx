@@ -14,7 +14,7 @@ const EmblaCarousel = ({
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((ima, index) => (
-            <div className="embla__slide" key={ima.src}>
+            <div className="embla__slide" key={ima.src + index}>
                <Image src={ima} alt="imagen" className="w-full h-full object-cover"/>
             </div>
           ))}

@@ -332,14 +332,14 @@ export const providers = [
   },
   {
     provider: FaFacebook,
-    color: "red",
+    color: "green",
   },
   {
     provider: FaGithub,
-    color: "red",
+    color: "blue",
   },
   {
     provider: FaInstagram,
-    color: "red",
+    color: "pink",
   },
 ];
