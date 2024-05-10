@@ -53,7 +53,7 @@ export const SliderItem = ({
           {description}
         </p>
         <Buttons
-          href="/"
+          href="/menu"
           text="Buy now"
           className={cn(
             "bg-primary text-vainilla ",

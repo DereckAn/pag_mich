@@ -1,7 +1,10 @@
+import { SliderBeverages } from "../sections/slider-bebidas";
+
 const Menu = () => {
     return ( 
         <main>
-            <h1>Menu</h1>
+      <SliderBeverages />
+
         </main>
      );
 }

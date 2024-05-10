@@ -1,20 +1,14 @@
 import { providers } from "@/assets/constants";
 import { cn } from "@/utils/utils";
+import CreateInputs from "./createinputs";
 import { LoginInputs } from "./loginputs";
 
 interface LoginFormProps {
-  title: string;
-  signinup: string;
   showlogin: boolean;
   className?: string;
 }
 
-export const LoginForm = ({
-  title,
-  signinup,
-  showlogin,
-  className,
-}: LoginFormProps) => {
+export const LoginForm = ({ showlogin, className }: LoginFormProps) => {
   return (
     <div
       className={cn(
@@ -22,8 +16,12 @@ export const LoginForm = ({
         className
       )}
     >
-      <h2 className="text-[3.5rem] text-black font-bold">{title}</h2>
-      <p className="text-gray-500 my-2">{signinup} using social networks</p>
+      <h2 className="text-[3.5rem] text-black font-bold">
+        {showlogin ? "Login to Your Account" : "Create Free Account"}
+      </h2>
+      <p className="text-gray-500 my-2">
+        {showlogin ? "Login" : "Sign up"} using social networks
+      </p>
       <ul className="flex flex-row items-center justify-center gap-5 p-3">
         {providers.map((providers) => {
           const IconComponent = providers.provider;
@@ -44,7 +42,7 @@ export const LoginForm = ({
           OR
         </p>
       </div>
-      <LoginInputs />
+      {showlogin ? <LoginInputs /> : <CreateInputs />}
     </div>
   );
 };

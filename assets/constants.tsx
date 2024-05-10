@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaTiktok,
   FaWhatsapp,
+  FaApple
 } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
@@ -31,10 +32,10 @@ export const routes = [
     name: "Home",
     path: "/",
   },
-  {
-    name: "Order Now",
-    path: "/ordernow",
-  },
+  // {
+  //   name: "Order Now",
+  //   path: "/ordernow",
+  // },
   {
     name: "Menu",
     path: "/menu",
@@ -335,7 +336,7 @@ export const providers = [
     color: "green",
   },
   {
-    provider: FaGithub,
+    provider: FaApple,
     color: "blue",
   },
   {
