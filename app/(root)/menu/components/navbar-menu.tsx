@@ -1,5 +1,5 @@
 const NavbarMenu = () => {
-    return ( <nav>
+    return ( <nav className="sticky w-full bg-green-800 h-44 mb-10">
         
     </nav> );
 }

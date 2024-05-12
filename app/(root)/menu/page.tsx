@@ -1,19 +1,15 @@
 import { products } from "@/assets/dummydb";
-import { CardMenu } from "@/components/ui/menu/card-menu";
+import { ListaCardsMenu } from "@/components/ui/menu/list-cards-menu";
+import NavbarMenu from "./components/navbar-menu";
 
 const Menu = () => {
   return (
-    <main className="h-screen w-full flex items-center justify-center">
-      {products[0].milkshakes?.map((product) => (
-        <CardMenu
-          key={product.id}
-          stars={product.stars}
-          image={product.image}
-          price={product.price}
-          description={product.description}
-          title={product.title}
-        />
-      ))}
+    <main className="min-h-screen relative lg:pr-[23vw] xl:pr-[20vw] xxl:pr-[16vw]  px-5 xl:-px-0 ">
+      <NavbarMenu />
+      <ListaCardsMenu
+        products={products[0].milkshakes}
+        titulo={" Super Milshakes"}
+      />
     </main>
   );
 };

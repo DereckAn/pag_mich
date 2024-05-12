@@ -18,7 +18,7 @@ export const CardMenu = ({
 }: CardMenuProps) => {
   return (
     <div className="border-2 h-[350px] w-[300px] flex items-start flex-col justify-end p-4 rounded-3xl bg-[#f2f1e5] relative">
-      <Image src={image} alt="image" className="w-[200px] rounded-full absolute top-[-50px] left-0 right-0 m-auto" />
+      <Image src={image} alt="image" className="w-[200px] rounded-3xl absolute top-[-60px] left-0 right-0 m-auto" />
       <FixStarRating stars={stars} />
       <h3 className="text-black font-bold mt-2">{title}</h3>
       <p className="text-gray-600 my-3">{description}</p>
