@@ -1,16 +1,19 @@
 import Order from "@/styles/order-styles.module.css";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-interface OrderCardProps{
-    title: string
-    text:string
-    image: StaticImageData
-    href: string
+interface OrderCardProps {
+  title: string;
+  text: string;
+  image: StaticImageData;
+  href: string;
 }
 
-export const OrderCard = ({title, text, image, href}: OrderCardProps) => {
+export const OrderCard = ({ title, text, image, href }: OrderCardProps) => {
   return (
-    <Link  href={href} className="w-[20vw] h-[30vw] relative flex group rounded-3xl overflow-hidden">
+    <Link
+      href={href}
+      className="w-[20vw] h-[30vw] relative flex group rounded-3xl overflow-hidden"
+    >
       <div
         className={`h-[70%] w-[150%] bg-primary z-10 group-hover:top-[-25%] group-hover:bg-yellow-500 
     left-[-25%] transition-all duration-500 ease-in-out overflow-hidden ${Order.order_card}
@@ -20,9 +23,7 @@ export const OrderCard = ({title, text, image, href}: OrderCardProps) => {
         <p className="font-extrabold text-2xl text-vainilla group-hover:text-primary ">
           {title}
         </p>
-        <p className="text-wrap hidden group-hover:block px-5">
-          {text}
-        </p>
+        <p className="text-wrap hidden group-hover:block px-5">{text}</p>
       </div>
       <div className="absolute -z-0 w-full h-full overflow-hidden rounded-3xl">
         <Image
@@ -34,4 +35,3 @@ export const OrderCard = ({title, text, image, href}: OrderCardProps) => {
     </Link>
   );
 };
-
