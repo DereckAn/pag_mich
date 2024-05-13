@@ -10,13 +10,13 @@ interface OrderCardProps{
 
 export const OrderCard = ({title, text, image, href}: OrderCardProps) => {
   return (
-    <Link  href={href} className="w-[20vw] h-[30vw] relative flex group rounded-3xl overflow-auto">
+    <Link  href={href} className="w-[20vw] h-[30vw] relative flex group rounded-3xl overflow-hidden">
       <div
-        className={`h-[70%] w-[150%] bg-primary z-10 group-hover:top-[-25%] group-hover:bg-yellow-500
-    left-[-25%] transition-all duration-500 ease-in-out ${Order.order_card}
+        className={`h-[70%] w-[150%] bg-primary z-10 group-hover:top-[-25%] group-hover:bg-yellow-500 
+    left-[-25%] transition-all duration-500 ease-in-out overflow-hidden ${Order.order_card}
     flex justify-center `}
       ></div>
-      <div className="absolute z-10 top-[87%] space-y-5  group-hover:top-[7%] left-0 right-0 p-auto text-center transition-all duration-500 ease-in-out">
+      <div className="absolute z-10 top-[87%] space-y-5 rounded-3xl group-hover:top-[7%] left-0 right-0 p-auto text-center transition-all duration-500 ease-in-out overflow-hidden">
         <p className="font-extrabold text-2xl text-vainilla group-hover:text-primary ">
           {title}
         </p>
@@ -24,11 +24,11 @@ export const OrderCard = ({title, text, image, href}: OrderCardProps) => {
           {text}
         </p>
       </div>
-      <div className="absolute -z-0 w-full h-full overflow-hidden">
+      <div className="absolute -z-0 w-full h-full overflow-hidden rounded-3xl">
         <Image
           src={image}
           alt={"Comida11"}
-          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
+          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ease-in-out rounded-3xl"
         />
       </div>
     </Link>
