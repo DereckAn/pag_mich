@@ -12,7 +12,7 @@ export const ListaCardsMenu = ({ products, titulo }: ListaCardsMenuProps) => {
       <h1 className="text-6xl relative p-10 text-primary font-bold after:bg-primary  after:h-[3px] after:absolute ">
         {titulo}
       </h1>
-      <div className={` relative mt-10 ${lista.menu}`}>
+      <div className={` relative my-10 ${lista.menu}`}>
         {products.map((product: any) => (
           <CardMenu
             key={product.id}
