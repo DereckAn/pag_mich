@@ -3,20 +3,20 @@ import { CardMenu } from "./card-menu";
 
 interface ListaCardsMenuProps {
   products: any;
-  titulo: string;   
+  titulo: string;
 }
 
 export const ListaCardsMenu = ({ products, titulo }: ListaCardsMenuProps) => {
   return (
     <>
-      <h1 className="text-6xl relative p-10 text-primary font-bold after:bg-primary  after:h-[3px] after:absolute ">
+      <h1 className="text-6xl text-center relative p-10 text-primary font-bold ">
         {titulo}
       </h1>
-      <div className={` relative my-10 ${lista.menu}`}>
+      <div className={` relative my-10 mx-auto ${lista.menu} p-5`}>
         {products.map((product: any) => (
           <CardMenu
             key={product.id}
-            stars={product.stars}   
+            stars={product.stars}
             image={product.image}
             price={product.price}
             description={product.description}

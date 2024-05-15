@@ -28,6 +28,7 @@ import time from "./svg/time.svg";
 import food_cart from "./svg/food_cart.svg";
 import fruitbowl from "./svg/fruitbowl.svg";
 import truk from "./svg/truk.svg";
+import protein from "./images/protein.webp";
 
 export {
   balloons,
@@ -60,4 +61,5 @@ export {
   food_cart,
   fruitbowl,
   truk,
+  protein,
 };

@@ -1,9 +1,9 @@
-.menu{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    row-gap: 5rem;
-
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  row-gap: 5rem;
 }

@@ -1,4 +1,4 @@
-import { bebidas } from "@/assets";
+import {  protein } from "@/assets";
 import { Container } from "@/components/ui/container";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
@@ -7,11 +7,11 @@ import Link from "next/link";
 const AboutUs = () => {
   return (
     <Container className="flex flex-col lg:flex-row justify-center items-center px-10 ">
-      <div className=" rounded-3x sm:w-3/4 md:w-2/4 px-2 sm:px-0">
+      <div className=" rounded-3x sm:w-3/4 md:w-2/4 px-2 sm:px-0 sm:h-3/4 md:h-2/4 relative ">
         <Image
-          src={bebidas}
+          src={protein}
           alt="hero image"
-          className="rounded-3xl object-cover "
+          className="rounded-3xl object-cover  "
           placeholder="blur"
         />
       </div>
