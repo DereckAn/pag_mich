@@ -8,15 +8,35 @@ interface ButtonNavbarProps {
   setShowMenu: (showMenu: boolean) => void;
 }
 
+let colorIndex = 0;
 export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
+  const colores = [
+    "#ff6961",
+    "#77dd77",
+    "#aec6cf",
+    "#fdfd96",
+    "#84b6f4",
+    "#fdcae1",
+  ];
+
+  const handleButtonClick = () => {
+    setShowMenu(!showMenu);
+    if (!showMenu) {
+      colorIndex = (colorIndex + 1) % colores.length;
+    }
+  };
+
   return (
-    <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center navbarsettings ">
+    <nav className="relative z-30 mr-[2.5%] pointer-events-auto opacity-100  group flex items-center justify-center  ">
       <div
         className={cn(
-          "absolute   rounded-full bg-color_azul_perry visible  transition-all duration-700 ease-in-out  ",
+          "absolute   rounded-full  visible  transition-all duration-700 ease-in-out  ",
           showMenu ? "w-[100vw] h-[100vw] rounded-none" : " buttonwh"
         )}
-        style={{ transform: showMenu ? "scale(3)" : "scale(1)" }}
+        style={{
+          transform: showMenu ? "scale(3)" : "scale(1)",
+          backgroundColor: colores[colorIndex],
+        }}
       />
       <button
         type="button"
@@ -24,7 +44,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
           " buttonwh bg-white relative z-20 flex items-center rounded-full justify-center group-hover:scale-110 transition-all duration-300 ease-in-out",
           showMenu ? "bg-gray-300" : ""
         )}
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={handleButtonClick}
       >
         <TresLineas showMenu={showMenu} />
       </button>

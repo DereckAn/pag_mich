@@ -68,17 +68,23 @@ button:hover .bottom-span {
 
 .navbarsettings {
   color: transparent;
-  animation: enhanced-header linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 300px;
-  opacity: 0;
-  pointer-events: none;
+  animation: blink-animation 5s infinite alternate; 
+}
+
+@keyframes blink-animation {
+  0%, 10%, 90%, 100% {
+    opacity: 1; 
+  }
+  20%, 80% {
+    opacity: 0;
+  }
 }
 
 .navbarsettings:hover {
+  animation: none;
   opacity: 1;
 }
-
+  
 .opacityy {
   opacity: 1;
   pointer-events: none;
