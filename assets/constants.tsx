@@ -1,10 +1,9 @@
 import {
+  FaApple,
   FaFacebook,
-  FaGithub,
   FaInstagram,
   FaTiktok,
   FaWhatsapp,
-  FaApple
 } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
@@ -338,5 +337,28 @@ export const providers = [
   {
     provider: FaInstagram,
     color: "pink",
+  },
+];
+
+export const navmenu = [
+  {
+    title: "Home",
+    path: "/",
+    icon: "fi fi-rr-home",
+  },
+  {
+    title: "Menu",
+    path: "/menu",
+    icon: "fi fi-rr-home",
+  },
+  {
+    title: "Catering",
+    path: "/catering",
+    icon: "fi fi-rr-home",
+  },
+  {
+    title: "Account",
+    path: "/auth",
+    icon: "fi fi-rr-home",
   },
 ];

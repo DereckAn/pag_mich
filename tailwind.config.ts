@@ -9,14 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#272f62",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+        },
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          foreground: "hsl(var(--background-foreground))",
+        },
+        text: {
+          DEFAULT: "hsl(var(--text))",
+          secondary: "hsl(var(--text-secondary))",
+        },
+        // primary: "#272f62",
         secondary: "#ffffff",
         tertary: "#292929",
         fourth: "#e4e2dd",
         color_azul_perry: "rgb(9, 233, 211)",
         vainilla: "#F5ECD7",
-        textcolor: "#000000"
-
+        textcolor: "#000000",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+      transitionDuration: {
+        DEFAULT: "150ms",
       },
     },
   },

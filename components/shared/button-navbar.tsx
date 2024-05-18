@@ -13,10 +13,13 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
   const colores = [
     "#ff6961",
     "#77dd77",
-    "#aec6cf",
-    "#fdfd96",
+    "#f8de7e",
+    "#f988ff",
     "#84b6f4",
     "#fdcae1",
+    "#ffa372",
+    "#e5d2c4",
+    "#b76f98"
   ];
 
   const handleButtonClick = () => {
