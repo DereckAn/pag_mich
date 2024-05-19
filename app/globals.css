@@ -16,8 +16,8 @@ html,
 body,
 :root {
   height: 100%;
-  scrollbar-color: transparent transparent;
   scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 }
 
 i{
@@ -33,6 +33,12 @@ i{
 .no-scroll {
   overflow: hidden;
 }
+
+.scrollbar-hidden{
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
 
 .buttonwh {
   width: 80px;

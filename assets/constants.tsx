@@ -1,3 +1,4 @@
+import { Category, Menu, Products } from "@/types";
 import {
   FaApple,
   FaFacebook,
@@ -340,7 +341,7 @@ export const providers = [
   },
 ];
 
-export const navmenu = [
+export const navmenu: Menu[] = [
   {
     title: "Home",
     path: "/",
@@ -360,5 +361,50 @@ export const navmenu = [
     title: "Account",
     path: "/auth",
     icon: "fi fi-rr-home",
+  },
+];
+
+export const categories: Category[] = [
+  {
+    category: "Hamburguesas",
+  },
+  {
+    category: "Pizzas",
+  },
+  {
+    category: "Postres",
+  },
+  {
+    category: "Bebidas",
+  },
+  {
+    category: "Comida",
+  },
+  {
+    category: "Desayunos",
+  },
+  {
+    category: "Cenas",
+  },
+  {
+    category: "Almuerzos",
+  },
+  {
+    category: "Snacks",
+  },
+  {
+    category: " rápida",
+  },
+  {
+    category: " saludable",
+  },
+  {
+    category: " chatarra",
+  },
+  {
+    category: " casera",
+  },
+  {
+    category: " gourmet",
   },
 ];
