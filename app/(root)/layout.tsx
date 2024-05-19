@@ -8,7 +8,7 @@ import { ReactNode } from "react";
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {children}
       <FooterX />
     </div>
