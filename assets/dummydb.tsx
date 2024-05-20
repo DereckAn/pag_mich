@@ -1,5 +1,15 @@
-import { Products } from "@/types";
-import { comida1, comida11, comida2, comida3, comida4, comida5, comida7, comida8, comida9 } from ".";
+import { Products, ProductSubset } from "@/types";
+import {
+  comida1,
+  comida11,
+  comida2,
+  comida3,
+  comida4,
+  comida5,
+  comida7,
+  comida8,
+  comida9,
+} from ".";
 
 export const products = [
   {
@@ -253,8 +263,7 @@ export const products = [
   },
 ];
 
-
-export const  products2: Products[] = [
+export const products2: Products[] = [
   {
     name: "Bacon burger",
     category: "Hamburguesas",
@@ -444,5 +453,44 @@ export const  products2: Products[] = [
     price: 20.01,
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco mmodo.",
+  },
+];
+
+export const productscart: ProductSubset[] = [
+  {
+    name: "Bacon burger",
+    image: comida1,
+    quantity: 1,
+    price: 20.01,
+  },
+  {
+    name: "Cheese burger",
+    image: comida2,
+    quantity: 1,
+    price: 6.78,
+  },
+  {
+    name: "Chicken burger",
+    image: comida3,
+    quantity: 1,
+    price: 49.99,
+  },
+  {
+    name: "Veggie burger",
+    image: comida4,
+    quantity: 2,
+    price: 23.5,
+  },
+  {
+    name: "Pepperoni pizza",
+    image: comida5,
+    quantity: 1,
+    price: 43.89,
+  },
+  {
+    name: "Cheese pizza",
+    image: comida7,
+    quantity: 1,
+    price: 12.43,
   },
 ];

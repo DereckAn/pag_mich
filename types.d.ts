@@ -13,7 +13,11 @@ export type Products = {
   category: string;
   image: StaticImageData;
   discount: number;
-  stock:number;
+  stock: number;
   price: number;
   description: string;
+};
+
+export type ProductSubset = Pick<Products, "name" | "price" | "image"> & {
+  quantity: number;
 };
