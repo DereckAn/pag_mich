@@ -40,6 +40,7 @@ export const CardQuantityProduct = ({ product }: CardQuantityProductProps) => {
             <i className="fi fi-rr-plus text-white " />
           </button>
         </div>
+        <h3 className="text-lg font-bold">${(price * quantity).toFixed(2)}</h3>
       </div>
     </>
   );
