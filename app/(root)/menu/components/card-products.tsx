@@ -39,7 +39,9 @@ export const CardProducts = ({ product }: CardProductsProps) => {
               </span>
             )}
           </div>
-          <h3 className="text-xl md:text-3xl font-extrabold line-clamp-1">{name}</h3>
+          <h3 className="text-xl md:text-3xl font-extrabold line-clamp-1">
+            {name}
+          </h3>
         </div>
       </div>
       <p className="text-gray-500 line-clamp-2">{description}</p>
@@ -49,8 +51,10 @@ export const CardProducts = ({ product }: CardProductsProps) => {
           type="button"
           disabled={stock <= 0}
           className={cn(
-            "flex bg-primary w-14 h-14 items-center justify-center rounded-full text-xl border-4 border-white/10 box-content hover:rotate-90 transition-transform",
-            stock <= 0 && "hover:rotate-0 bg-gray-500 cursor-not-allowed"
+            "flex bg-primary w-14 h-14 items-center justify-center rounded-full text-xl border-4 border-white/10 box-content transition-transform",
+            stock > 0
+              ? "hover:rotate-90 hover:bg-naranja"
+              : "hover:rotate-0 bg-gray-500 cursor-not-allowed"
           )}
         >
           <i className="fi fi-rr-plus text-white"></i>
