@@ -17,7 +17,7 @@ export const Navbar = () => {
   };
 
   return (
-    <header className={`header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none navbarsettings ${showMenu ? "opacityy" : ""} `}>
+    <header className={`header fixed top-0 left-0 w-full z-50 mt-[2.5vw] pointer-events-none navbarsettings ${showMenu ? "opacityy" : ""} hidden lg:block `}>
       <div className="flex items-center justify-between">
         <Link
           className={cn(

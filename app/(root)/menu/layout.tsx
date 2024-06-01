@@ -11,23 +11,14 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         <HeaderMenu />
       </section>
       <section className="h-[90dvh] lg:flex lg:gap-x-4">
-        <main className="bg-green-100 basis-4/4 lg:basis-3/4 p-5 lg:pr-2 overflow-y-auto">
+        <main className="bg-green-100 basis-4/4 lg:basis-3/4 p-5 lg:pr-1 overflow-y-auto relative">
           {children}
         </main>
-        <div className="bg-blue-100 xl:basis-1/4 p-5 lg:pl-2">
+        <div className="bg-blue-100 xl:basis-1/4 p-5 lg:pl-0">
           <MiniCart />
         </div>
       </section>
     </div>
-    // <div className="relative ">
-    //   <SidebarMenu showMenu={showMenu} onclose={() => setShowMenu(false)} />
-    //   <ButtonIcon
-    //     icon={RiMenu2Line}
-    //     onClick={() => setShowMenu(true)}
-    //     className="lg:hidden fixed left-0 top-0 z-30 bg-primary p-4  rounded-tl-lg"
-    //   />
-    //   {children}
-    // </div>
   );
 };
 

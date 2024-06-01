@@ -17,7 +17,7 @@ export const CardProducts = ({ product }: CardProductsProps) => {
     stock,
   } = product;
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-md space-y-5 text-primary">
+    <div className="bg-white p-6 rounded-3xl shadow-md space-y-5 text-primary ">
       <div className="flex items-center gap-x-6 ">
         <Image
           src={image}

@@ -1,17 +1,14 @@
 "use client";
 
 import { products2 } from "@/assets/dummydb";
-import { Categories } from "./components/categories";
 import { CardProducts } from "./components/card-products";
+import { Categories } from "./components/categories";
 
 const Menu = () => {
-  // const [selectedMenu, setSelectedMenu] = useState("Super Milshakes");
-  // const cards = products.find((item) => item.title === selectedMenu);
-
   return (
     <div>
       <Categories />
-      <ul className="grid md:grid-cols-2 gap-5 mt-8 ">
+      <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-8  ">
         {products2.map((item) => (
           <li key={item.name}>
             <CardProducts product={item} />
@@ -19,13 +16,6 @@ const Menu = () => {
         ))}
       </ul>
     </div>
-    // <main className="min-h-screen relative lg:pr-[20vw] md:pr-[30vw] xl:pr-[16vw] xxl:pr-[20vw]  xl:-px-0 ">
-    //   <NavMenuSection select={setSelectedMenu} />
-    //   <ListaCardsMenu
-    //     products={cards?.products}
-    //     titulo={cards?.title ?? "Default Title"}
-    //   />
-    // </main>
   );
 };
 
