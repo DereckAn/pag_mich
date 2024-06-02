@@ -1,42 +1,22 @@
 "use client";
 import { comida11 } from "@/assets";
-import { navmenu } from "@/assets/constants";
-import { cn } from "@/utils/utils";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { LogoMenu } from "./logomenu";
-import MenuMobile from "./menu-mobile";
+import { useEffect, useState } from "react";
+import { LogoMenu } from "../../app/(root)/menu/components/logomenu";
+import { MenuMobile } from "./menu-mobile";
 
-export const HeaderMenu = () => {
+export const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("no-scroll", showMenu);
+  }, [showMenu]);
+
   return (
     <>
-      <header className="flex items-center justify-between w-full">
+      <header className=" header flex items-center justify-between w-full md:hidden fixed top-0 z-50 text-primary bg-vainilla ">
         <section>
           <LogoMenu />
-        </section>
-        <section className="hidden lg:block">
-          <nav>
-            <ul className="flex items-center gap-x-1 p-1 rounded-full bg-white">
-              {navmenu.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.path}
-                    className={cn(
-                      "flex items-center gap-x-2 text-sm py-3 px-6 rounded-full transition-colors",
-                      item.path === "/menu"
-                        ? "bg-primary text-white"
-                        : "text-primary"
-                    )}
-                  >
-                    <i className={item.icon}></i>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </section>
         <section>
           <ul className="flex items-center gap-x-3 bg-white p-3 rounded-full">

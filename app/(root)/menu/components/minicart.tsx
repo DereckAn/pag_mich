@@ -17,11 +17,11 @@ export const MiniCart = () => {
     <>
       <aside
         className={cn(
-          "fixed xl:static right-0 p-5 xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] lg:w-[50%] xl:w-full transition-all    bg-red-100",
+          "fixed xl:static right-0 p-5 xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] lg:w-[50%] xl:w-full transition-all",
           showCart ? "top-0 delay-300" : "-top-full"
         )}
       >
-        <div className="relative border-2">
+        <div className="relative">
           <i className="fi fi-rr-search absolute left-4 top-4 text-primary " />
           <input
             type="text"
@@ -29,7 +29,7 @@ export const MiniCart = () => {
             placeholder="Search"
           />
         </div>
-        <div className=" overflow-y-auto mt-8  flex flex-col bg-white rounded-3xl p-6 border-4 ">
+        <div className=" overflow-y-auto mt-8  flex flex-col bg-white rounded-3xl p-6 ">
           <section className="basis-1/12 ">
             <h1 className="text-2xl font-medium">Order Details</h1>
           </section>

@@ -2,13 +2,16 @@ import { navmenu } from "@/assets/constants";
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
+import { usePathname } from "next/navigation";
+
 
 interface MenuMobileProps {
   isOpen: boolean;
   onClose: Dispatch<SetStateAction<boolean>>;
 }
 
-const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
+export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
+  const pathName = usePathname();
   return (
     <>
       <div
@@ -21,10 +24,11 @@ const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
           {navmenu.map((item) => (
             <li key={item.title}>
               <Link
+              onClick={() => onClose(false)}
                 href={item.path}
                 className={cn(
                   "text-primary flex items-center gap-x-2 py-3 px-6 rounded-full text-2xl",
-                  item.path === "/menu" &&
+                  item.path === pathName &&
                     "bg-primary font-medium text-vainilla"
                 )}
               >
@@ -49,4 +53,3 @@ const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
   );
 };
 
-export default MenuMobile;

@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div>
       <Categories />
-      <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-8  ">
+      <ul className="grid grid-cols-1 md:grid-cols-2  gap-5 mt-8  ">
         {products2.map((item) => (
           <li key={item.name}>
             <CardProducts product={item} />
