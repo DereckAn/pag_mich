@@ -1,16 +1,14 @@
-"use client";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { MiniCart } from "./components/minicart";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
-  const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="h-[100dvh] text-primary">
-      <section className="h-[100dvh] lg:flex lg:gap-x-4">
-        <main className="basis-4/4 lg:basis-3/4 p-5 lg:pr-1 overflow-y-auto relative">
+    <div className=" text-primary ">
+      <section className="h-[100dvh] xl:flex xl:gap-x-4">
+        <main className=" xl:w-3/4 p-5 space-y-5 xl:pr-1 h-[100dvh] ">
           {children}
         </main>
-        <div className="xl:basis-1/4 p-5 lg:pl-0">
+        <div className="lg:basis-1/4 p-5 xl:pl-0">
           <MiniCart />
         </div>
       </section>

@@ -17,7 +17,7 @@ export const MiniCart = () => {
     <>
       <aside
         className={cn(
-          "fixed xl:static right-0 p-5 xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] lg:w-[50%] xl:w-full transition-all",
+          "fixed xl:static right-0  xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] xl:w-full  transition-all space-y-5",
           showCart ? "top-0 delay-300" : "-top-full"
         )}
       >
@@ -29,7 +29,7 @@ export const MiniCart = () => {
             placeholder="Search"
           />
         </div>
-        <div className=" overflow-y-auto mt-8  flex flex-col bg-white rounded-3xl p-6 ">
+        <div className=" overflow-y-auto  flex flex-col bg-white rounded-3xl p-6 ">
           <section className="basis-1/12 ">
             <h1 className="text-2xl font-medium">Order Details</h1>
           </section>
