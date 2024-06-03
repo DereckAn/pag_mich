@@ -14,7 +14,7 @@ export const NavbarMobile = () => {
 
   return (
     <>
-      <header className=" header flex items-center justify-between w-full md:hidden fixed top-0 z-50 text-primary bg-vainilla ">
+      <header className=" header flex items-center justify-between w-full md:hidden fixed top-0 z-50 text-primary bg-vainilla px-5">
         <section>
           <LogoMenu />
         </section>

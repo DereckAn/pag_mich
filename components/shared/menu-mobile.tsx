@@ -27,7 +27,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
               onClick={() => onClose(false)}
                 href={item.path}
                 className={cn(
-                  "text-primary flex items-center gap-x-2 py-3 px-6 rounded-full text-2xl",
+                  "text-primary flex items-center gap-x-2 py-3 px-6 rounded-full text-2xl ",
                   item.path === pathName &&
                     "bg-primary font-medium text-vainilla"
                 )}
@@ -43,7 +43,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
       <button
         onClick={() => onClose(false)}
         className={cn(
-          "fixed  bg-black/40 z-40 lg:hidden transition-all",
+          "fixed  bg-black/40 z-30 lg:hidden transition-all",
           isOpen
             ? "h-full w-full right-0 top-0"
             : "w-0 h-0 left-0 bottom-0 delay-300"
