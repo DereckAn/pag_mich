@@ -1,4 +1,4 @@
-import { routes } from "@/assets/constants";
+import {  navmenu } from "@/assets/constants";
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,7 +11,7 @@ export const MapMenu = ({ setShowMenu }: MapMenuProps) => {
   const pathName = usePathname();
   return (
     <ul className="flex flex-wrap justify-center">
-      {routes.map((route) => (
+      {navmenu.map((route) => (
         <li
           key={route.path}
           className="flex-none w-full flex justify-center "
@@ -26,7 +26,7 @@ export const MapMenu = ({ setShowMenu }: MapMenuProps) => {
                 "text-secondary before:w-full before:bg-primary  "
             )}
           >
-            {route.name}
+            {route.title}
           </Link>
         </li>
       ))}

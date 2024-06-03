@@ -1,4 +1,4 @@
-import { routes, socials } from "@/assets/constants";
+import { navmenu, socials } from "@/assets/constants";
 import Link from "next/link";
 
 export const FooterX = () => {
@@ -14,48 +14,40 @@ export const FooterX = () => {
             mezcló de tal manera que logró hacer un libro de textos especimen.
           </p>
         </div>
-        <div className="md:col-span-4 xl:col-span-2">
+        <div className="md:col-span-4 xl:col-span-2 ">
           <h2 className="font-bold mb-6 uppercase">Menu</h2>
           <nav className="flex flex-col gap-4">
-            {routes.map((route) => (
+            {navmenu.map((route) => (
               <Link
-                key={route.name}
+                key={route.title}
                 href={route.path}
-                className="hover:underline"
+                className="hover:underline "
               >
-                {route.name}
+                {route.title}
               </Link>
             ))}
           </nav>
         </div>
-        <div className="md:col-span-4 xl:col-span-3">
+        <div className="md:col-span-4 xl:col-span-3 ">
           <h2 className="font-bold mb-6 uppercase">Social Media</h2>
-          <nav>
+          <nav className="">
             {socials.map((social) => {
-              const IconComponent = social.iconComponent;
               return (
                 <a
                   key={social.name}
                   href={social.url}
-                  className="group flex items-center gap-2 hover:bg-vainilla p-2 rounded-lg transition-colors"
+                  className=" group flex items-center justify-start gap-2 hover:bg-vainilla p-2 rounded-lg transition-colors"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    style={{ color: "#F5ECD7" }}
-                    className="group-hover:text-primary"
-                  >
-                    <IconComponent size={22} className="group-hover:text-primary"/>
-                  </span>
-                  <span className="group-hover:text-primary">
-                    {social.name}
-                  </span>
+                  <i className={social.icon + " group-hover:text-primary text-xl "} />
+                  <p className="group-hover:text-primary">{social.name}</p>
                 </a>
               );
             })}
           </nav>
         </div>
-        <div className="md:col-span-4 xl:col-span-3">
+        <div className="md:col-span-4 xl:col-span-3 ">
           <h2 className="font-bold mb-6 uppercase">Contact</h2>
           <div className="flex flex-col gap-4">
             <p className="flex items-center gap-2">

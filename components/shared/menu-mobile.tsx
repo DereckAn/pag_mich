@@ -33,7 +33,6 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
                 )}
               >
                 <i className={item.icon}></i>
-
                 {item.title}
               </Link>
             </li>

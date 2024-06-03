@@ -44,7 +44,7 @@ export const NavbarMobile = () => {
                 onClick={() => setShowMenu(true)}
                 className="bg-gray-100 text-xl w-10 h-10 flex items-center justify-center rounded-full"
               >
-                <i className="fi fi-rr-bars-staggered"></i>
+                <i className="fi fi-br-menu-burger"></i>
               </button>
             </li>
           </ul>

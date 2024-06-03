@@ -17,7 +17,7 @@ export const MiniCart = () => {
     <>
       <aside
         className={cn(
-          "fixed xl:static right-0  xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] xl:w-full  transition-all space-y-5",
+          "fixed xl:static right-0  xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] xl:w-full  transition-all space-y-5 bg-vainilla p-3",
           showCart ? "top-0 delay-300" : "-top-full"
         )}
       >
