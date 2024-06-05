@@ -17,7 +17,7 @@ const AuthForm = () => {
         "h-screen w-full flex transition-transform duration-500 ease-in-out",
         showLoginForm ? "flex-row-reverse " : "flex-row"
       )}
-    >   
+    >
       <LoginForm showlogin={showLoginForm} />
       <SignCard
         title={showLoginForm ? "New Here?" : "One of Us?"}

@@ -45,7 +45,7 @@ export const navmenu: Menu[] = [
   },
   {
     title: "Account",
-    path: "/auth",
+    path: "/authentication",
     icon: "fi fi-rr-user-pen",
   },
 ];

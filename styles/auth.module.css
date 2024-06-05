@@ -1,0 +1,24 @@
+.alertuser {
+  position: fixed;
+  right: -8%;
+  top: 5%;
+  animation: slideInFromRight 1s ease-in-out forwards, fadeOut 5s 1s forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    right: -8%;
+  }
+  100% {
+    right: 1%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

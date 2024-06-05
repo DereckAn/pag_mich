@@ -14,7 +14,7 @@ export const NavbarMobile = () => {
 
   return (
     <>
-      <header className=" header flex items-center justify-between w-full md:hidden fixed top-0 z-50 text-primary bg-vainilla px-5">
+      <header className=" header flex items-center justify-between w-full lg:hidden fixed top-0 z-50 text-primary bg-vainilla px-5">
         <section>
           <LogoMenu />
         </section>
@@ -28,7 +28,7 @@ export const NavbarMobile = () => {
                 height={100}
                 className="w-10 h-10 object-cover rounded-full"
               />
-              <h5 className="font-medium">Antonella</h5>
+              <h5 className="font-medium">Welcome</h5>
             </li>
             <li>
               <button
