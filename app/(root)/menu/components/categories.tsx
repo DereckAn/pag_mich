@@ -2,7 +2,7 @@ import { categories } from "@/assets/constants";
 
 export const Categories = () => {
   return (
-    <div >
+    <div>
       <ul className="flex items-center gap-x-1 flex-nowrap border border-black/10 p-1 rounded-full max-w-full overflow-hidden overflow-x-auto scrollbar-hidden">
         <li>
           <button

@@ -60,9 +60,8 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
           <div className="flex-grow basis-0 flex items-end">
             <div className="w-10 basis-1/2"> </div>
 
-            <div className="flex gap-5 wobble-horizontal-bottom">
+            <div className="flex gap-6 wobble-horizontal-bottom">
               {socials.map((social) => {
-                const IconComponent = social.iconComponent;
                 return (
                   <a
                     href={social.url}
@@ -70,7 +69,7 @@ export const ButtonNavbar = ({ showMenu, setShowMenu }: ButtonNavbarProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <IconComponent size={50} className="fill-primary" />
+                    <i className={social.icon + " group-hover:text-primary text-5xl "} />
                   </a>
                 );
               })}

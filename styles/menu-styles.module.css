@@ -1,9 +1,10 @@
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
-  row-gap: 5rem;
+.menu{
+  --height-category: 32px;
+  --height-menu-item: 32px;
+}
+
+
+.menu_item_list{
+  height: calc(100% - 4 * 1.25rem);
+  overflow-y: auto;
 }

@@ -27,45 +27,49 @@ import {
   wedding,
 } from "./index";
 
-export const routes = [
+export const navmenu: Menu[] = [
   {
-    name: "Home",
+    title: "Home",
     path: "/",
+    icon: "fi fi-br-home",
   },
   {
-    name: "Menu",
+    title: "Menu",
     path: "/menu",
+    icon: "fi fi-rs-list",
   },
   {
-    name: "Catering",
+    title: "Catering",
     path: "/catering",
+    icon: "fi fi-sr-room-service",
   },
   {
-    name: "Account",
-    path: "/auth",
+    title: "Account",
+    path: "/authentication",
+    icon: "fi fi-rr-user-pen",
   },
 ];
 
 export const socials = [
   {
     name: "TikTok",
-    iconComponent: FaTiktok,
     url: "https://www.tiktok.com/",
+    icon:"fi fi-brands-tik-tok"
   },
   {
     name: "Instagram",
-    iconComponent: FaInstagram,
     url: "https://www.instagram.com/",
+    icon: "fi fi-brands-instagram"
   },
   {
     name: "Whatsapp",
-    iconComponent: FaWhatsapp,
     url: "https://whatsapp.com/",
+    icon: "fi fi-brands-whatsapp"
   },
   {
     name: "Facebook",
-    iconComponent: FaFacebook,
     url: "https://www.facebook.com/",
+    icon: "fi fi-brands-facebook"
   },
 ];
 
@@ -109,34 +113,6 @@ export const bebidasSliderSection = [
     link: "/",
     description:
       "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
-  },
-];
-
-export const menuSection = [
-  {
-    name: "Coockies",
-    path: "/",
-    icon: "🍪",
-  },
-  {
-    name: "Waffels",
-    path: "/ordernow",
-    icon: "🧇",
-  },
-  {
-    name: "Pancakes",
-    path: "/menu",
-    icon: "🥞",
-  },
-  {
-    name: "Smoothies",
-    path: "/catering",
-    icon: "🥤",
-  },
-  {
-    name: "Bowls",
-    path: "/login",
-    icon: "🍎",
   },
 ];
 
@@ -341,28 +317,7 @@ export const providers = [
   },
 ];
 
-export const navmenu: Menu[] = [
-  {
-    title: "Home",
-    path: "/",
-    icon: "fi fi-rr-home",
-  },
-  {
-    title: "Menu",
-    path: "/menu",
-    icon: "fi fi-rr-home",
-  },
-  {
-    title: "Catering",
-    path: "/catering",
-    icon: "fi fi-rr-home",
-  },
-  {
-    title: "Account",
-    path: "/auth",
-    icon: "fi fi-rr-home",
-  },
-];
+
 
 export const categories: Category[] = [
   {

@@ -2,13 +2,16 @@ import { navmenu } from "@/assets/constants";
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
+import { usePathname } from "next/navigation";
+
 
 interface MenuMobileProps {
   isOpen: boolean;
   onClose: Dispatch<SetStateAction<boolean>>;
 }
 
-const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
+export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
+  const pathName = usePathname();
   return (
     <>
       <div
@@ -21,15 +24,15 @@ const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
           {navmenu.map((item) => (
             <li key={item.title}>
               <Link
+              onClick={() => onClose(false)}
                 href={item.path}
                 className={cn(
-                  "text-primary flex items-center gap-x-2 py-3 px-6 rounded-full text-2xl",
-                  item.path === "/menu" &&
+                  "text-primary flex items-center gap-x-2 py-3 px-6 rounded-full text-2xl ",
+                  item.path === pathName &&
                     "bg-primary font-medium text-vainilla"
                 )}
               >
                 <i className={item.icon}></i>
-
                 {item.title}
               </Link>
             </li>
@@ -39,7 +42,7 @@ const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
       <button
         onClick={() => onClose(false)}
         className={cn(
-          "fixed  bg-black/40 z-40 lg:hidden transition-all",
+          "fixed  bg-black/40 z-30 lg:hidden transition-all",
           isOpen
             ? "h-full w-full right-0 top-0"
             : "w-0 h-0 left-0 bottom-0 delay-300"
@@ -49,4 +52,3 @@ const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
   );
 };
 
-export default MenuMobile;
