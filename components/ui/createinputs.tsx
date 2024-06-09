@@ -1,68 +1,38 @@
 import { register } from "@/app/actions/register";
-import { ChangeEvent, FormEvent, useState, useTransition } from "react";
+import { useFormState } from "react-dom";
 import { AlertFailure } from "./alert-failure";
 import { AlertSuccess } from "./alert-succes";
 
 const CreateInputs = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    name: "",
-    birthday: undefined,
-    phone: "",
-  });
-  const [isPending, startTransition] = useTransition();
-  const [error, setError] = useState<string | undefined>("");
-  const [success, setSuccess] = useState<string | undefined>("");
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData);
-    setError("");
-    setSuccess("");
-    startTransition(() => {
-      register(formData).then((result) => {
-        setError(result.error ?? "");
-        setSuccess(result.success ?? "");
-      });
-    });
-  };
+  const [state, formAction] = useFormState(register, null);
 
   return (
     <>
-      <AlertSuccess message={success} />
-      <AlertFailure message={error} />
+      <AlertSuccess message={state?.success} />
+      <AlertFailure message={state?.error} />
       <form
         className=" flex flex-col gap-5 w-[60%] items-center"
-        onSubmit={handleSubmit}
-        action="#"
+        action={formAction}
         method="POST"
       >
         <div className="flex gap-5 w-full">
           <input
             type="text"
             id="name"
+            name="name"
             autoComplete="name"
             required
-            disabled={isPending}
-            onChange={handleChange}
+            // disabled={isPending}
             placeholder="Name"
             className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
           />
           <input
             type="email"
             id="email"
+            name="email"
             autoComplete="email"
             required
-            disabled={isPending}
-            onChange={handleChange}
+            // disabled={isPending}
             placeholder="Email"
             className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
           />
@@ -71,20 +41,20 @@ const CreateInputs = () => {
           <input
             type="tel"
             id="phone"
+            name="phone"
             autoComplete="tel"
             required
-            disabled={isPending}
-            onChange={handleChange}
+            // disabled={isPending}
             placeholder="(801)-123-4567"
             className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
           />
           <input
             type="password"
             id="password"
+            name="password"
             autoComplete="current-password"
             required
-            disabled={isPending}
-            onChange={handleChange}
+            // disabled={isPending}
             placeholder="Password"
             className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
           />
@@ -93,7 +63,7 @@ const CreateInputs = () => {
         <button
           className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2 max-w-lg"
           type="submit"
-          disabled={isPending}
+          // disabled={isPending}
         >
           Sign Up
         </button>
