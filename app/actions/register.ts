@@ -1,45 +1,50 @@
 "use server";
 
 import { getUserByEmail } from "@/data/user";
-import * as z from "zod";
-import {RegisterSchema} from "@/app/schemas";
+import { RegisterSchema } from "@/schemas";
+import { db } from "@/utils/db";
 import bcrypt from "bcryptjs";
-import {db} from "@/utils/db";
 
-export const register = async (values: z.infer<typeof RegisterSchema>) => {
-    const validatedResult = RegisterSchema.safeParse(values);
-    if (!validatedResult.success) {
-        console.log(validatedResult.error.errors);
-        return { error: "Invalid Fields" };
-    }
+export const register = async (state: any, formData: FormData) => {
+  const validatedResult = RegisterSchema.safeParse({
+    email: formData.get("email")?.toString(),
+    password: formData.get("password")?.toString(),
+    name: formData.get("name")?.toString(),
+    birthday: formData.get("birthday")?.toString(),
+    phone: formData.get("phone")?.toString(),
+  });
 
-    const {
-        email,
-        password,
-        name,
-        birthday,
-        phone,
-    } = validatedResult.data;
-    const hashedPassword = await bcrypt.hash(password, 10);
+  console.log(validatedResult);
+  
+  if (!validatedResult.success) {
+    console.log(validatedResult.error.errors);
+    return { error: "Invalid Fields" };
+  }
 
-    const existingUser = await getUserByEmail(email);
+  const { email, password, name, birthday, phone } = validatedResult.data;
+  const hashedPassword = await bcrypt.hash(password, 10);
 
-    if (existingUser) {
-        return { error: "Email already exists" };
-    }
+  const existingUser = await getUserByEmail(email);
 
-    await db.user.create({
-        data: {
-            email,
-            password: hashedPassword,
-            name,
-            birthday,
-            phone,
-        },
-    });
+  if (existingUser) {
+    return { error: "Email already exists" };
+  }
 
-    //todo: Send verification token email.
+  await db.user.create({
+    data: {
+      email,
+      password: hashedPassword,
+      name,
+      birthday,
+      phone,
+    },
+  });
 
-    console.log(values);
-    return { success: "User created successfully" };
+  //todo: Send verification token email.
+
+  console.log(validatedResult);
+  console.log(formData);
+  console.log("este es el state ----> ", state);
+
+  return { success: "User created successfully" };
 };
