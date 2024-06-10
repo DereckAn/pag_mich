@@ -1,7 +1,7 @@
-import { register } from "@/app/actions/register";
 import { useFormState } from "react-dom";
 import { AlertFailure } from "./alert-failure";
 import { AlertSuccess } from "./alert-succes";
+import { register } from "@/actions/register";
 
 const CreateInputs = () => {
   const [state, formAction] = useFormState(register, null);

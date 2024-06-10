@@ -21,3 +21,5 @@ export type Products = {
 export type ProductSubset = Pick<Products, "name" | "price" | "image"> & {
   quantity: number;
 };
+
+export type ProvidersNames = "google" | "twitter" | "github" | "instagram";

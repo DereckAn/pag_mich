@@ -1,5 +1,7 @@
 import { providers } from "@/assets/constants";
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { cn } from "@/utils/utils";
+import { signIn } from "next-auth/react";
 import CreateInputs from "./createinputs";
 import { LoginInputs } from "./loginputs";
 
@@ -9,6 +11,13 @@ interface LoginFormProps {
 }
 
 export const LoginForm = ({ showlogin, className }: LoginFormProps) => {
+
+  const onclick = (provider: "google" | "twitter" | "github" | "instagram") => {
+    signIn(provider, {
+      callbackUrl: DEFAULT_LOGIN_REDIRECT,
+    });
+  };
+
   return (
     <div
       className={cn(
@@ -24,10 +33,13 @@ export const LoginForm = ({ showlogin, className }: LoginFormProps) => {
       </p>
       <ul className="flex flex-row items-center justify-center gap-5 p-3">
         {providers.map((providers) => {
-          const IconComponent = providers.provider;
           return (
-            <li key={providers.color} className="rounded-full bg-primary p-2">
-              <IconComponent size={30} className="fill-vainilla" />
+            <li key={providers.name}>
+              <button className="w-[50px] h-[50px] "
+                onClick={() => onclick(providers.name)}
+              >
+                <i className={providers.icon + " text-3xl text-primary"} />
+              </button>
             </li>
           );
         })}

@@ -1,6 +1,6 @@
 "use client";
 
-import { login } from "@/app/actions/login";
+import { login } from "@/actions/login";
 import { useFormState } from "react-dom";
 import { AlertFailure } from "./alert-failure";
 import { AlertSuccess } from "./alert-succes";
@@ -40,8 +40,6 @@ export const LoginInputs = () => {
           Sign In
         </button>
       </form>
-
-      <pre>{JSON.stringify(state)}</pre>
     </>
   );
 };

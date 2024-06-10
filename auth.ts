@@ -1,27 +1,29 @@
 import { getUserByEmail, getUserById } from "@/data/user";
 import { LoginSchema } from "@/schemas";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, UserRole } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import NextAuth, { DefaultSession } from "next-auth";
+import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
+import Instagram from "next-auth/providers/instagram";
+import Facebook from "next-auth/providers/facebook";
 
-type ExtendedUser = DefaultSession["user"] & {
-  role: "ADMIN" | "STAFF" | "USER";
-};
-declare module "next-auth" {
-  interface Session {
-    user: ExtendedUser;
-  }
-}
 const prisma = new PrismaClient();
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
   callbacks: {
+    // async signIn({ user }) {
+    //     const existingUser = await getUserById(user.id);
+    //   console.log("user", user);
+    //   if(!existingUser || !existingUser.emailVerified){
+    //     return false;
+    //   }
+    //   return true;
+    // },
     async session({ session, token }) {
       console.log("token", token);
       if (token.sub && session.user) {
@@ -29,7 +31,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
 
       if (token.role && session.user) {
-        session.user.role = token.role as "ADMIN" | "STAFF" | "USER";
+        session.user.role = token.role as UserRole;
       }
       return session;
     },
@@ -43,12 +45,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   providers: [
     Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
+      clientId: process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET,
     }),
     Github({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
+    }),
+    Instagram({
+      clientId: process.env.INSTAGRAM_ID,
+      clientSecret: process.env.INSTAGRAM_SECRET,
     }),
     Credentials({
       async authorize(credentials) {

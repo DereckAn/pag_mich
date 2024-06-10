@@ -2,7 +2,7 @@
 
 import { getUserByEmail } from "@/data/user";
 import { RegisterSchema } from "@/schemas";
-import { db } from "@/utils/db";
+import  db  from "@/utils/db";
 import bcrypt from "bcryptjs";
 
 export const register = async (state: any, formData: FormData) => {
