@@ -29,13 +29,13 @@ export const CardQuantityProduct = ({ product }: CardQuantityProductProps) => {
         <div className="flex items-center gap-x-2 ">
           <button
             type="button"
-            className="w-8 h-8 bg-primary rounded-full flex items-center justify-center "
+            className="w-8 h-8 bg-primary hover:bg-amarillo transition-all duration-300 ease-in-out hover:text-primary hover:font-bold rounded-full flex items-center justify-center "
           >
             <i className="fi fi-rr-minus text-white " />
           </button>
           <button
             type="button"
-            className="w-8 h-8 bg-primary rounded-full flex items-center justify-center "
+            className="w-8 h-8 bg-primary hover:bg-amarillo transition-all duration-300 ease-in-out hover:text-primary hover:font-bold rounded-full flex items-center justify-center "
           >
             <i className="fi fi-rr-plus text-white " />
           </button>

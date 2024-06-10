@@ -1,7 +1,7 @@
-'use server';
+"use server";
 
 import { logo } from "@/assets";
-import { Buttons } from "@/components/ui/buttons";
+import { LinkPro } from "@/components/ui/link-pro";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,19 +21,19 @@ export const Part1Catering = ({ classname }: Part1CateringProps) => {
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
-        <Buttons href={"/"} text={"Get in Touch"} className="bg-primary" />
+        <LinkPro href={"/"} text={"Get in Touch"} className="bg-primary" />
       </div>
       <h1 className="text-black h1size font-bold rounded-3xl py-10 ">
         At Protein House, we pride ourselves on providing exceptional culinary
         experiences that take your celebrations to the next level.
       </h1>
       <div className="flex gap-5 sm:flex-row flex-col 2xl:justify-start justify-center ">
-        <Buttons
+        <LinkPro
           href={"/"}
           text={"Order Carside Pickup"}
           className="bg-primary max-w-sm text-center "
         />
-        <Buttons
+        <LinkPro
           href={"/"}
           text={"Order Delivery"}
           className="border-2 border-primary max-w-sm text-center text-primary "

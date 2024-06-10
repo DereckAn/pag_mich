@@ -1,6 +1,6 @@
 import { cn } from "@/utils/utils";
 import Image, { StaticImageData } from "next/image";
-import { Buttons } from "./buttons";
+import { LinkPro } from "./link-pro";
 
 interface SliderItemProps {
   itemActivo: number;
@@ -52,7 +52,7 @@ export const SliderItem = ({
         >
           {description}
         </p>
-        <Buttons
+        <LinkPro
           href="/menu"
           text="Buy now"
           className={cn(

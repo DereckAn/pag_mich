@@ -53,7 +53,7 @@ export const CardProducts = ({ product }: CardProductsProps) => {
           className={cn(
             "flex bg-primary w-14 h-14 items-center justify-center rounded-full text-xl border-4 border-white/10 box-content transition-transform",
             stock > 0
-              ? "hover:rotate-90 hover:bg-naranja"
+              ? "hover:rotate-90 hover:bg-amarillo transition-transform duration-300 ease-in-out cursor-pointer"
               : "hover:rotate-0 bg-gray-500 cursor-not-allowed"
           )}
         >

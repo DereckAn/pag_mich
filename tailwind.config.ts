@@ -28,6 +28,7 @@ const config: Config = {
         vainilla: "#F5ECD7",
         textcolor: "#000000",
         naranja: "#Fb7e00",
+        amarillo: "#EAB308"
       },
       borderRadius: {
         "4xl": "2rem",

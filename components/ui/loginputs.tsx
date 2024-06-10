@@ -34,7 +34,7 @@ export const LoginInputs = () => {
           className="rounded-full p-[16px] w-[460px] transition-colors duration-200 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
         />
         <button
-          className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2"
+          className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2 mx-auto max-w-lg"
           type="submit"
         >
           Sign In

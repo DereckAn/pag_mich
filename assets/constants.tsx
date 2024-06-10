@@ -1,12 +1,4 @@
-import { Category, Menu, Products, ProvidersNames } from "@/types";
-import {
-  FaApple,
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { Category, Menu, ProvidersNames } from "@/types";
 import {
   balloons,
   building,

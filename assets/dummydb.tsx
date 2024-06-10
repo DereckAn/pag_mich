@@ -355,7 +355,7 @@ export const products2: Products[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco mmodo.",
   },
   {
-    name: "Chocolate cake",
+    name: "Chocolate cake 2",
     category: "Postres",
     image: comida11,
     discount: 10,
@@ -365,7 +365,7 @@ export const products2: Products[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco mmodo.",
   },
   {
-    name: "Chocolate cake",
+    name: "Chocolate cake 3",
     category: "Postres",
     image: comida11,
     discount: 10,
@@ -375,7 +375,7 @@ export const products2: Products[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco mmodo.",
   },
   {
-    name: "Chocolate cake",
+    name: "Chocolate cake 4",
     category: "Postres",
     image: comida11,
     discount: 10,
@@ -385,7 +385,7 @@ export const products2: Products[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco mmodo.",
   },
   {
-    name: "Chocolate cake",
+    name: "Chocolate cake 5",
     category: "Postres",
     image: comida11,
     discount: 10,

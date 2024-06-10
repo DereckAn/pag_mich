@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { Buttons } from "./buttons";
-import Menuhi from "@/styles/catering-styles.module.css";
+import { LinkPro } from "./link-pro";
 
 interface MenuHighlightCateringProps {
   title: string;
@@ -33,7 +32,7 @@ export const MenuHighlightCatering = ({
             </ul>
           </div>
           <div className="my-5">
-            <Buttons
+            <LinkPro
               href={link}
               text="View Menu"
               className="bg-primary text-vainilla"
