@@ -8,8 +8,8 @@ const CreateInputs = () => {
 
   return (
     <>
-      <AlertSuccess message={state?.success} />
       <AlertFailure message={state?.error} />
+      <AlertSuccess message={state?.success} />
       <form
         className=" flex flex-col gap-5 w-[60%] items-center"
         action={formAction}

@@ -8,21 +8,28 @@ import Credentials from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 import Instagram from "next-auth/providers/instagram";
+import db from "./utils/db";
 
 const prisma = new PrismaClient();
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
+  pages:{
+    signIn: "/authentication",
+    error: "/authentication/error"
+  },
+  events: {
+    async linkAccount({user}){
+      await db.user.update({
+        where: {id: user.id},
+        data: {
+          emailVerified: new Date(),
+        },
+      });
+    }
+  },
   callbacks: {
-    // async signIn({ user }) {
-    //     const existingUser = await getUserById(user.id);
-    //   console.log("user", user);
-    //   if(!existingUser || !existingUser.emailVerified){
-    //     return false;
-    //   }
-    //   return true;
-    // },
     async session({ session, token }) {
       console.log("token", token);
       if (token.sub && session.user) {

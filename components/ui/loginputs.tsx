@@ -10,8 +10,8 @@ export const LoginInputs = () => {
 
   return (
     <>
-      <AlertSuccess message={state?.success} />
       <AlertFailure message={state?.error} />
+      <AlertSuccess message={state?.success} />
       <form
         className="flex flex-col gap-3 p-5"
         action={formAction}
