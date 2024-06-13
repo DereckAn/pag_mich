@@ -2,7 +2,8 @@
 
 import { getUserByEmail } from "@/data/user";
 import { RegisterSchema } from "@/schemas";
-import  db  from "@/utils/db";
+import db from "@/utils/db";
+import { generateVerificationToken } from "@/utils/tokens";
 import bcrypt from "bcryptjs";
 
 export const register = async (state: any, formData: FormData) => {
@@ -15,7 +16,7 @@ export const register = async (state: any, formData: FormData) => {
   });
 
   console.log(validatedResult);
-  
+
   if (!validatedResult.success) {
     console.log(validatedResult.error.errors);
     return { error: "Invalid Fields" };
@@ -42,9 +43,11 @@ export const register = async (state: any, formData: FormData) => {
 
   //todo: Send verification token email.
 
+  const verificationToken = await generateVerificationToken(email);
+
   console.log(validatedResult);
   console.log(formData);
   console.log("este es el state ----> ", state);
 
-  return { success: "User created successfully" };
+  return { success: "Confirnmation email sent" };
 };

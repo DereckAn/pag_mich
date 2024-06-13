@@ -15,21 +15,33 @@ const prisma = new PrismaClient();
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
-  pages:{
+  pages: {
     signIn: "/authentication",
-    error: "/authentication/error"
+    error: "/authentication/error",
   },
   events: {
-    async linkAccount({user}){
+    async linkAccount({ user }) {
       await db.user.update({
-        where: {id: user.id},
+        where: { id: user.id },
         data: {
           emailVerified: new Date(),
         },
       });
-    }
+    },
   },
   callbacks: {
+    async signIn({ user, account }) {
+      // Allow oath without email verification
+      if (account?.provider !== "credentials") return true;
+      const exisitingUser = await getUserById(user.id?.toString()!);
+
+      //Prevent sign in without verification
+      if (!exisitingUser?.emailVerified) return false;
+
+      //Todo: add 2fa check
+
+      return true;
+    },
     async session({ session, token }) {
       console.log("token", token);
       if (token.sub && session.user) {

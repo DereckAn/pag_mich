@@ -1,8 +1,10 @@
 "use server";
 
 import { signIn } from "@/auth";
+import { getUserByEmail } from "@/data/user";
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { LoginSchema } from "@/schemas";
+import { generateVerificationToken } from "@/utils/tokens";
 import { AuthError } from "next-auth";
 
 export const login = async (state: any, formData: FormData) => {
@@ -17,6 +19,19 @@ export const login = async (state: any, formData: FormData) => {
   }
 
   const { email, password } = validatedResult.data;
+  const exisitingUser = await getUserByEmail(email);
+
+  if (!exisitingUser?.email || !exisitingUser.password) {
+    return { error: "Email does not exist or Invalid Credentials " };
+  }
+
+  if (!exisitingUser.emailVerified) {
+    const verificationToken = await generateVerificationToken(
+      exisitingUser.email
+    );
+    return { success: "Please verify your email" };
+  }
+
   try {
     await signIn("credentials", {
       email,
