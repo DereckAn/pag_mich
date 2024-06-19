@@ -16,7 +16,6 @@ export const CardProducts = ({ product }: CardProductsProps) => {
     dispatch(addToCart({ productId: product.id, quantity: 1 }));
   }
   console.log(carts);
-
   const {
     id,
     name,
@@ -27,6 +26,7 @@ export const CardProducts = ({ product }: CardProductsProps) => {
     discount,
     stock,
   } = product;
+  
   return (
     <div className="bg-white p-6 rounded-3xl shadow-md space-y-5 text-primary ">
       <div className="flex items-center gap-x-6 ">
