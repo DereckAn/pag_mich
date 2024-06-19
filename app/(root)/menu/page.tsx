@@ -8,7 +8,7 @@ const Menu = () => {
     <>
       <Categories />
       <ul
-        className={`grid grid-cols-2  gap-3 h-full ${menucss.menu_item_list}`}
+        className={`grid grid-cols-2 gap-3 h-full ${menucss.menu_item_list}`}
       >
         {products2.map((item) => (
           <li key={item.name}>

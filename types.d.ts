@@ -9,12 +9,14 @@ export type Category = {
 };
 
 export type Products = {
+  id: number;
   name: string;
   category: string;
   image: StaticImageData;
   discount: number;
   stock: number;
   price: number;
+  slug: string;
   description: string;
 };
 

@@ -1,13 +1,24 @@
+'use client';
 import { Products } from "@/types";
 import { cn } from "@/utils/utils";
 import Image from "next/image";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "@/data/cart";
 
 interface CardProductsProps {
   product: Products;
 }
 
 export const CardProducts = ({ product }: CardProductsProps) => {
+  const carts = useSelector((store: any) => store.cart.items);
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart({ productId: product.id, quantity: 1 }));
+  }
+  console.log(carts);
+
   const {
+    id,
     name,
     price,
     image,
@@ -48,6 +59,7 @@ export const CardProducts = ({ product }: CardProductsProps) => {
       <div className="flex items-center justify-between">
         <h4 className="text-2xl font-bold">${price.toFixed(2)}</h4>
         <button
+          onClick={handleAddToCart}
           type="button"
           disabled={stock <= 0}
           className={cn(
