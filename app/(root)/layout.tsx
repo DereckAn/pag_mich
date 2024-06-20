@@ -12,7 +12,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
     <Provider store={store}>
       <NavbarMobile />
       <Navbar />
-      <div className="mt-20 pt-[0.1px]  md:mt-0">{children}</div>
+      <div className="mt-20 pt-[0.1px]  lg:mt-0">{children}</div>
       <FooterX />
     </Provider>
   );
