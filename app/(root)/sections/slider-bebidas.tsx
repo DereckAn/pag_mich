@@ -1,68 +1,57 @@
 "use client";
-import { bebidasSliderSection } from "@/assets/constants";
+import { drinkSlider } from "@/assets/constants";
 import { ArrowsLR } from "@/components/ui/arrows-lr";
-import EmblaCarousel from "@/components/ui/EmblaCarousel";
-import { usePrevNextButtons } from "@/components/ui/EmblaCarouselArrowButtons";
 import { SliderItem } from "@/components/ui/slider-items";
-import { EmblaOptionsType } from "embla-carousel";
-import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 
 export const SliderBeverages = () => {
-  const [itemActivo, setItemActivo] = useState<number>(0);
-  const [listaaa, setListaaa] = useState(bebidasSliderSection);
+  const [activeDrink, setActiveDrink] = useState<number>(0);
+  const listDrink = drinkSlider;
 
+  // Set index for drinks and ingredients
   const handleNext = () => {
-    setListaaa(listaaa.slice(1).concat(listaaa.slice(0, 1)));
+    const drink = activeDrink === listDrink.length - 1 ? 0 : activeDrink + 1;
+
+    setActiveDrink(drink);
   };
 
   const handlePrev = () => {
-    setListaaa(listaaa.slice(-1).concat(listaaa.slice(0, -1)));
+    const drink = activeDrink === 0 ? listDrink.length - 1 : activeDrink - 1;
+
+    setActiveDrink(drink);
   };
 
+  // Functions to go back or forward
   const handleNextCombined = () => {
     handleNext();
-    onNextButtonClick();
   };
 
   const handlePrevCombined = () => {
     handlePrev();
-    onPrevButtonClick();
   };
 
-  const OPTIONS: EmblaOptionsType = { align: "start", loop: true, watchDrag: false, };
-  const Slides2 = bebidasSliderSection.map((bebida) => bebida.imagenl);
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
-
   return (
-    <section className="w-full h-screen relative overflow-hidden  ">
+    <section className="relative w-screen py-20 min-[500px]:py-24 md:py-0">
       <ul>
-        {listaaa.map((bebida, index) => (
+        {listDrink.map((drink, index) => (
           <SliderItem
-            key={bebida.titulo + index}
-            itemActivo={itemActivo}
+            key={drink.titulo + index}
+            itemActivo={activeDrink}
             id={index}
-            imagec={bebida.imagenc}
-            titulo={bebida.titulo}
-            description={bebida.description}
+            imageDrink={drink.imageDrink}
+            imageIngredients={drink.imageIngredients}
+            ingredients={drink.ingredients}
+            titulo={drink.titulo}
+            description={drink.description}
           />
         ))}
       </ul>
-      <ArrowsLR
-        handleNext={handleNextCombined}
-        handlePrev={handlePrevCombined}
-      />
-      <EmblaCarousel
-        slides={Slides2}
-        emblaRef={emblaRef}
-      />
+      <div className="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 ">
+        <ArrowsLR
+          handleNext={handleNextCombined}
+          handlePrev={handlePrevCombined}
+        />
+      </div>
     </section>
   );
 };

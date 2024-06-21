@@ -25,6 +25,16 @@ import {
   time,
   truk,
   wedding,
+  drink1,
+  drink2,
+  drink3,
+  drink4,
+  drink5,
+  ingredient1,
+  ingredient2,
+  ingredient3,
+  ingredient4,
+  ingredient5,
 } from "./index";
 
 export const navmenu: Menu[] = [
@@ -54,65 +64,70 @@ export const socials = [
   {
     name: "TikTok",
     url: "https://www.tiktok.com/",
-    icon:"fi fi-brands-tik-tok"
+    icon: "fi fi-brands-tik-tok",
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/",
-    icon: "fi fi-brands-instagram"
+    icon: "fi fi-brands-instagram",
   },
   {
     name: "Whatsapp",
     url: "https://whatsapp.com/",
-    icon: "fi fi-brands-whatsapp"
+    icon: "fi fi-brands-whatsapp",
   },
   {
     name: "Facebook",
     url: "https://www.facebook.com/",
-    icon: "fi fi-brands-facebook"
+    icon: "fi fi-brands-facebook",
   },
 ];
 
-export const bebidasSliderSection = [
+export const drinkSlider = [
   {
-    imagenc: comida1,
-    imagenl: comida11,
-    titulo: "Fresh Grapes",
+    imageIngredients: ingredient1,
+    imageDrink: drink1,
+    titulo: "Jamaican Bird",
     link: "/",
     description:
-      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+      "Exotic and flavorful cocktail that combines tropical ingredients for a refreshing drink:",
+    ingredients: ["Jigger jamaican", "Banana Liqueur", "Orange juice"],
   },
   {
-    imagenc: comida2,
-    imagenl: comida12,
-    titulo: "Fresh Apples",
+    imageIngredients: ingredient2,
+    imageDrink: drink2,
+    titulo: "Blue Margaritas",
     link: "/",
     description:
-      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+      "A Blue Margarita is a vibrant, tropical twist on the classic margarita cocktail:",
+    ingredients: ["Tequila", "Blue Curaçao", "Lime Juice"],
   },
   {
-    imagenc: comida3,
-    imagenl: comida9,
-    titulo: "Rotten Tommatos",
+    imageIngredients: ingredient3,
+    imageDrink: drink3,
+    titulo: "Alcatraz Cocktail",
     link: "/",
     description:
-      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+      "A perfect for those who enjoy bold and flavorful drinks with a touch of sophistication:",
+    ingredients: ["Orange", "Cointreau", "Rye whiskey"],
   },
   {
-    imagenc: comida4,
-    imagenl: comida8,
-    titulo: "Orange HUge",
+    imageIngredients: ingredient4,
+    imageDrink: drink4,
+    titulo: "Red Nail Cocktail",
     link: "/",
     description:
-      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+      "A sophisticated and striking drink known for its bold flavors and vibrant color:",
+    ingredients: ["Vodka", "Campari", "Scotch whisky"],
   },
   {
-    imagenc: comida5,
-    imagenl: comida7,
-    titulo: "Banana Splite",
+    imageIngredients: ingredient5,
+    imageDrink: drink5,
+    titulo: "Blue Punch",
     link: "/",
     description:
-      "Fresh grapes are a great snack to havloremp ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.e on hand. They're easy to eat, and they're packed with vitamins and minerals that are good for your health.",
+      "A delightful and visually appealing drink, often served at baby showers or celebrations:",
+    ingredients: ["Blueberry", "Light rum", "Triple sec"],
   },
 ];
 
@@ -316,8 +331,6 @@ export const providers = [
     color: "pink",
   },
 ];
-
-
 
 export const categories: Category[] = [
   {

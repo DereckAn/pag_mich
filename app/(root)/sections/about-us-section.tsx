@@ -1,4 +1,4 @@
-import {  protein } from "@/assets";
+import { protein } from "@/assets";
 import { Container } from "@/components/ui/container";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
@@ -35,11 +35,11 @@ const AboutUs = () => {
             Our products are high-quality and safe. And we focus on the details
             so you have a clean, orderly home or office every time.
           </p>
-        <div className="flex justify-start">
-          <Link className=" underline hover:text-blue-600" href={"./aboutus"}>
-            VIEW MORE
-          </Link>
-        </div>
+          <div className="flex justify-start">
+            <Link className=" underline hover:text-blue-600" href={"./aboutus"}>
+              VIEW MORE
+            </Link>
+          </div>
         </div>
       </div>
     </Container>

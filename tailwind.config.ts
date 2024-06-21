@@ -35,6 +35,13 @@ const config: Config = {
       transitionDuration: {
         DEFAULT: "150ms",
       },
+      screens: {
+        "3xl": "1600px",
+      },
+      listStyleType: {
+        roman: "upper-roman",
+        square: "square",
+      },
     },
   },
   plugins: [],

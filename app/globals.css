@@ -20,7 +20,7 @@ body,
   scrollbar-color: transparent transparent;
 }
 
-i{
+i {
   /* @apply mt-1; */
   margin-top: 0.25rem;
 }
@@ -34,11 +34,10 @@ i{
   overflow: hidden;
 }
 
-.scrollbar-hidden{
+.scrollbar-hidden {
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
 }
-
 
 .buttonwh {
   width: 80px;
@@ -363,4 +362,14 @@ button:hover .bottom-span {
 .embla__button__svg {
   width: 35%;
   height: 35%;
+}
+
+.shadow-rounded {
+  border-radius: 50%;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.shadow-none {
+  border-radius: 0;
+  box-shadow: 0;
 }
