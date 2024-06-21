@@ -1,12 +1,4 @@
-import { Category, Menu, Products } from "@/types";
-import {
-  FaApple,
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { Category, Menu, ProvidersNames } from "@/types";
 import {
   balloons,
   building,
@@ -313,22 +305,22 @@ export const orderCards = [
   },
 ];
 
-export const providers = [
+export const providers: { icon: string; name: ProvidersNames }[] = [
   {
-    provider: FcGoogle,
-    color: "red",
+    icon: "fi fi-brands-google",
+    name: "google",
   },
   {
-    provider: FaFacebook,
-    color: "green",
+    icon: "fi fi-brands-twitter",
+    name: "twitter",
   },
   {
-    provider: FaApple,
-    color: "blue",
+    icon:"fi fi-brands-github",
+    name: "github",
   },
   {
-    provider: FaInstagram,
-    color: "pink",
+    icon:"fi fi-brands-instagram",
+    name: "instagram",
   },
 ];
 

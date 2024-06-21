@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
+import { LinkPro } from "./link-pro";
 import { cn } from "@/utils/utils";
-import { Buttons } from "./buttons";
 
 interface SliderItemProps {
   itemActivo: number;
@@ -63,7 +63,7 @@ export const SliderItem = ({
                 <li key={index}>{ingredient}</li>
               ))}
           </ul>
-          <Buttons
+          <LinkPro
             href="/menu"
             text="Buy Now"
             className={cn(

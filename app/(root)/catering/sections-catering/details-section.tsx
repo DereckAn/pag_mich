@@ -1,8 +1,8 @@
 "use server";
 
 import { detailsCatering } from "@/assets/constants";
-import { Buttons } from "@/components/ui/buttons";
 import { Container } from "@/components/ui/container";
+import { LinkPro } from "@/components/ui/link-pro";
 import { Title } from "@/components/ui/title";
 import Details from "@/styles/catering-styles.module.css";
 import Image from "next/image";
@@ -30,7 +30,7 @@ export const DetailsCatering = () => {
         ))}
       </div>
       <div className="flex items-center justify-center ">
-        <Buttons
+        <LinkPro
           href="/catering"
           className="uppercase bg-primary text-vainilla"
           text="Order Delivery"

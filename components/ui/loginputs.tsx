@@ -1,21 +1,45 @@
+"use client";
+
+import { login } from "@/actions/login";
+import { useFormState } from "react-dom";
+import { AlertFailure } from "./alert-failure";
+import { AlertSuccess } from "./alert-succes";
+
 export const LoginInputs = () => {
+  const [state, formAction] = useFormState(login, null);
+
   return (
     <>
-      <div className="flex flex-col gap-3 p-5">
+      <AlertFailure message={state?.error} />
+      <AlertSuccess message={state?.success} />
+      <form
+        className="flex flex-col gap-3 p-5"
+        action={formAction}
+        method="POST"
+      >
         <input
-          type="text"
           placeholder="Email"
+          name="email"
+          id="email"
+          type="email"
+          required
           className="rounded-full p-[16px] w-[460px] transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
         />
         <input
           type="password"
+          name="password"
+          id="password"
+          required
           placeholder="Password"
           className="rounded-full p-[16px] w-[460px] transition-colors duration-200 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
         />
-      </div>
-      <button className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2">
-        Sign In
-      </button>
+        <button
+          className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2 mx-auto max-w-lg"
+          type="submit"
+        >
+          Sign In
+        </button>
+      </form>
     </>
   );
 };
