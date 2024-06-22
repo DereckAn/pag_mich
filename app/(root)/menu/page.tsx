@@ -3,8 +3,7 @@
 import { products2 } from "@/assets/dummydb";
 import menucss from "@/styles/menu-styles.module.css";
 import { Products } from "@/types";
-import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect , useState } from "react";
 import { CardMenu } from "./components/card-menu";
 import Categories  from "./components/categories";
 import { DialogDetailsItem } from "./components/dialog-details-item";
@@ -23,7 +22,6 @@ const Menu = () => {
     } else {
       body.classList.remove("no-scroll");
     }
-
     // Cleanup function to remove the class when the component unmounts
     return () => body.classList.remove("no-scroll");
   }, [activeCard]);
