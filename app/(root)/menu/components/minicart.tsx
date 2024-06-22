@@ -17,18 +17,10 @@ export const MiniCart = () => {
     <>
       <aside
         className={cn(
-          "fixed xl:static right-0  xl:p-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] xl:w-full  transition-all space-y-5 bg-vainilla p-3",
+          "fixed right-0 flex flex-col h-full z-50 w-[90%] sm:w-[70%] xl:w-[33%] transition-all space-y-5 bg-vainilla p-3",
           showCart ? "top-0 delay-300" : "-top-full"
         )}
       >
-        <div className="relative">
-          <i className="fi fi-rr-search absolute left-4 top-4 text-primary " />
-          <input
-            type="text"
-            className="h-[58px] pl-12 pr-4 rounded-full outline-none  w-full "
-            placeholder="Search"
-          />
-        </div>
         <div className=" overflow-y-auto  flex flex-col bg-white rounded-3xl p-6 ">
           <section className="basis-1/12 ">
             <h1 className="text-2xl font-medium">Order Details</h1>
@@ -67,14 +59,14 @@ export const MiniCart = () => {
       <button
         type="button"
         onClick={() => setShowCart(true)}
-        className="xl:hidden fixed bottom-0 right-0 w-14 h-14 bg-black text-white  text-xl rounded-tl-xl z-30 "
+        className="fixed bottom-0 right-0 w-14 h-14 bg-black text-white text-xl rounded-tl-xl z-30 "
       >
         <i className="fi fi-br-shopping-cart"></i>
       </button>
       <button
         type="button"
         className={cn(
-          "fixed bg-black/40 xl:hidden transition-all",
+          "fixed bg-black/40 transition-all",
           showCart
             ? "w-full h-full right-0 top-0"
             : "w-0 h-0 bottom-0 delay-300 left-0 "

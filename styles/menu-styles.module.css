@@ -8,3 +8,22 @@
   height: calc(100% - 4 * 1.25rem);
   overflow-y: auto;
 }
+
+.menu_card_list{
+  --widtht: 500px;
+  --heightt: 300px;
+  height: calc(100% - 4 * 1.25rem);
+  display: grid;
+  gap: 25px;
+  padding: 10px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, var(--widtht));
+  grid-auto-rows: var(--heightt);
+  overflow-y: auto;
+}
+
+@media (width >= 1280px) {
+  .menu_card_list {
+    gap: 25px;
+  }
+}

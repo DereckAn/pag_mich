@@ -1,9 +1,10 @@
 import { categories } from "@/assets/constants";
+import React from "react";
 
-export const Categories = () => {
+const Categories = () => {
   return (
-    <div>
-      <ul className="flex items-center gap-x-1 flex-nowrap border border-black/10 p-1 rounded-full max-w-full overflow-hidden overflow-x-auto scrollbar-hidden">
+    <div className="w-3/4">
+      <ul className="flex items-center gap-x-1 flex-nowrap border border-black/10 p-1 rounded-full overflow-hidden overflow-x-auto scrollbar-hidden ">
         <li>
           <button
             className="py-3 px-6 bg-primary font-medium rounded-full text-vainilla"
@@ -26,3 +27,5 @@ export const Categories = () => {
     </div>
   );
 };
+
+export default React.memo(Categories);

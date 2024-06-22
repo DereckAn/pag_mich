@@ -35,7 +35,7 @@ export const CardProducts = ({ product }: CardProductsProps) => {
           alt={name}
           width={100}
           height={100}
-          className="rounded-2xl w-24 h-24 object-contain "
+          className="rounded-2xl w-24 h-24 object-contain"
         />
         <div className="spcae-y-2">
           <div className="flex items-center gap-x-2">
