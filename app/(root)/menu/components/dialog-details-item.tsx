@@ -79,9 +79,11 @@ export const DialogDetailsItem = ({
             />
           </SectionDialogItem>
         </div>
-        <div className={`relative p-5  bottom-0 left-0 right-0 space-y-2 shadow-2xl shadow-black`}>
+        <div
+          className={`relative p-5  bottom-0 left-0 right-0 space-y-2 shadow-2xl shadow-black`}
+        >
           <div className="flex items-center justify-end gap-3">
-            Hungry?? 
+            Hungry??
             <button
               type="button"
               className="w-8 h-8 bg-primary hover:bg-amarillo transition-all duration-300 ease-in-out hover:text-primary hover:font-bold rounded-full flex items-center justify-center "
