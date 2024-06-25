@@ -18,21 +18,26 @@ export const MenuHighlightCatering = ({
 }: MenuHighlightCateringProps) => {
   return (
     <div className="w-full">
-      <div className="mx-auto cristalblur rounded-3xl sm:h-[350px] md:h-[450px] flex items-center justify-between p-3 my-3 flex-col-reverse sm:flex-row max-w-7xl">
-        <div className="flex flex-col h-full justify-between px-5">
-          <h2 className="text-2xl mt-5">{title}</h2>
-          <p className="text-lg">{text}</p>
-          <ul className={`list-disc list-inside space-y-2 sm:hidden md:block`}>
-            {lista.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          <LinkPro
-            href={link}
-            text="View Menu"
-            className="bg-primary text-vainilla w-fit mt-4 sm:mt-0 md:mt-2"
-          />
-          <div className="my-5"></div>
+      <div className="mx-auto cristalblur rounded-3xl sm:h-[350px] flex items-center justify-between p-3 my-3 flex-col-reverse sm:flex-row max-w-7xl">
+        <div className="flex flex-col h-full justify-between px-5  ">
+          <div className="space-y-1">
+            <h2 className="text-2xl mt-5">{title}</h2>
+            <p className="text-lg">{text}</p>
+            <ul className="list-inside sm:hidden lg:block">
+              {lista.map((item) => (
+                <li key={item} className="palomita ">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="my-5">
+            <LinkPro
+              href={link}
+              text="View Menu"
+              className="bg-primary text-vainilla"
+            />
+          </div>
         </div>
         <Image
           src={image}

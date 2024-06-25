@@ -59,7 +59,7 @@ export const MiniCart = () => {
       <button
         type="button"
         onClick={() => setShowCart(true)}
-        className="fixed bottom-3 right-3 w-14 h-14 bg-black text-white text-xl rounded-full z-30 "
+        className="fixed bottom-3 right-3 w-14 h-14 bg-black text-white text-xl rounded-full z-30 flex items-center justify-center" 
       >
         <i className="fi fi-br-shopping-cart"></i>
       </button>
