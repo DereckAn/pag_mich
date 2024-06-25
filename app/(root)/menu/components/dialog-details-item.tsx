@@ -16,16 +16,16 @@ export const DialogDetailsItem = ({
       onClick={closeDialog}
       className="w-full h-full bg-black/60 z-50 fixed inset-0"
     >
-      <dialog
+      <form
         onClick={(e) => e.stopPropagation()}
-        className="bg-vainilla w-[80vw] md:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] h-[92dvh] fixed inset-0 flex flex-col z-50 m-auto  rounded-3xl transition-all duration-500 ease-in-out"
+        className="bg-vainilla w-[100vw] md:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] h-[92dvh] fixed inset-0 flex flex-col z-50 m-auto  rounded-3xl transition-all duration-500 ease-in-out"
       >
         <button onClick={closeDialog} className="z-50 absolute right-5 top-5">
           <i className="fi fi-br-cross text-xl" />
         </button>
         <div className="flex-1 overflow-y-auto">
           <section>
-            <div className=" w-full p-5 flex flex-row gap-5">
+            <div className=" w-full p-5 flex flex-col sm:flex-row gap-5">
               <Image
                 src={activeCard?.image}
                 alt={activeCard?.name}
@@ -98,11 +98,11 @@ export const DialogDetailsItem = ({
               <i className="fi fi-rr-plus text-white " />
             </button>
           </div>
-          <button className="bg-primary py-4 px-8 text-vainilla rounded-full w-full">
+          <button className="bg-primary py-4 px-8 text-vainilla rounded-full w-full" type="submit">
             Add To Cart
           </button>
         </div>
-      </dialog>
+      </form>
     </div>
   );
 };

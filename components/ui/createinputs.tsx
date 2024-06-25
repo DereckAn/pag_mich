@@ -5,6 +5,7 @@ import { register } from "@/actions/register";
 
 const CreateInputs = () => {
   const [state, formAction] = useFormState(register, null);
+  const style = "rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100";
 
   return (
     <>
@@ -22,9 +23,8 @@ const CreateInputs = () => {
             name="name"
             autoComplete="name"
             required
-            // disabled={isPending}
             placeholder="Name"
-            className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
+            className={style}
           />
           <input
             type="email"
@@ -32,9 +32,8 @@ const CreateInputs = () => {
             name="email"
             autoComplete="email"
             required
-            // disabled={isPending}
             placeholder="Email"
-            className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
+            className={style}
           />
         </div>
         <div className="flex gap-5 w-full">
@@ -44,9 +43,8 @@ const CreateInputs = () => {
             name="phone"
             autoComplete="tel"
             required
-            // disabled={isPending}
             placeholder="(801)-123-4567"
-            className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
+            className={style}
           />
           <input
             type="password"
@@ -54,16 +52,14 @@ const CreateInputs = () => {
             name="password"
             autoComplete="current-password"
             required
-            // disabled={isPending}
             placeholder="Password"
-            className="rounded-full p-4 w-full transition-colors duration-300 ease-in-out focus:bg-vainilla focus:border-none focus:outline-none focus:ring-2 focus:ring-primary text-primary border-orange-100"
+            className={style}
           />
         </div>
 
         <button
           className="bg-primary text-vainilla p-4 rounded-full px-20 mt-2 max-w-lg"
           type="submit"
-          // disabled={isPending}
         >
           Sign Up
         </button>
