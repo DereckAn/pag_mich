@@ -6,8 +6,9 @@
 export const publicRoutes = [
     "/",
     "/menu",
-    "/catering"
-];
+    "/catering",
+    "/cart",
+];  
 
 
 /**

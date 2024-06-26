@@ -25,3 +25,10 @@ export type ProductSubset = Pick<Products, "name" | "price" | "image"> & {
 };
 
 export type ProvidersNames = "google" | "twitter" | "github" | "instagram";
+
+export interface InstagramMedia {
+  id: string;
+  caption: string;
+  media_url: string;
+  permalink: string;
+}
