@@ -12,9 +12,10 @@ export const ReviewSection = async () => {
           description={item.caption}
           image={item.media_url}
           link={item.permalink}
+          timestamp={item.timestamp}
           key={item.id}
         />
       ))}
     </section>
-  );
+  );  
 };

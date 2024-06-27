@@ -31,4 +31,5 @@ export interface InstagramMedia {
   caption: string;
   media_url: string;
   permalink: string;
+  timestamp: string;
 }

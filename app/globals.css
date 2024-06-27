@@ -367,6 +367,14 @@ button:hover .bottom-span {
   background-color: cadetblue;
 }
 
+.description_text {
+  display: -webkit-box;
+  -webkit-line-clamp: calc(var(--cards-number) + 1); 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (width > 630px) {
   :root{
     --cards-number: 3;
