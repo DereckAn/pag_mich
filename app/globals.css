@@ -9,6 +9,9 @@
     --background: 220 3% 91%;
     --background-foreground: 0 0% 100%;
     --text: 0 0% 11%;
+    --widtht: 95vw;
+    --cards-number: 2;
+    --true-width:calc(var(--widtht) / var(--cards-number));
   }
 }
 
@@ -229,53 +232,6 @@ button:hover .bottom-span {
   }
 }
 
-.item {
-  width: 400px;
-  height: 100%;
-  background-position: 50% 50%;
-  display: inline-block;
-  transition: 1s;
-  background-size: 200%;
-  position: absolute;
-  z-index: 1;
-}
-
-.item:nth-child(1) {
-  transform: translate(-150%);
-  opacity: 0;
-}
-.item:nth-child(2) {
-  transform: translate(-40%);
-}
-.item:nth-child(3) {
-  transform: translate(70%);
-}
-.item:nth-child(4) {
-  transform: translate(180%);
-}
-.item:nth-child(n + 5) {
-  transform: translate(290%);
-  opacity: 0;
-}
-
-.item:nth-child(1).prev {
-  transform: translate(150%);
-  opacity: 0;
-}
-.item:nth-child(2).prev {
-  transform: translate(40%);
-}
-.item:nth-child(3).prev {
-  transform: translate(-70%);
-}
-.item:nth-child(4).prev {
-  transform: translate(-180%);
-}
-.item:nth-child(n + 5).prev {
-  transform: translate(-290%);
-  opacity: 0;
-}
-
 .embla {
   /* max-width: 50rem; */
   margin: auto;
@@ -372,4 +328,59 @@ button:hover .bottom-span {
 .shadow-none {
   border-radius: 0;
   box-shadow: 0;
+}
+
+/* Cards Review from Instagram: */
+.squareci {
+  width: var(--true-width);
+  height: var(--true-width);
+  position: relative;
+  background: transparent;
+}
+
+.cardci {
+  width: var(--true-width);
+  height: var(--true-width);
+  transform-style: preserve-3d;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+} 
+
+.squareci:hover > .cardci {
+  transform: rotateY(180deg);
+}
+
+.frontci {
+  width: var(--true-width);
+  height: var(--true-width);
+  backface-visibility: hidden;
+  position: absolute;
+  background-color: darkgoldenrod;
+}
+
+.backci {
+  width: var(--true-width);
+  height: var(--true-width);
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: cadetblue;
+}
+
+@media (width > 630px) {
+  :root{
+    --cards-number: 3;
+  }
+}
+
+@media (width > 1024px) {
+  :root{
+    --cards-number: 4;
+  }
+}
+
+@media (width > 1280px) {
+  :root{
+    --cards-number: 5;
+  }
 }
