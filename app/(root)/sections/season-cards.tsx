@@ -1,9 +1,8 @@
 import { orderCards } from "@/assets/constants";
-import { Container } from "@/components/ui/container";
 import { OrderCard } from "@/components/ui/order-card";
 export const SeassonCards = () => {
   return (
-    <Container className=" flex justify-center items-center flex-wrap border-2 border-primary">
+    <div className="flex flex-wrap items-center justify-center  gap-10 py-20">
       {orderCards.map((card) => (
         <OrderCard
           key={card.title}
@@ -13,7 +12,6 @@ export const SeassonCards = () => {
           href={card.href}
         />
       ))}
-    </Container>
+    </div>
   );
 };
-
