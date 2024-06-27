@@ -188,22 +188,22 @@ export const cateringMenu = [
 export const detailsCatering = [
   {
     image: food_cart,
-    text: "$100 minimum on catering delivery orders",
+    text: "$75 minimum on catering delivery orders",
     text2: "",
   },
   {
     image: time,
-    text: "Order by 5 p.m. for next day lunch delivery",
-    text2: "for orders within delivery area",
+    text: "Order with 24 hours before your event",
+    text2: "Contact for exceptions",
   },
   {
     image: truk,
-    text: "10% delivery fee up to $500",
-    text2: "then 5% for every dollar thereafter",
+    text: "10% discount on orders up to $250",
+    text2: "",
   },
   {
     image: fruitbowl,
-    text: "Complimentary chafing kit",
+    text: "Free delivery on orders over $100",
     text2: "available upon request with delivery",
   },
 ];

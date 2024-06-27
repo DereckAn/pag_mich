@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/container";
 import { OrderCard } from "@/components/ui/order-card";
 export const SeassonCards = () => {
   return (
-    <Container className=" flex justify-center items-center flex-row">
+    <Container className=" flex justify-center items-center flex-wrap border-2 border-primary">
       {orderCards.map((card) => (
         <OrderCard
           key={card.title}

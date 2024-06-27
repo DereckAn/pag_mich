@@ -355,7 +355,6 @@ button:hover .bottom-span {
   height: var(--true-width);
   backface-visibility: hidden;
   position: absolute;
-  background-color: darkgoldenrod;
 }
 
 .backci {

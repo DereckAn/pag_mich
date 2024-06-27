@@ -1,16 +1,13 @@
-import { cn } from "@/utils/utils";
-import Image, { StaticImageData } from "next/image";
-import { differenceInDays } from 'date-fns';
+import { InstagramMedia } from "@/types";
+import { differenceInDays } from "date-fns";
+import Image from "next/image";
 
 interface FlipCardProps {
-  image: StaticImageData | string;
-  description: string;
-  link?: string;
-  className?: string;
-  timestamp?: string;
+  item: InstagramMedia;
 }
 
-export const FlipCard = ({ image, description, className, link, timestamp }: FlipCardProps) => {
+export const FlipCard = ({ item }: FlipCardProps) => {
+  const { caption, media_url, permalink, timestamp } = item;
 
   function calculateDaysSince(timestamp: string): number {
     const givenDate = new Date(timestamp);
@@ -19,12 +16,12 @@ export const FlipCard = ({ image, description, className, link, timestamp }: Fli
   }
 
   return (
-    <div className={cn(`squareci rounded-3xl `, className)}>
+    <div className={`squareci rounded-3xl bg-transparent`}>
       <div className={`rounded-3xl cardci`}>
         <div className={`frontci rounded-3xl`}>
           <Image
-            src={image}
-            alt={description}
+            src={media_url}
+            alt={caption}
             className="rounded-3xl object-cover w-full h-full"
             width={200}
             height={200}
@@ -33,10 +30,14 @@ export const FlipCard = ({ image, description, className, link, timestamp }: Fli
         <div
           className={`backci rounded-3xl flex flex-col justify-start items-start p-5`}
         >
-          <p className="text-[12px]">about {calculateDaysSince(timestamp!)} days ago</p>
-          <p className={`description_text`}>{description}</p>
-          <span className="absolute bottom-5 left-5 text-[12px] sm:text-sm md:text-md">@provoproteinhouse</span>
-          <a href={link}>
+          <p className="text-[12px]">
+            about {calculateDaysSince(timestamp)} days ago
+          </p>
+          <p className={`description_text`}>{caption}</p>
+          <span className="absolute bottom-5 left-5 text-[12px] sm:text-sm md:text-md lg:text-lg">
+            @provoproteinhouse
+          </span>
+          <a href={permalink}>
             <i className="fi fi-brands-instagram absolute bottom-3 right-5 text-xl md:text-2xl" />
           </a>
         </div>

@@ -7,15 +7,15 @@ import Link from "next/link";
 const AboutUs = () => {
   return (
     <Container className="flex flex-col lg:flex-row justify-center items-center px-10 ">
-      <div className=" rounded-3x sm:w-3/4 md:w-2/4 px-2 sm:px-0 sm:h-3/4 md:h-2/4 relative ">
+      <div className=" rounded-3x sm:w-3/4 px-2 sm:px-0 sm:h-3/4 relative md:h-full md:max-w-full">
         <Image
           src={protein}
           alt="hero image"
-          className="rounded-3xl object-cover  "
+          className="rounded-3xl object-cover"
           placeholder="blur"
         />
       </div>
-      <div className="sm:w-3/4 md:w-2/4 space-y-5 flex flex-col justify-center items-center px-2 sm:px-0 ">
+      <div className="sm:w-3/4 space-y-5 flex flex-col justify-center items-center px-2 sm:px-0 ">
         <div className="space-y-5">
           <Title
             className="text-4xl tracking-wider text-start"
@@ -36,7 +36,7 @@ const AboutUs = () => {
             so you have a clean, orderly home or office every time.
           </p>
           <div className="flex justify-start">
-            <Link className=" underline hover:text-blue-600" href={"./aboutus"}>
+            <Link className=" underline hover:text-primary transition duration-300 ease-in-out" href={"./aboutus"}>
               VIEW MORE
             </Link>
           </div>
