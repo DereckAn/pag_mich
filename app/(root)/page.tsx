@@ -13,7 +13,7 @@ export default function Home() {
       {/* <SliderBeverages /> */}
       <HighlightSection />
       <SeassonCards />
-      <AboutUs />
+      <AboutUs /> 
       <DetailsCatering />
       <ReviewSection />
     </main>

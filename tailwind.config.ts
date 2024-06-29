@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'show-content': "showContent 0.5s 0.7s ease-in-out 1 forwards",
+      },
       colors: {
         // primary: {
         //   DEFAULT: "hsl(var(--primary))",

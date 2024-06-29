@@ -1,8 +1,17 @@
-const CartPage = async () => {
+'use client';
+
+import { CircleImage } from "@/app/(root)/cart/components/circle-image";
+import { cerdo } from "@/assets";
+import { useState } from "react";
+
+const CartPage = () => {
+  const [itemActivo, setItemActivo] = useState<number>(0);
   return (
-    <div className="w-full h-screen text-primary">
-      <h1>CartPage</h1>
-    </div>
+    <section className="h-screen w-full">
+      <ul className="relative">
+        <CircleImage image={cerdo} itemActivo={itemActivo} id={0} />
+      </ul>
+    </section>
   );
 };
 
