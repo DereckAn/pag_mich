@@ -26,10 +26,19 @@ export type ProductSubset = Pick<Products, "name" | "price" | "image"> & {
 
 export type ProvidersNames = "google" | "twitter" | "github" | "instagram";
 
-export interface InstagramMedia {
+export type InstagramMedia  = {
   id: string;
   caption: string;
   media_url: string;
   permalink: string;
   timestamp: string;
+}
+
+export type drinkSliderType = {
+  imageIngredients: StaticImageData | string,
+  imageDrink: StaticImageData | string,
+  titulo: string,
+  link: string,
+  description: string,
+  ingredients: string[],
 }

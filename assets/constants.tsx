@@ -1,4 +1,4 @@
-import { Category, Menu, ProvidersNames } from "@/types";
+import { Category, drinkSliderType, Menu, ProvidersNames } from "@/types";
 import {
   balloons,
   building,
@@ -75,7 +75,7 @@ export const socials = [
   },
 ];
 
-export const drinkSlider = [
+export const drinkSlider: drinkSliderType[] = [
   {
     imageIngredients: ingredient1,
     imageDrink: drink1,

@@ -1,36 +1,35 @@
 import { cerdo } from "@/assets";
+import { drinkSliderType } from "@/types";
 import { cn } from "@/utils/utils";
 import Image, { StaticImageData } from "next/image";
 
 interface CircleImageProps {
   itemActivo?: number;
   id?: number;
-  image: StaticImageData | string;
-  brand?: string;
-  name?: string;
-  description?: string;
+  item?: drinkSliderType;
   className?: string;
 }
 
-export const CircleImage = ({
-  className,
+export const CircleImageSlider = ({
   itemActivo,
   id,
-  image,
+  item,
+  className
 }: CircleImageProps) => {
   return (
-    <li
+    <div
+      id="circular-image"
       className={cn(
-        "absolute transition-all duration-500 rounded-full w-[50vw] h-[50vw] ",
+        "transition-all duration-500 cicular_image_slider",
         itemActivo === id ? "opacity-100" : "opacity-0",
         className
       )}
     >
       <Image
-        src={image}
+        src={cerdo}
         alt={"cerdo"}
-        className="object-cover rounded-full w-[50vw] h-[50vw]"
+        className="object-cover rounded-full w-full h-full"
       />
-    </li>
+    </div>
   );
 };

@@ -11,7 +11,16 @@
     --text: 0 0% 11%;
     --widtht: 95vw;
     --cards-number: 2;
-    --true-width:calc(var(--widtht) / var(--cards-number));
+    --width-slider: 100vw;
+    --cards-in-row:calc(var(--widtht) / var(--cards-number));
+    --slider-text-muliplicator: 1.3;
+    --slider-text-size: calc(var(--width-slider) * var(--slider-text-muliplicator));
+    --slider-text-top: 0%;
+    --slider-text-left: -45%;
+    --slider-image-size: var(--width-slider);
+    --slider-image-bottom: 20%;
+    --slider-image-right: -40%;
+    --slider-image-muliplicator: 1.2;
   }
 }
 
@@ -332,15 +341,15 @@ button:hover .bottom-span {
 
 /* Cards Review from Instagram: */
 .squareci {
-  width: var(--true-width);
-  height: var(--true-width);
+  width: var(--cards-in-row);
+  height: var(--cards-in-row);
   position: relative;
   background: transparent;
 }
 
 .cardci {
-  width: var(--true-width);
-  height: var(--true-width);
+  width: var(--cards-in-row);
+  height: var(--cards-in-row);
   transform-style: preserve-3d;
   position: absolute;
   transition: transform 0.5s ease-in-out;
@@ -351,15 +360,15 @@ button:hover .bottom-span {
 }
 
 .frontci {
-  width: var(--true-width);
-  height: var(--true-width);
+  width: var(--cards-in-row);
+  height: var(--cards-in-row);
   backface-visibility: hidden;
   position: absolute;
 }
 
 .backci {
-  width: var(--true-width);
-  height: var(--true-width);
+  width: var(--cards-in-row);
+  height: var(--cards-in-row);
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
@@ -374,20 +383,99 @@ button:hover .bottom-span {
   text-overflow: ellipsis;
 }
 
+.cicular_image_slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--slider-image-size);
+  height: var(--slider-image-size);
+  right: var(--slider-image-right);
+  bottom: var(--slider-image-bottom);
+  position: absolute;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cicular_text_slider{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  padding: 2rem;
+  border-radius: 50%;
+  width: var(--slider-text-size);
+  height: var(--slider-text-size);
+  top: var(--slider-text-top);
+  left: var(--slider-text-left);
+}
+
+@media (width > 430px) {
+  :root{
+    --slider-text-muliplicator: 1.2;
+    --slider-image-size: 90vw;
+  }
+}
+
+@media (width > 530px) {
+  :root{
+    --slider-text-muliplicator: 1.1;
+    --slider-image-bottom: 15%;
+    --slider-image-size: 80vw;
+  }
+}
+
+/* sm */
 @media (width > 630px) {
   :root{
     --cards-number: 3;
   }
 }
 
+/* md */
+@media (width > 768px) {
+  :root{
+    --slider-text-muliplicator: .95;
+    --slider-text-top: -2%;
+    --slider-text-left: -30%;
+    --slider-image-size: 67vw;
+    --slider-image-right: -10%;
+    --slider-image-bottom: 15%;
+  }
+}
+
+@media (width > 830px) {
+  :root{
+    --slider-text-muliplicator: .9;
+    --slider-text-top: -1%;
+    --slider-text-left: -30%;
+    --slider-image-size: 65vw;
+    --slider-image-right: -10%;
+    --slider-image-bottom: 15%;
+  }
+}
+
+/* lg */
 @media (width > 1024px) {
   :root{
     --cards-number: 4;
   }
+
+  .cicular_image_slider {
+    width: var(--width-slider) / 2;
+    height: var(--width-slider) / 2;
+  }
+
 }
 
+/* xl */
 @media (width > 1280px) {
   :root{
     --cards-number: 5;
   }
+}
+
+/* 2xl */
+@media (width > 1536px) {
 }
