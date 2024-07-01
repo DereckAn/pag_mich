@@ -4,7 +4,6 @@ import { InstagramMedia } from "@/types";
 
 export const ReviewSection = async () => {
   const media = await fetchReviews();
-  // console.log(media);
   return (
     <section
       className={`flex flex-wrap relative w-[100vw] items-center justify-center py-4 gap-2`}

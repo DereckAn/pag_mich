@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      {/* <SliderBeverages /> */}
+      <SliderBeverages />
       <HighlightSection />
       <SeassonCards />
       <AboutUs /> 

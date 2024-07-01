@@ -1,37 +1,26 @@
 "use client";
+
 import { drinkSlider } from "@/assets/constants";
 import { ArrowsLR } from "@/components/ui/arrows-lr";
+import { CircleImageSlider } from "@/components/ui/circle-image";
 import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import { usePrevNextButtons } from "@/components/ui/EmblaCarouselArrowButtons";
-import { SliderItem } from "@/components/ui/slider-items";
+import { TextSlider } from "@/components/ui/text-slider";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 export const SliderBeverages = () => {
-  const [itemActivo, setItemActivo] = useState<number>(0);
-  const [listaaa, setListaaa] = useState(drinkSlider);
-
-  const handleNext = () => {
-    setListaaa(listaaa.slice(1).concat(listaaa.slice(0, 1)));
-  };
-
-  const handlePrev = () => {
-    setListaaa(listaaa.slice(-1).concat(listaaa.slice(0, -1)));
-  };
-
-  const handleNextCombined = () => {
-    handleNext();
-    onNextButtonClick();
-  };
-
-  const handlePrevCombined = () => {
-    handlePrev();
-    onPrevButtonClick();
-  };
-
-  const OPTIONS: EmblaOptionsType = { align: "start", loop: true, watchDrag: false, };
-  const Slides2 = drinkSlider.map((bebida) => bebida.imageR);
+  const [itemActivo, setItemActivo] = useState(0);
+  const Slides2 = useMemo(() => drinkSlider.map((bebida) => bebida.imageR), []);
+  const OPTIONS: EmblaOptionsType = useMemo(
+    () => ({
+      align: "start",
+      loop: true,
+      watchDrag: false,
+    }),
+    []
+  );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const {
@@ -41,30 +30,46 @@ export const SliderBeverages = () => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  const handleNextCombined = useCallback(() => {
+    onNextButtonClick();
+    setItemActivo(
+      (prevItemActivo) => (prevItemActivo + 1) % drinkSlider.length
+    );
+  }, [onNextButtonClick, drinkSlider.length]);
+
+  const handlePrevCombined = useCallback(() => {
+    onPrevButtonClick();
+    setItemActivo(
+      (prevItemActivo) =>
+        (prevItemActivo - 1 + drinkSlider.length) % drinkSlider.length
+    );
+  }, [onPrevButtonClick, drinkSlider.length]);
+
+  const bebidaActiva = drinkSlider[itemActivo];
+
   return (
-    <section className="w-full h-screen relative overflow-hidden  ">
-      <ul>
-        {listaaa.map((bebida, index) => (
-          <SliderItem
-            imageDrink={bebida.imageR}
-            ingredients={bebida.ingredients}
-            key={bebida.titulo + index}
-            itemActivo={itemActivo}
-            id={index}
-            imageIngredients={bebida.imageC}
-            titulo={bebida.titulo}
-            description={bebida.description}
-          />
-        ))}
-      </ul>
+    <section className="h-[100dvh] w-full relative overflow-hidden flex flex-col items-center justify-end">
+      <CircleImageSlider
+        key={bebidaActiva.titulo}
+        itemActivo={itemActivo}
+        id={itemActivo}
+        item={bebidaActiva}
+      />
+      <TextSlider
+        key={bebidaActiva.description}
+        itemActivo={itemActivo}
+        id={itemActivo}
+        item={bebidaActiva}
+      />
       <ArrowsLR
         handleNext={handleNextCombined}
         handlePrev={handlePrevCombined}
+        disableNext={prevBtnDisabled}
+        disablePrev={nextBtnDisabled}
+        className="mb-10"
       />
-      <EmblaCarousel
-        slides={Slides2}
-        emblaRef={emblaRef}
-      />
+      <EmblaCarousel slides={Slides2} emblaRef={emblaRef} />
     </section>
   );
 };
+

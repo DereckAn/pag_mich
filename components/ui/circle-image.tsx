@@ -22,7 +22,6 @@ export const CircleImageSlider = ({
       id="circular-image"
       className={cn(
         "transition-all duration-500 cicular_image_slider",
-        itemActivo === id ? "opacity-100" : "opacity-0",
         className
       )}
     >

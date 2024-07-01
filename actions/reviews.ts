@@ -3,6 +3,5 @@ export async function fetchReviews() {
     `https://graph.instagram.com/me/media?fields=id,caption,timestamp,media_url,permalink&access_token=${process.env.INSTA_TOKEN}`
   );
   const data = await response.json();
-  // console.log(data);
   return data.data;
 }

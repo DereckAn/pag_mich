@@ -17,13 +17,14 @@ export const TextSlider = ({
   return (
     <li
       className={cn(
-        "cicular_text_slider cristalblur flex flex-col",
-        itemActivo === id ? "opacity-100" : "opacity-0",
+        "cicular_text_slider cristalblur flex flex-col ",
         className
       )}
     >
-      <h1 className="text-center text-white text-4xl font-bold">{titulo}</h1>
-      <h4>{description}</h4>
+      <div className="face-inout">
+        <h1 className="text-center text-white text-4xl font-bold">{titulo}</h1>
+        <h4>{description}</h4>
+      </div>
     </li>
   );
 };

@@ -7,7 +7,7 @@ interface PropTypeProps {
 
 const EmblaCarousel = ({ slides, emblaRef }: PropTypeProps) => {
   return (
-    <section className="embla ">
+    <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((ima, index) => (
@@ -15,7 +15,7 @@ const EmblaCarousel = ({ slides, emblaRef }: PropTypeProps) => {
               <Image
                 src={ima}
                 alt="imagen"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl hidden lg:block"
               />
             </div>
           ))}
