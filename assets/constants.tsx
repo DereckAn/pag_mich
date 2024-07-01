@@ -77,8 +77,8 @@ export const socials = [
 
 export const drinkSlider: drinkSliderType[] = [
   {
-    imageIngredients: ingredient1,
-    imageDrink: drink1,
+    imageC: ingredient1,
+    imageR: drink1,
     titulo: "Jamaican Bird",
     link: "/",
     description:
@@ -86,8 +86,8 @@ export const drinkSlider: drinkSliderType[] = [
     ingredients: ["Jigger jamaican", "Banana Liqueur", "Orange juice"],
   },
   {
-    imageIngredients: ingredient2,
-    imageDrink: drink2,
+    imageC: ingredient2,
+    imageR: drink2,
     titulo: "Blue Margaritas",
     link: "/",
     description:
@@ -95,8 +95,8 @@ export const drinkSlider: drinkSliderType[] = [
     ingredients: ["Tequila", "Blue Curaçao", "Lime Juice"],
   },
   {
-    imageIngredients: ingredient3,
-    imageDrink: drink3,
+    imageC: ingredient3,
+    imageR: drink3,
     titulo: "Alcatraz Cocktail",
     link: "/",
     description:
@@ -104,8 +104,8 @@ export const drinkSlider: drinkSliderType[] = [
     ingredients: ["Orange", "Cointreau", "Rye whiskey"],
   },
   {
-    imageIngredients: ingredient4,
-    imageDrink: drink4,
+    imageC: ingredient4,
+    imageR: drink4,
     titulo: "Red Nail Cocktail",
     link: "/",
     description:
@@ -113,8 +113,8 @@ export const drinkSlider: drinkSliderType[] = [
     ingredients: ["Vodka", "Campari", "Scotch whisky"],
   },
   {
-    imageIngredients: ingredient5,
-    imageDrink: drink5,
+    imageC: ingredient5,
+    imageR: drink5,
     titulo: "Blue Punch",
     link: "/",
     description:

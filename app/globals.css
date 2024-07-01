@@ -420,15 +420,21 @@ button:hover .bottom-span {
 
 @media (width > 530px) {
   :root{
-    --slider-text-muliplicator: 1.1;
     --slider-image-bottom: 15%;
     --slider-image-size: 80vw;
+    --slider-image-right: -38%;
   }
 }
 
 /* sm */
 @media (width > 630px) {
   :root{
+    --slider-text-muliplicator: 1.0;
+    --slider-text-top: 2%;
+    --slider-text-left: -35%;
+    --slider-image-size: 70vw;
+    --slider-image-right: -10%;
+    --slider-image-bottom: 15%;
     --cards-number: 3;
   }
 }

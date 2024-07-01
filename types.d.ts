@@ -35,8 +35,8 @@ export type InstagramMedia  = {
 }
 
 export type drinkSliderType = {
-  imageIngredients: StaticImageData | string,
-  imageDrink: StaticImageData | string,
+  imageC: StaticImageData | string,
+  imageR: StaticImageData | string,
   titulo: string,
   link: string,
   description: string,

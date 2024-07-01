@@ -31,7 +31,7 @@ export const SliderBeverages = () => {
   };
 
   const OPTIONS: EmblaOptionsType = { align: "start", loop: true, watchDrag: false, };
-  const Slides2 = drinkSlider.map((bebida) => bebida.imageDrink);
+  const Slides2 = drinkSlider.map((bebida) => bebida.imageR);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const {
@@ -46,12 +46,12 @@ export const SliderBeverages = () => {
       <ul>
         {listaaa.map((bebida, index) => (
           <SliderItem
-            imageDrink={bebida.imageDrink}
+            imageDrink={bebida.imageR}
             ingredients={bebida.ingredients}
             key={bebida.titulo + index}
             itemActivo={itemActivo}
             id={index}
-            imageIngredients={bebida.imageIngredients}
+            imageIngredients={bebida.imageC}
             titulo={bebida.titulo}
             description={bebida.description}
           />

@@ -1,12 +1,11 @@
-import { cerdo } from "@/assets";
 import { drinkSliderType } from "@/types";
 import { cn } from "@/utils/utils";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface CircleImageProps {
   itemActivo?: number;
   id?: number;
-  item?: drinkSliderType;
+  item: drinkSliderType;
   className?: string;
 }
 
@@ -14,10 +13,12 @@ export const CircleImageSlider = ({
   itemActivo,
   id,
   item,
-  className
+  className,
 }: CircleImageProps) => {
+  const { imageC, titulo } = item || {};
+
   return (
-    <div
+    <li
       id="circular-image"
       className={cn(
         "transition-all duration-500 cicular_image_slider",
@@ -26,10 +27,10 @@ export const CircleImageSlider = ({
       )}
     >
       <Image
-        src={cerdo}
-        alt={"cerdo"}
+        src={imageC}
+        alt={titulo}
         className="object-cover rounded-full w-full h-full"
       />
-    </div>
+    </li>
   );
 };
