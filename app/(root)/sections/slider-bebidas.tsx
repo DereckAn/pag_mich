@@ -13,6 +13,7 @@ import { useCallback, useMemo, useState } from "react";
 export const SliderBeverages = () => {
   const [itemActivo, setItemActivo] = useState(0);
   const Slides2 = useMemo(() => drinkSlider.map((bebida) => bebida.imageR), []);
+  const lenlist = drinkSlider.length;
   const OPTIONS: EmblaOptionsType = useMemo(
     () => ({
       align: "start",
@@ -32,23 +33,22 @@ export const SliderBeverages = () => {
 
   const handleNextCombined = useCallback(() => {
     onNextButtonClick();
-    setItemActivo(
-      (prevItemActivo) => (prevItemActivo + 1) % drinkSlider.length
-    );
-  }, [onNextButtonClick, drinkSlider.length]);
+    setItemActivo((prevItemActivo) => (prevItemActivo + 1) % lenlist);
+  }, [onNextButtonClick, lenlist]);
 
   const handlePrevCombined = useCallback(() => {
     onPrevButtonClick();
-    setItemActivo(
-      (prevItemActivo) =>
-        (prevItemActivo - 1 + drinkSlider.length) % drinkSlider.length
-    );
-  }, [onPrevButtonClick, drinkSlider.length]);
+    setItemActivo((prevItemActivo) => (prevItemActivo - 1 + lenlist) % lenlist);
+  }, [onPrevButtonClick, lenlist]);
 
   const bebidaActiva = drinkSlider[itemActivo];
 
   return (
-    <section className="h-[100dvh] w-full relative overflow-hidden flex flex-col items-center justify-end">
+    <section
+      className={`h-[100dvh] w-full relative overflow-hidden flex flex-col items-center justify-end  `}
+    >
+      <div className={`bg-transition ${drinkSlider[itemActivo].bgcolor}`} />
+
       <CircleImageSlider
         key={bebidaActiva.titulo}
         itemActivo={itemActivo}
@@ -72,4 +72,3 @@ export const SliderBeverages = () => {
     </section>
   );
 };
-

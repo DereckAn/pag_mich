@@ -41,4 +41,5 @@ export type drinkSliderType = {
   link: string,
   description: string,
   ingredients: string[],
+  bgcolor: string
 }

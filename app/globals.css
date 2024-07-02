@@ -93,13 +93,6 @@ button:hover .bottom-span {
   top: 35%;
 }
 
-.medio-circulo {
-  width: 50%;
-  height: 110%;
-  border-radius: 0 90% 90% 0/ 0 100% 100% 0;
-  background-color: #7bab83;
-}
-
 .navbarsettings {
   color: transparent;
   animation: blink-animation 10s infinite alternate;
@@ -132,19 +125,6 @@ button:hover .bottom-span {
     color: white;
     opacity: 1;
     pointer-events: auto;
-  }
-}
-
-.appearing {
-  animation: appearing 1s;
-}
-
-@keyframes appearing {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -295,6 +275,16 @@ button:hover .bottom-span {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.bg-transition {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 2s ease;
 }
 
 .cicular_image_slider {

@@ -22,15 +22,15 @@ export const ArrowsLR = ({
   return (
     <div
       className={cn(
-        "flex justify-center items-center gap-8 sm:gap-10",
+        "flex justify-center items-center gap-8 sm:gap-10 absolute",
         className
       )}
     >
       <button onClick={handlePrev} className={`${commonClasses} `}>
-        <IoIosArrowBack className="size-8 " />
+        <IoIosArrowBack className="size-8" />
       </button>
       <button onClick={handleNext} className={`${commonClasses}`}>
-        <IoIosArrowForward className="size-8 " />
+        <IoIosArrowForward className="size-8" />
       </button>
     </div>
   );

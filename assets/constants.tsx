@@ -84,6 +84,7 @@ export const drinkSlider: drinkSliderType[] = [
     description:
       "Exotic and flavorful cocktail that combines tropical ingredients for a refreshing drink:",
     ingredients: ["Jigger jamaican", "Banana Liqueur", "Orange juice"],
+    bgcolor:"bg-vainilla"
   },
   {
     imageC: ingredient2,
@@ -93,6 +94,7 @@ export const drinkSlider: drinkSliderType[] = [
     description:
       "A Blue Margarita is a vibrant, tropical twist on the classic margarita cocktail:",
     ingredients: ["Tequila", "Blue Curaçao", "Lime Juice"],
+    bgcolor:"bg-red-500"
   },
   {
     imageC: ingredient3,
@@ -102,6 +104,7 @@ export const drinkSlider: drinkSliderType[] = [
     description:
       "A perfect for those who enjoy bold and flavorful drinks with a touch of sophistication:",
     ingredients: ["Orange", "Cointreau", "Rye whiskey"],
+    bgcolor:"bg-green-500"
   },
   {
     imageC: ingredient4,
@@ -111,6 +114,7 @@ export const drinkSlider: drinkSliderType[] = [
     description:
       "A sophisticated and striking drink known for its bold flavors and vibrant color:",
     ingredients: ["Vodka", "Campari", "Scotch whisky"],
+    bgcolor:"bg-blue-500"
   },
   {
     imageC: ingredient5,
@@ -120,6 +124,7 @@ export const drinkSlider: drinkSliderType[] = [
     description:
       "A delightful and visually appealing drink, often served at baby showers or celebrations:",
     ingredients: ["Blueberry", "Light rum", "Triple sec"],
+    bgcolor:"bg-purple-500"
   },
 ];
 
